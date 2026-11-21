@@ -26,9 +26,11 @@ git push origin main
 
 For the one-time GitHub Pages activation, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Before activation, the workflow builds and checks the site but skips deployment with a setup note in its run summary. Selecting the source does not rerun an already completed workflow. After enabling Pages, run **Actions → Deploy project explorer → Run workflow**, or push the next checked update to `main`, to build and deploy the site.
 
-Once the deployment succeeds, the expected project URL is:
+The public project site is:
 
 <https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/>
+
+The [first successful public deployment](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models/actions/runs/44924561912) published commit `1480b4884341f335adb35dce4cfc05119f1d53cd` on 21 November 2026. Browser checks against this public URL passed for search, filters, model/layer comparisons, plot selection, keyboard navigation, missing values, full-precision CSV downloads, feature definitions, and mobile/tablet layout. No JavaScript errors or failed requests were observed during these checks.
 
 The static site uses relative paths and needs no API keys, server, or model inference. The deployment uploads only `docs/`. It validates the released data and downloadable results before publication. [GitHub’s Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) describes the required Pages environment and permissions.
 
