@@ -43,6 +43,7 @@ def argument(s: str, start: int):
 
 def plain(s: str):
     s = re.sub(r"(?<!\\)%[^\n]*", "", s)
+    s = s.replace(r"\{", "__LITERAL_OPEN_BRACE__").replace(r"\}", "__LITERAL_CLOSE_BRACE__")
     # Keep the text argument of spanning cells and colour keys.
     for command, count, keep in [("multicolumn", 3, 2), ("multirow", 3, 2), ("familykey", 2, 1)]:
         pattern = re.compile(r"\\" + command + r"(?:\[[^\]]*\])?\s*\{")
@@ -64,6 +65,7 @@ def plain(s: str):
     s = re.sub(r"\\[A-Za-z]+\*?", " ", s)
     s = re.sub(r"\\[,;! ]", " ", s)
     s = s.replace("{", "").replace("}", "").replace("``", '“').replace("''", '”').replace("---", "—").replace("--", "–")
+    s = s.replace("__LITERAL_OPEN_BRACE__", "{").replace("__LITERAL_CLOSE_BRACE__", "}")
     s = s.replace("R^2", "R²")
     return re.sub(r"\s+", " ", s).strip()
 
@@ -127,7 +129,7 @@ def import_results(manuscript: Path, source_root: Path):
         rows, spans = table_rows(match[0], match[1]); width = max(map(sum, spans))
         csv_path = dest / "tables" / (slug + ".csv")
         with csv_path.open("w", newline="") as stream:
-            writer = csv.writer(stream); writer.writerow(["cell_" + str(i + 1) for i in range(width)])
+            writer = csv.writer(stream, lineterminator="\n"); writer.writerow(["cell_" + str(i + 1) for i in range(width)])
             for row, sizes in zip(rows, spans):
                 expanded = [value for cell, size in zip(row, sizes) for value in [cell] + [""] * (size - 1)]
                 writer.writerow(expanded + [""] * (width - len(expanded)))

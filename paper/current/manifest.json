@@ -61,7 +61,7 @@
       ],
       "csv": "results/current/perplexity-ess-correlations.csv",
       "tex": "results/current/perplexity-ess-correlations.tex",
-      "sha256": "f88f28675c179fd43fc09c643712322889e8944bfcc1fab95d95f8cb9b24c407"
+      "sha256": "2a9f243fa6730980bfe21a79b0b15fca2bc5673d0d6fb0897dbe961be819d98a"
     },
     {
       "number": 2,
@@ -286,7 +286,7 @@
       ],
       "csv": "results/current/main-results.csv",
       "tex": "results/current/main-results.tex",
-      "sha256": "952862a74794984ed66de0e113e19577503734b7dbf17be1bbc48f225da3536e"
+      "sha256": "0550e6cc0c00b1fe5c7caecb54d9479f0cccfd37ae8747615045de7d0ac4bd15"
     },
     {
       "number": 3,
@@ -397,7 +397,7 @@
       ],
       "csv": "results/current/top-features.csv",
       "tex": "results/current/top-features.tex",
-      "sha256": "2586d079cdfff04d564b8726e396aa0d5dbdb138678f0965f34f829484a79ca6"
+      "sha256": "1ce46369ce438c8abb1b6d33fb274d06855762f4f6245464af39eab540272f2e"
     },
     {
       "number": 4,
@@ -506,7 +506,7 @@
       ],
       "csv": "results/current/feature-direction.csv",
       "tex": "results/current/feature-direction.tex",
-      "sha256": "20d77e58857ca7396f0e31fef4e963a05285f258fb88a73e25231b601bd43135"
+      "sha256": "7adb2dd01ae1f0227027fb94d1bf3f80f53fe1a3793c9c5a9d1499d76842aa4c"
     },
     {
       "number": 5,
@@ -783,7 +783,7 @@
       ],
       "csv": "results/current/apertus-checkpoint-ess-importance.csv",
       "tex": "results/current/apertus-checkpoint-ess-importance.tex",
-      "sha256": "a54f65732ec9f45b3ded81cca4734c10836cf5b1cd8f0bdce38e387b5865feb0"
+      "sha256": "02c557f2e5c8b78d9559e0343f726e701ff699598581888c7c2665a98bb3bbd6"
     },
     {
       "number": 6,
@@ -1074,7 +1074,7 @@
       ],
       "csv": "results/current/alternative-estimator-ablation.csv",
       "tex": "results/current/alternative-estimator-ablation.tex",
-      "sha256": "dce66b7f103ee65572940ca32bcb2be1fe529d2b176159cfa626ef3c46304806"
+      "sha256": "6e232247e6deff702e794a64f5cb2b4ccb7f93a879130f9330bbbc3fca9bfa4a"
     },
     {
       "number": 7,
@@ -1287,7 +1287,7 @@
       ],
       "csv": "results/current/alternative-estimator-importance.csv",
       "tex": "results/current/alternative-estimator-importance.tex",
-      "sha256": "2449566e7195af11846fa9a9fe33e85d18ab953d31f3b735ff932760add772ef"
+      "sha256": "db83b4828156a9906c69df6637f776d6e80ccc5c584cd5b65160b0279da0388f"
     },
     {
       "number": 8,
@@ -1988,7 +1988,7 @@
       ],
       "csv": "results/current/k-layer-sensitivity.csv",
       "tex": "results/current/k-layer-sensitivity.tex",
-      "sha256": "c1dc481b5ae62945c316273990b52fcfbc48ff1b5f881b20e913eef0d797c68d"
+      "sha256": "577d66b51392e9add80190da529089911f9dfedd0208688f83e5959b841aa97c"
     },
     {
       "number": 9,
@@ -2113,7 +2113,7 @@
       ],
       "csv": "results/current/importance-sensitivity.csv",
       "tex": "results/current/importance-sensitivity.tex",
-      "sha256": "36ac19da68cbf8e1d0575450e7e80566b114f75b27441da6b3dc309598a03a9c"
+      "sha256": "6c5a15fa6368609f8f31e8db787e5be5bc1417f797f3d49a3b507370bda26157"
     },
     {
       "number": 10,
@@ -2266,7 +2266,7 @@
       ],
       "csv": "results/current/pile-split-id-robustness.csv",
       "tex": "results/current/pile-split-id-robustness.tex",
-      "sha256": "c15a5da48a4a19a5df7a4f1c12e736ca7e5e564d661548463d1faab6e5ef37d8"
+      "sha256": "fc3ba60432a36fc76518e77a28b3773201221bbdbbe147a2d05841bec6554111"
     },
     {
       "number": 11,
@@ -2465,7 +2465,7 @@
       ],
       "csv": "results/current/ess-classification-features.csv",
       "tex": "results/current/ess-classification-features.tex",
-      "sha256": "9e40414cf03ff42b6196eebb4c33c7a255759ed51f9a0b9a92c42771224d1010"
+      "sha256": "978ad72761cb6a78a4d9768821c96b9171093f9f51ebd12d0140c66a3f96c552"
     },
     {
       "number": 12,
@@ -2590,7 +2590,7 @@
       ],
       "csv": "results/current/mann-whitney.csv",
       "tex": "results/current/mann-whitney.tex",
-      "sha256": "ed055f79fbaf36e935eed9a4552ee670eac102ccfed3fdb57aaffe7d78d64dcb"
+      "sha256": "a1cf1a689bcb67f7f1e7014ed4cbaed8a0c27077bb242020ac63ce1e85c4b6c3"
     },
     {
       "number": 13,
@@ -3069,7 +3069,7 @@
       ],
       "csv": "results/current/lexical-classification.csv",
       "tex": "results/current/lexical-classification.tex",
-      "sha256": "14900964a923f6995e7ca522c0c1a3caeaca2896704c5543d0a1949720298a58"
+      "sha256": "6f2f10f85dc60bbb557ea5494a5d42108a9a6d63dfbe0727ee2a4fa1f28bf76b"
     },
     {
       "number": 14,
@@ -3548,7 +3548,7 @@
       ],
       "csv": "results/current/lexical-regression.csv",
       "tex": "results/current/lexical-regression.tex",
-      "sha256": "46e9537abf5294c229a5f02fa344eb09eba795cf4b0306dcfe48253991ab2c13"
+      "sha256": "958d3aac66df5668cf3e48b5b40a008ea8f37e3e592b7c6a37d59bfda696bf3d"
     },
     {
       "number": 15,
@@ -3753,7 +3753,7 @@
       ],
       "csv": "results/current/pythia-feature.csv",
       "tex": "results/current/pythia-feature.tex",
-      "sha256": "b2292ba793f6ce9e9a01199f6eddfb69300dcd311120277b23e88573bd1841e5"
+      "sha256": "089ea862ca58e4d02c2856a011e7c3e1dd6da61a90de8dde35548d826143a3eb"
     },
     {
       "number": 16,
@@ -3848,14 +3848,14 @@
           "Dependency-relation distributions (5 predictors)"
         ],
         [
-          "dep_\\compound, nmod, nsubj, obj, obl\\",
+          "dep_{compound, nmod, nsubj, obj, obl}",
           "Five predictors giving the percentages of UD dependency relations labelled as compound, nominal modifier, nominal subject, core object, and oblique nominal."
         ],
         [
           "Morphosyntactic information (14 predictors)"
         ],
         [
-          "upos_\\ADJ, ADP, ADV, AUX, CCONJ, DET, NOUN, NUM, PART, PRON, PROPN, PUNCT, VERB\\",
+          "upos_{ADJ, ADP, ADV, AUX, CCONJ, DET, NOUN, NUM, PART, PRON, PROPN, PUNCT, VERB}",
           "Thirteen predictors giving the percentage of UD tokens assigned each listed universal part-of-speech tag."
         ],
         [
@@ -3873,7 +3873,7 @@
           "Lexical-verb morphology (5 predictors)"
         ],
         [
-          "verbs_form_dist_\\Inf, Part\\",
+          "verbs_form_dist_{Inf, Part}",
           "Two predictors giving the percentages of VERB tokens marked as infinitives and participles."
         ],
         [
@@ -3881,7 +3881,7 @@
           "Percentage of VERB tokens marked for indicative mood."
         ],
         [
-          "verbs_tense_dist_\\Past, Pres\\",
+          "verbs_tense_dist_{Past, Pres}",
           "Two predictors giving the percentages of VERB tokens marked for past and present tense."
         ],
         [
@@ -4042,7 +4042,7 @@
       ],
       "csv": "results/current/retained-profiling-ud-features.csv",
       "tex": "results/current/retained-profiling-ud-features.tex",
-      "sha256": "3140f45e2812749b7dc079d79f8a29926b76188047d734a723187c084678b3a7"
+      "sha256": "fb4dc37c265e3ca1cb6a03be73d3375a8a68d2ae2bff9629d2981311d39a70c9"
     }
   ],
   "figures": [

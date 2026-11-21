@@ -22,16 +22,16 @@ subj_pre,Percentage of subject dependents preceding their governing verbal head.
 obj_post,Percentage of core-object dependents following their governing verbal head.
 subordinate_post,Percentage of subordinate-clause heads following their governing head.
 Dependency-relation distributions (5 predictors),
-"dep_\compound, nmod, nsubj, obj, obl\","Five predictors giving the percentages of UD dependency relations labelled as compound, nominal modifier, nominal subject, core object, and oblique nominal."
+"dep_{compound, nmod, nsubj, obj, obl}","Five predictors giving the percentages of UD dependency relations labelled as compound, nominal modifier, nominal subject, core object, and oblique nominal."
 Morphosyntactic information (14 predictors),
-"upos_\ADJ, ADP, ADV, AUX, CCONJ, DET, NOUN, NUM, PART, PRON, PROPN, PUNCT, VERB\",Thirteen predictors giving the percentage of UD tokens assigned each listed universal part-of-speech tag.
+"upos_{ADJ, ADP, ADV, AUX, CCONJ, DET, NOUN, NUM, PART, PRON, PROPN, PUNCT, VERB}",Thirteen predictors giving the percentage of UD tokens assigned each listed universal part-of-speech tag.
 lexical_density,"Percentage of word tokens assigned a content-word UPOS tag: NOUN, VERB, ADJ, or ADV."
 Auxiliary morphology (3 predictors),
 aux_mood_dist_Ind; aux_num_pers_dist_Sing+3; aux_tense_dist_Pres,"Among tokens tagged as AUX, the percentages marked Mood=Ind, jointly marked Number=Sing and Person=3, and marked Tense=Pres, respectively."
 Lexical-verb morphology (5 predictors),
-"verbs_form_dist_\Inf, Part\",Two predictors giving the percentages of VERB tokens marked as infinitives and participles.
+"verbs_form_dist_{Inf, Part}",Two predictors giving the percentages of VERB tokens marked as infinitives and participles.
 verbs_mood_dist_Ind,Percentage of VERB tokens marked for indicative mood.
-"verbs_tense_dist_\Past, Pres\",Two predictors giving the percentages of VERB tokens marked for past and present tense.
+"verbs_tense_dist_{Past, Pres}",Two predictors giving the percentages of VERB tokens marked for past and present tense.
 Tokenizer-specific frequency controls (3 predictors),
 median_frequency_class,Median frequency class C_M(t) across the model tokens in the input.
 max_frequency_class,"Largest frequency class in the input, corresponding to its rarest token under the model-specific frequency table."
