@@ -8,16 +8,16 @@ The study asks how the linguistic form of an excerpt relates to the local intrin
 
 ## Explore the texts and results
 
-Open the [interactive project site](https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/) to explore the released excerpts, measurements, and paper results.
+Use the [owner-only project preview](https://local-geometry-paper-preview.reflectiveshore16.chatgpt.site) to explore the excerpts, measurements, and paper results during private review. Public GitHub Pages publication is paused.
 
 The static site in [`docs/`](docs/) includes:
 
-- **1,994 original evaluation excerpts**, each joined to its released feature vector by a verified text SHA-256;
+- **2,000 original evaluation excerpts**, verified against the original text/source mappings across all nine model/layer settings; six have no released linguistic profile and retain unavailable feature values;
 - **46 features**, with definitions, units, and missing values preserved;
 - **27 measured settings**: three models × three depths × three ID estimators;
 - text, source, percentile, and feature-value filters; a selectable feature/geometry scatterplot; paired model/layer plots; per-excerpt all-model tables; two-text comparisons; and full-precision CSV export;
-- **498 aligned locality-audit excerpts**, with recorded Euclidean radii, distances, source composition, and TF-IDF diagnostics for five neighbourhood sizes and cumulative/shell intervals;
-- **all 7 figures and 16 tables from the current manuscript**, with full captions and downloadable PNG/PDF, CSV, and original table TeX;
+- **500 verified locality-audit excerpts**, with recorded Euclidean radii, distances, source composition, and TF-IDF diagnostics for five neighbourhood sizes and cumulative/shell intervals;
+- **all 7 figures and 16 tables from the current manuscript**, with full captions and downloadable PNG/PDF and CSV;
 - the earlier reproduction bundle and its additional geometry, neighbourhood, feature-family, source, lexical, and perplexity analyses.
 
 To preview the committed site, Python’s standard library is enough:
@@ -27,13 +27,13 @@ make serve
 # Open http://localhost:8765
 ```
 
-The site works entirely in the browser. It displays saved measurements; it does not run a language model or predict ID for new text. Percentiles use all available aligned observations within each model/layer/estimator before filtering. The measured evaluation set has 2,000 queries; the browser includes the 1,994 with aligned linguistic profiles. One early-layer Pythia FCI measurement is unavailable and remains null.
+The site works entirely in the browser. It displays saved measurements; it does not run a language model or predict ID for new text. Percentiles use all available evaluation observations within each model/layer/estimator before filtering. The measured evaluation set has 2,000 queries; the browser includes all 2,000 texts and their recorded geometry, with missing profiles explicitly unavailable. One early-layer Pythia FCI measurement is unavailable and remains null.
 
-The page now uses a compact academic layout with the actual abstract, supplied paper PDF, current manuscript TeX, central figures, and separate code/data downloads. The supplied PDF is an earlier version; the site explains its difference from the current TeX snapshot. The public repository is [ldomenichelli/linguistic-features-of-local-geometry-in-language-models](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models). No DOI or arXiv URL was supplied.
+The page now uses a compact academic layout with the actual abstract, supplied paper PDF, central figures, and full-precision JSON/CSV downloads. The supplied PDF is an earlier version; the site explains its difference from the current manuscript snapshot. The repository is [ldomenichelli/linguistic-features-of-local-geometry-in-language-models](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models). No DOI or arXiv URL was supplied.
 
 Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
 
-The site is published through [`.github/workflows/pages.yml`](.github/workflows/pages.yml). See [PUBLISHING.md](PUBLISHING.md) for the verified deployment and instructions for future updates.
+Public deployment is paused in [`.github/workflows/pages.yml`](.github/workflows/pages.yml): pushes never publish the site, and manual public publication requires an explicit opt-in and a public repository. See [PUBLISHING.md](PUBLISHING.md) for private access and future publication instructions.
 
 ## Current paper and earlier reproduction bundle
 
@@ -55,7 +55,7 @@ make PYTHON=.venv/bin/python site
 make PYTHON=.venv/bin/python check
 ```
 
-`make paper` rebuilds the **earlier reproducible artifact bundle** under `results/paper/`; it does not overwrite the current-manuscript snapshot. `make site` regenerates the explorer from the released Parquet tables and packaged excerpts, then checks all site downloads and both result manifests. It requires no original working directories or model weights. The static HTML/JS can be served without analysis packages. Run `make site` once to generate the actual downloadable ZIPs and repository source browser before sharing the complete site.
+`make paper` rebuilds the **earlier reproducible artifact bundle** under `results/paper/`; it does not overwrite the current-manuscript snapshot. `make site` regenerates the explorer from the released Parquet tables and packaged excerpts, then checks all site downloads and both result manifests. It requires no original working directories or model weights. The static HTML/JS can be served without analysis packages. Run `make site` once to prepare the PDF, numeric result downloads, and repository source browser before sharing the complete site.
 
 To refit the downstream models and compare against the earlier recorded reference results:
 

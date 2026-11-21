@@ -10,26 +10,26 @@ The project website is buildless HTML, CSS, and JavaScript in `docs/`. GitHub Pa
 | Excerpt text and source | Excerpt | An excerpt can contain multiple parser-detected sentences. |
 | 46 linguistic features | Aggregated excerpt profile | 43 Profiling-UD descriptors and three shared Pythia-tokenizer frequency proxies. Definitions specify denominators. |
 | ESS, MLE, local FCI | Query representation and its reference neighbourhood | One last-non-padding-token representation per excerpt/model/layer; main ID uses k=1,000 and 15,000 disjoint references. These are not per-token scores. |
-| Percentiles | Distribution of aligned, available query estimates | Average rank / available population × 100, separately by model, layer, and estimator; calculated before filtering. |
+| Percentiles | Distribution of available evaluation query estimates | Average rank / available population × 100, separately by model, layer, and estimator; calculated before filtering. |
 | Radius and mean distance | Selected query neighbourhood | Unnormalised Euclidean representation distances; magnitude depends on model and layer. |
 | Relative radius | Selected query neighbourhood | Radius / median query-to-reference distance. |
 | Source fractions, entropy, lexical cosine | Composition of a query neighbourhood | Fractions, normalised entropy, or TF-IDF similarity; not direct word-level or semantic labels. |
 | Paper figure means / standard deviations | Dataset or checkpoint summary | Some summaries cover all 2,000 queries; do not assign them to an individual excerpt. |
 
-The geometric targets contain 2,000 queries. The browser has the 1,994 with aligned profiles. A locality audit sampled 500 queries; 498 are in the aligned browser. `data/explorer/neighbourhood_alignment.json` records verification of original source indices and exact text digests in every model/layer setting. No proximity or source-name heuristic was used to join these rows.
+The geometric targets and text browser contain all 2,000 original queries. Six have no released linguistic profile, and their 46 feature values remain null. A locality audit sampled 500 queries; all 500 texts and their recorded diagnostics are included. `data/explorer/neighbourhood_alignment.json` records verification of original source indices and exact text digests in every model/layer setting. No proximity or source-name heuristic was used to join these rows.
 
 The locality controls select one of five k values and either a cumulative neighbourhood or a shell. Shells are ranks 1–100, 101–500, 501–1,000, 1,001–2,000, and 2,001–3,000. Their sizes are 100, 400, 500, 1,000, and 1,000, respectively. They do not change the main ID estimates’ k=1,000.
 
 ## Missing data and reconstruction boundaries
 
-- Six geometric evaluation queries have no aligned linguistic profile. They remain in the released numeric target tables, but not in the text/profile browser.
-- Local FCI for Pythia, early layer 2, query 502 is missing. Its percentile denominator is 1,993; other main settings have 1,994 available aligned measurements.
+- Six geometric evaluation queries have no aligned linguistic profile. Their original texts and geometry are included in the browser; the feature panel explains the missing profile.
+- Local FCI for Pythia, early layer 2, query 502 is missing. Its percentile denominator is 1,999; other main settings have 2,000 available measurements.
 - Locality diagnostics are absent outside the recorded 500-query audit. The browser does not approximate or impute them.
 - Linguistic missing values remain missing in the browser. Fold-local median imputation belongs to prediction experiments only.
 - Token-level geometric scores and word-aligned annotations are not supplied. Neighbour texts, hidden states, and raw reference arrays are not packaged.
-- Checkpoint measurements are available in the data download and paper results. The interactive per-excerpt comparison currently covers the nine main model/layer settings.
-- No DOI or arXiv URL was provided. The supplied PDF predates the current TeX snapshot; the site identifies that version difference. It provides both real downloads.
-- The public GitHub repository URL is verified and recorded in `configs/site.json`. Code and data are also available as ZIP downloads.
+- Checkpoint measurements are available in the repository and paper results. The interactive per-excerpt comparison currently covers the nine main model/layer settings.
+- No DOI or arXiv URL was provided. The supplied PDF predates the current TeX snapshot; the site identifies that version difference. The website provides the PDF; manuscript sources remain in the repository.
+- The GitHub repository URL is verified and recorded in `configs/site.json`. Website downloads use PDF, CSV, and JSON. ZIP archives and TeX files are neither generated nor served by the site.
 
 ## Progressive loading
 
@@ -38,7 +38,7 @@ The locality controls select one of five k values and either a cumulative neighb
 1. `explorer-index.js`: texts, source labels, feature vectors, definitions, and data-file manifests. Search normalises text once and uses a debounced local index.
 2. Nine geometry files, loaded by model/layer. The initial view requests one; paired plots request two; the expanded all-model table requests the remaining settings.
 3. Nine locality files, loaded on demand when plotting a locality measure, opening its definitions/values, or exporting a CSV.
-4. `explorer.json`: the portable, full-precision main excerpt/feature/ID download. Full locality and checkpoint data remain in the numeric data ZIP.
+4. `explorer.json`: the portable, full-precision main excerpt/feature/ID download. Full locality and checkpoint data remain in the repository’s numeric tables.
 
 There is no all-layer or locality-data fetch at first paint. Loaded files are cached in the page. Load failures produce a retry control without fabricated values. Static script chunks also work from extracted local files.
 
@@ -55,7 +55,7 @@ make PYTHON=.venv/bin/python site
 make PYTHON=.venv/bin/python check
 ```
 
-`make site` needs only released files inside this repository. `build_site_assets.py` rebuilds actual code and measurement ZIPs, manuscript downloads, and a static source browser. Generated download ZIPs and the repository source index are ignored by Git and rebuilt by CI. They preserve repository-relative paths; extract both ZIPs into one directory for a complete source/data checkout.
+`make site` needs only released files inside this repository. `build_site_assets.py` prepares the supplied paper PDF, figure/result downloads, and a static source browser. It removes legacy ZIP and TeX assets from the website output. The source browser omits ZIP and TeX entries; the complete canonical sources remain in the repository.
 
 When importing a new manuscript snapshot, put its figures in the original source tree, update `FIGURES` in `scripts/import_current_paper.py` if labels change, and run:
 
@@ -78,7 +78,7 @@ make check
 python3 scripts/check_browser.py --screenshots /tmp/local-geometry-preview
 ```
 
-Commit the changed source, manifests, paper snapshot, and generated JS/JSON data chunks. The Pages workflow rebuilds and validates downloads, then uploads only `docs/`. See [PUBLISHING.md](PUBLISHING.md) for GitHub activation.
+Commit the changed source, manifests, paper snapshot, and generated JS/JSON data chunks. Public Pages publication is paused. The workflow does not run on push, and its manual public opt-in requires a public repository. The private preview uses owner-only Sites permissions. See [PUBLISHING.md](PUBLISHING.md) for access and future publication.
 
 ## Accessibility and visual conventions
 

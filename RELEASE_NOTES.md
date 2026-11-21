@@ -27,3 +27,12 @@ The explorer now loads geometry progressively by model/layer and locality diagno
 Verified the original locality query/source joins and text digests across nine settings: 498 aligned excerpts, five neighbourhood sizes, cumulative/shell intervals, and all 16 retained diagnostics. All 44,820 exported locality rows match the canonical Parquet data exactly. `make check` passes 17 tests plus artifact, provenance, percentile, download, and progressive-chunk checks. Real-browser checks pass with no JavaScript exceptions or failed requests, including source-precision CSV values, missing FCI handling, model/layer comparison, native keyboard navigation, retry after a blocked data file, and mobile/tablet layout.
 
 See [SITE.md](SITE.md) for measure granularity, source units, missing observations, progressive loading, accessibility, and update instructions.
+
+
+## Private review revision
+
+Recovered the six remaining original texts and verified exact text/source alignment across all nine model/layer outputs. The explorer now contains all 2,000 evaluation excerpts. Missing linguistic profiles remain null, and recorded geometric measurements are unchanged. Browser percentiles now use the full available evaluation population, with denominator 2,000 (1,999 for the one unavailable early-layer Pythia FCI measurement). The paper’s recorded results and original feature table are unchanged.
+
+All 500 locality-audit texts are included, with 45,000 exact diagnostic rows across nine settings. Feature-based plots omit unavailable feature pairs; geometry-only paired plots include all available estimates.
+
+Removed ZIP and TeX download links and generated assets from the website. PDF, CSV, and JSON remain available. Public Pages publication no longer runs on push and requires an explicit manual opt-in in a public repository. The existing owner-only Sites preview is retained.

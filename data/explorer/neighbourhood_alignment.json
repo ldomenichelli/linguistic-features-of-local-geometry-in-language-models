@@ -1,5 +1,5 @@
 {
-  "mapping": "query_position equals main evaluation query_index; verified against original query_source_index and exact text SHA-256 for every available profile, separately in all nine model/layer settings",
+  "mapping": "query_position equals main evaluation query_index; verified against original query_source_index and exact text SHA-256 for every released excerpt, separately in all nine model/layer settings",
   "locality_sha256": "5651a6f43d7d25f0669ee50293a87a1a62e4c8302d72457a614fd46e28ef6be7",
   "original_locality_sha256": "ba361de44633670b848dbf6fa07c9354d916586a674f4e5d5d2daf9b803a8d5f",
   "target_source_hashes": {
@@ -18,55 +18,55 @@
       "model": "Apertus-8B",
       "layer": 2,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Apertus-8B",
       "layer": 16,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Apertus-8B",
       "layer": 31,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Pythia-6.9B",
       "layer": 2,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Pythia-6.9B",
       "layer": 16,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Pythia-6.9B",
       "layer": 31,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Qwen2.5-7B",
       "layer": 2,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Qwen2.5-7B",
       "layer": 14,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     },
     {
       "model": "Qwen2.5-7B",
       "layer": 27,
       "query_positions": 500,
-      "aligned_excerpts": 498
+      "aligned_excerpts": 500
     }
   ],
   "positions": [
@@ -678,6 +678,7 @@
     405,
     414,
     418,
+    421,
     428,
     431,
     435,
@@ -897,6 +898,7 @@
     1312,
     1314,
     1316,
+    1318,
     1319,
     1329,
     1338,

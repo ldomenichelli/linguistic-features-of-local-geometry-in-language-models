@@ -33,7 +33,7 @@ def main(source):
     assert hashlib.sha256(target.text.encode()).hexdigest()==t['text_sha256']
   verified.append({'model':model,'layer':int(layer),'query_positions':len(rows),'aligned_excerpts':sum(int(q) in texts for q in rows.query_position)})
  positions=sorted(int(q) for q in released.query_position.unique())
- report={'mapping':'query_position equals main evaluation query_index; verified against original query_source_index and exact text SHA-256 for every available profile, separately in all nine model/layer settings','locality_sha256':hashlib.sha256((ROOT/'data/derived/neighbourhood_locality_metrics.parquet').read_bytes()).hexdigest(),'original_locality_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'target_source_hashes':hashes,'verified_settings':verified,'positions':positions,'aligned_positions':[q for q in positions if q in texts]}
+ report={'mapping':'query_position equals main evaluation query_index; verified against original query_source_index and exact text SHA-256 for every released excerpt, separately in all nine model/layer settings','locality_sha256':hashlib.sha256((ROOT/'data/derived/neighbourhood_locality_metrics.parquet').read_bytes()).hexdigest(),'original_locality_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'target_source_hashes':hashes,'verified_settings':verified,'positions':positions,'aligned_positions':[q for q in positions if q in texts]}
  (ROOT/'data/explorer/neighbourhood_alignment.json').write_text(json.dumps(report,indent=2)+'\n')
  print('Verified locality alignment:',len(report['aligned_positions']),'of',len(positions),'queries across',len(verified),'settings')
 if __name__=='__main__':

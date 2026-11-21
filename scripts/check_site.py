@@ -38,9 +38,13 @@ def check_data():
     features = pd.read_parquet(ROOT / 'data/derived/features.parquet').set_index('query_index').sort_index()
     targets = pd.read_parquet(ROOT / 'data/derived/main_targets.parquet')
     excerpts = payload['excerpts']
-    assert len(excerpts) == len(features) == 1994
+    assert len(excerpts) == 2000 and len(features) == 1994
     assert len({e['id'] for e in excerpts}) == len(excerpts)
-    assert set(e['queryIndex'] for e in excerpts) == set(features.index)
+    assert set(features.index) <= set(e['queryIndex'] for e in excerpts)
+    proof=json.loads((ROOT/'data/explorer/excerpt_alignment.json').read_text())
+    assert proof['excerpts_sha256']==sha(ROOT/'data/explorer/excerpts.json')
+    assert proof['queries']==2000 and len(proof['verified_settings'])==9
+    assert proof['missing_profile_queries']==[95,321,421,704,1318,1479]
     columns = [f['id'] for f in payload['features']]
     assert len(columns) == 46 and set(columns) == set(features.columns) - {'text_sha256'}
     for name, rel in [('features','data/derived/features.parquet'), ('targets','data/derived/main_targets.parquet'), ('excerpts','data/explorer/excerpts.json')]:
@@ -48,8 +52,13 @@ def check_data():
     for e in excerpts:
         q = e['queryIndex']
         assert e['id'] == f'q-{q}' and e['source'] and e['text']
-        assert hashlib.sha256(e['text'].encode()).hexdigest() == features.loc[q, 'text_sha256']
-        np.testing.assert_allclose(np.array(e['features'], dtype=float), features.loc[q, columns].to_numpy(dtype=float), rtol=0, atol=0, equal_nan=True)
+        assert hashlib.sha256(e['text'].encode()).hexdigest() == e['textSha256']
+        assert e['featuresAvailable'] == (q in features.index)
+        if q in features.index:
+            assert e['textSha256'] == features.loc[q, 'text_sha256']
+            np.testing.assert_allclose(np.array(e['features'], dtype=float), features.loc[q, columns].to_numpy(dtype=float), rtol=0, atol=0, equal_nan=True)
+        else:
+            assert q in proof['missing_profile_queries'] and e['features']==[None]*46
     ids = [e['queryIndex'] for e in excerpts]
     missing = []
     for model in payload['models']:
@@ -81,7 +90,8 @@ def safe_download(relative):
 
 def check_results():
     manifest = json.loads((ROOT / 'paper/current/manifest.json').read_text())
-    assert manifest == read_js(DOCS / 'assets/results-data.js', 'RESULTS_DATA')
+    web_manifest={**manifest,'tables':[{k:v for k,v in table.items() if k!='tex'} for table in manifest['tables']]}
+    assert web_manifest == read_js(DOCS / 'assets/results-data.js', 'RESULTS_DATA')
     assert len(manifest['tables']) == 16 and len(manifest['figures']) == 7
     for t in manifest['tables']:
         path = safe_download(t['csv']); assert sha(path) == t['sha256']
@@ -92,8 +102,7 @@ def check_results():
         for actual, cells, sizes in zip(grid[1:], t['rows'], t['colspans']):
             expanded = [value for cell, size in zip(cells, sizes) for value in [cell] + ['']*(size-1)]
             assert actual == expanded + [''] * (width - len(expanded))
-        tex = safe_download(t['tex'])
-        assert tex.read_bytes() == (ROOT/'paper/current/tables'/tex.name).read_bytes()
+        tex = ROOT/'paper/current/tables'/Path(t['tex']).name
         assert f"\\label{{{t['label']}}}" in tex.read_text()
         assert not any('@ c' in cell or '\\textbf' in cell for row in t['rows'] for cell in row)
     for f in manifest['figures']:
@@ -148,7 +157,7 @@ def check_progressive():
     local=pd.read_parquet(ROOT/'data/derived/neighbourhood_locality_metrics.parquet')
     aligned=bootstrap['neighbourhoodCoverage']['positions']
     proof=json.loads((ROOT/'data/explorer/neighbourhood_alignment.json').read_text())
-    assert aligned==proof['aligned_positions'] and len(aligned)==498
+    assert aligned==proof['aligned_positions'] and len(aligned)==500
     assert proof['locality_sha256']==sha(ROOT/'data/derived/neighbourhood_locality_metrics.parquet')
     assert bootstrap['neighbourhoodCoverage']['sha256']==proof['locality_sha256']
     count=0
@@ -157,7 +166,7 @@ def check_progressive():
             key=f"{m['id']}.{l['id']}"
             entry=bootstrap['geometryManifest'][key];path=safe_download(entry['path']);assert sha(path)==entry['sha256']
             chunk=read_chunk(path,'EXPLORER_GEOMETRY',key)
-            assert len(chunk['records'])==1994
+            assert len(chunk['records'])==2000
             for e in full['excerpts']:
                 expected=[v for est in ['ess','mle','fci'] for v in e['scores'][m['id']][l['id']][est]]
                 assert chunk['records'][str(e['queryIndex'])]==expected
@@ -167,27 +176,19 @@ def check_progressive():
             expected=local.loc[(local.model==m['label'])&(local.layer==l['number'])&local.query_position.isin(aligned),frame.columns].sort_values(['query_position','kind','k']).reset_index(drop=True)
             pd.testing.assert_frame_equal(frame,expected,check_dtype=False,check_exact=True)
             count+=len(frame)
-    assert count==44820
+    assert count==45000
     return {'progressive_geometry_files':9,'progressive_locality_files':9,'verified_locality_rows':count}
 
 
 def check_downloads():
-    import zipfile
     manifest=json.loads((DOCS/'assets/downloads-manifest.json').read_text())
+    assert set(manifest)=={'supplied-paper.pdf'}
     for name,metadata in manifest.items():
         path=safe_download('downloads/'+name)
         assert sha(path)==metadata['sha256'] and path.stat().st_size==metadata['bytes']
-        if path.suffix=='.zip':
-            with zipfile.ZipFile(path) as archive:assert archive.testzip() is None
-    with zipfile.ZipFile(DOCS/'downloads/measurements.zip') as archive:
-        for name in ['data/derived/features.parquet','data/derived/main_targets.parquet','data/derived/neighbourhood_locality_metrics.parquet','data/explorer/excerpts.json','data/explorer/neighbourhood_alignment.json']:
-            assert archive.read(name)==(ROOT/name).read_bytes()
-    with zipfile.ZipFile(DOCS/'downloads/project-code.zip') as archive:
-        for name in ['docs/assets/app.js','docs/index.html','scripts/build_explorer.py']:
-            assert archive.read(name)==(ROOT/name).read_bytes()
-        assert not any(Path(n).name.startswith('.env') for n in archive.namelist())
+    assert not [p for p in DOCS.rglob('*') if p.is_file() and p.suffix in {'.zip','.tex'}]
     paper=json.loads((ROOT/'configs/site.json').read_text())
-    assert paper['manuscriptSha256']==sha(DOCS/'downloads/manuscript.tex')
+    assert paper['manuscriptSha256']==sha(ROOT/'paper/manuscript/manuscript.tex')
     assert paper['paperPdfSha256']==sha(DOCS/'downloads/supplied-paper.pdf')
 
 

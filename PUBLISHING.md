@@ -1,55 +1,43 @@
-# Publishing the repository and GitHub Pages site
+# Private review and publication
 
-The prepared repository name is:
+Public publication is paused. The project should remain in a private GitHub repository, with GitHub Pages unpublished, during this review period.
 
-```text
-linguistic-features-of-local-geometry-in-language-models
-```
+## Private preview
 
-The intended owner is `ldomenichelli`. No code license has been selected. Do not add a blanket license to the third-party excerpts.
+The owner-only site is:
 
-## Repository
+<https://local-geometry-paper-preview.reflectiveshore16.chatgpt.site>
 
-The public repository has been created at:
+Sites enforces access for the project owner. Static HTML, excerpts, and result files must remain behind that access control; a client-side password is not a privacy boundary.
 
-<https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models>
+## Repository access
 
-The local `main` branch is published through the owner’s SSH connection. Existing release commits use Lucia Domenichelli’s verified GitHub noreply identity as both author and committer. Do not rewrite published history when updating ordinary project files.
+Repository: <https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models>
 
-After making and checking changes:
+In **Settings → General → Danger Zone → Change visibility**, choose **Make private** and complete GitHub’s confirmation. Independently, open **Settings → Pages**, use the menu beside the site address, and choose **Unpublish site** if a deployment remains. A private repository alone does not guarantee private Pages access on every GitHub plan.
+
+The connected GitHub tools do not expose these administrative settings. Verify the repository visibility in the owner’s settings and check that its anonymous API URL and the former public Pages URL return 404.
+
+## Updates during private review
 
 ```bash
+make site
+make check
+python3 scripts/check_browser.py
+
 git push origin main
 ```
 
-## Activate the site
+Pushes run validation but never publish GitHub Pages. The Pages workflow only supports manual dispatch; `publish_publicly` defaults to false, and publication also requires a public repository. Keep that option off during private review.
 
-For the one-time GitHub Pages activation, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Before activation, the workflow builds and checks the site but skips deployment with a setup note in its run summary. Selecting the source does not rerun an already completed workflow. After enabling Pages, run **Actions → Deploy project explorer → Run workflow**, or push the next checked update to `main`, to build and deploy the site.
+Update the existing private Sites project from the checked `docs/` snapshot, preserving its project ID and owner-only audience. Do not create a second site or change access to publish an update.
 
-The public project site is:
+Existing commits use Lucia Domenichelli’s verified GitHub noreply identity as both author and committer. Preserve this identity and ordinary published history. No code license has been selected.
 
-<https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/>
+## Future public release
 
-The [first successful public deployment](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models/actions/runs/44924561912) published commit `1480b4884341f335adb35dce4cfc05119f1d53cd` on 21 November 2026. Browser checks against this public URL passed for search, filters, model/layer comparisons, plot selection, keyboard navigation, missing values, full-precision CSV downloads, feature definitions, and mobile/tablet layout. No JavaScript errors or failed requests were observed during these checks.
+Only after a new request to publish publicly, change repository visibility as appropriate, configure Pages with **GitHub Actions** as its source, and run **Actions → Deploy project explorer → Run workflow** with `publish_publicly` explicitly enabled.
 
-The static site uses relative paths and needs no API keys, server, or model inference. The deployment uploads only `docs/`. It validates the released data and downloadable results before publication. [GitHub’s Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) describes the required Pages environment and permissions.
+Check a text search, missing-profile record, model/layer comparison, filtered CSV, figure PDF, and table CSV. Website downloads use PDF, CSV, and JSON; ZIP and TeX files remain outside the site output.
 
-## Verify before sharing
-
-```bash
-make check
-make serve
-```
-
-Check an excerpt permalink, a filtered CSV download, two-excerpt comparison, a figure PDF, and a current table CSV. Optional real-browser automation is available in `scripts/check_browser.py`; its help explains the local Chrome endpoint. Record the successful Pages workflow URL before describing the site as published. The manuscript’s repository link is intentionally left unchanged.
-
-## Optional browser verification
-
-With a local Chrome DevTools endpoint on port 9222, install `websocket-client` in your analysis environment and run:
-
-```bash
-.venv/bin/pip install websocket-client
-.venv/bin/python scripts/check_browser.py --screenshots /tmp/local-geometry-preview
-```
-
-The script is local developer tooling, separate from the static site and its deployment. It verifies actual interactions and downloads, including missing FCI values and the lexical-density display convention.
+The first public deployment was verified on 21 November 2026 ([workflow run](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models/actions/runs/44924561912)). This historical deployment is not evidence that the site is currently public.

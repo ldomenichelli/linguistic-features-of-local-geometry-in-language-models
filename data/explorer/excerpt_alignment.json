@@ -1,0 +1,69 @@
+{
+  "queries": 2000,
+  "excerpts_sha256": "668ec1fcf877aeb4c61545b89510ce9ca3acd906a5adc725881b59780decbf9a",
+  "source_metadata_sha256": "4f6bcf0784c2b7c85c53d981a938481c0b9a005b86433a648eaa9c5229fafab1",
+  "verified_settings": [
+    {
+      "model": "Pythia-6.9B",
+      "file": "eval_known_layer16_k1000_ref15000_sentence_level.parquet",
+      "sha256": "62e385121b4255bb7a95d12bddf2a9787f4f22177dbf0ab163db59efe192a3f6",
+      "queries": 2000
+    },
+    {
+      "model": "Pythia-6.9B",
+      "file": "eval_known_layer2_k1000_ref15000_sentence_level.parquet",
+      "sha256": "eaf5359fc8ef1b17c5d785d41c6d64861743878c4b80fe524748b6ffff5c5675",
+      "queries": 2000
+    },
+    {
+      "model": "Pythia-6.9B",
+      "file": "eval_known_layer31_k1000_ref15000_sentence_level.parquet",
+      "sha256": "d45b2b61bfe5e4261736b6b99850624c2be392b4436d80dd952b00b873e3d9cd",
+      "queries": 2000
+    },
+    {
+      "model": "Qwen2.5-7B",
+      "file": "eval_known_layer14_k1000_ref15000_sentence_level.parquet",
+      "sha256": "516b22271c72f6b6b8e57b6ca8c28964823da21eeb738b477bd68df2310e9ee5",
+      "queries": 2000
+    },
+    {
+      "model": "Qwen2.5-7B",
+      "file": "eval_known_layer27_k1000_ref15000_sentence_level.parquet",
+      "sha256": "15d7e43e467a64f310b0006c7d5d863d5162c7fcfdc5f187c093aca8b87b039e",
+      "queries": 2000
+    },
+    {
+      "model": "Qwen2.5-7B",
+      "file": "eval_known_layer2_k1000_ref15000_sentence_level.parquet",
+      "sha256": "3cb5d6946d91ee91ce0f8b9f2163f308f7a2576a9796a9ecc0d68b386261a6da",
+      "queries": 2000
+    },
+    {
+      "model": "Apertus-8B",
+      "file": "eval_known_layer16_k1000_ref15000_sentence_level.parquet",
+      "sha256": "fe7d1de10b6e6b2a4abde203ea01cf4f3298b4bb7d672cb22a6f8dcb43c91aeb",
+      "queries": 2000
+    },
+    {
+      "model": "Apertus-8B",
+      "file": "eval_known_layer2_k1000_ref15000_sentence_level.parquet",
+      "sha256": "ec2f7f96158952bc8d621a5a44c8064f4d9bdd9d9b34e7b6bfbc58d41a403e6e",
+      "queries": 2000
+    },
+    {
+      "model": "Apertus-8B",
+      "file": "eval_known_layer31_k1000_ref15000_sentence_level.parquet",
+      "sha256": "66cd369d0717389524ed8cd79dde971e5191fb6712cf5f8afdf6bb518a0f3012",
+      "queries": 2000
+    }
+  ],
+  "missing_profile_queries": [
+    95,
+    321,
+    421,
+    704,
+    1318,
+    1479
+  ]
+}

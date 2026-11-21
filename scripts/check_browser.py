@@ -70,6 +70,9 @@ def main():
     assert js("Object.keys(EXPLORER_GEOMETRY).length")==1
     assert js("typeof EXPLORER_NEIGHBOURHOODS==='undefined'")
     assert js("document.querySelectorAll('.plot-point').length")==1994
+    assert js("EXPLORER_INDEX.excerpts.length")==2000
+    assert js("document.querySelector('#count').textContent.startsWith('2,000 / 2,000')")
+    assert js("[...document.querySelectorAll('a[href]')].every(a=>!(/\\.(zip|tex)(?:$|[?#])/i).test(a.getAttribute('href')))")
     assert js("document.querySelectorAll('.table-item').length")==16
     assert js("document.querySelectorAll('.paper-figure').length")==7
     snapshot('desktop-v3',0)
@@ -80,7 +83,10 @@ def main():
     count=js("document.querySelectorAll('.plot-point').length")
     assert 1<count<1994
     # The available point values must match the unfiltered source population.
-    assert js("document.querySelector('.measure-table tr[data-estimator=ess] td:last-child').textContent")=='93.5'
+    targets=pd.read_parquet(Path(__file__).resolve().parents[1]/'data/derived/main_targets.parquet')
+    population=targets.loc[(targets.model_key=='pythia')&(targets.layer==16)].set_index('query_index').pointwise_ess
+    expected_percentile=population.rank(method='average',pct=True).loc[1140]*100
+    assert abs(float(js("document.querySelector('.measure-table tr[data-estimator=ess] td:last-child').textContent"))-expected_percentile)<.051
     js("document.querySelector('#reset').click()")
     wait_for("document.querySelectorAll('.plot-point').length===1994")
     change('model','qwen')
@@ -103,7 +109,7 @@ def main():
     # Missing FCI is never rendered as zero, and its percentile denominator shrinks.
     navigate('?depth=early&estimator=fci&example=q-502')
     assert js("document.querySelector('[data-estimator=fci] td').textContent")=='Unavailable'
-    assert js("document.querySelector('#detail').textContent.includes('1,993')")
+    assert js("document.querySelector('#detail').textContent.includes('1,999')")
     assert js("document.querySelectorAll('.plot-point').length")==1993
     # Locality is a verified 498-excerpt subset, with explicit k and shell ranks.
     navigate('?example=q-14&measure=radius_ratio')
@@ -151,6 +157,15 @@ def main():
     js("document.querySelectorAll('#detail > details')[0].open=true")
     wait_for("Object.keys(EXPLORER_GEOMETRY).length===9 && document.querySelector('#detail .compare-table tbody tr')!==null")
     assert js("document.querySelectorAll('#detail .compare-table tbody tr').length")==9
+    # Every original excerpt is searchable, including the six without profiles.
+    for missing_query in [95,321,421,704,1318,1479]:
+        navigate(f'?search=q-{missing_query}&example=q-{missing_query}')
+        assert js("document.querySelector('#detail').textContent.includes('Linguistic profile unavailable')")
+        assert js("[...document.querySelectorAll('.feature-row td')].every(e=>e.textContent==='Unavailable')")
+        assert js("document.querySelector('[data-estimator=ess] td').textContent!=='Unavailable'")
+        assert js("document.querySelectorAll('.plot-point').length")==0
+    navigate('?plotMode=compare')
+    assert js("document.querySelectorAll('.plot-point').length")==2000
     # No diagnostics are fabricated for an excerpt outside the locality sample.
     navigate('?example=q-1140&measure=radius')
     js("document.querySelectorAll('#detail > details')[1].open=true")
