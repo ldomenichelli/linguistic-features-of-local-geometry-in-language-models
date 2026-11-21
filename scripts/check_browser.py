@@ -13,6 +13,7 @@ import csv
 import tempfile
 import json
 import time
+import pandas as pd
 import urllib.request
 from pathlib import Path
 
@@ -43,15 +44,18 @@ def main():
         result=call('Runtime.evaluate',{'expression':code,'returnByValue':True,'awaitPromise':True})
         assert 'exceptionDetails' not in result,result
         return result.get('result',{}).get('value')
+    def wait_for(expression,timeout=15):
+        deadline=time.monotonic()+timeout
+        while time.monotonic()<deadline:
+            if js(expression):return
+            time.sleep(.07)
+        raise AssertionError('Timed out: '+expression)
     def navigate(suffix=''):
         call('Page.navigate',{'url':args.url.rstrip('/')+'/'+suffix})
-        deadline=time.monotonic()+15
-        while time.monotonic()<deadline:
-            if js("document.querySelectorAll('.feature-row').length===46"):return
-            time.sleep(.1)
-        raise AssertionError('Explorer did not load')
+        wait_for("document.querySelectorAll('.feature-row').length===46 && !document.querySelector('#count').textContent.startsWith('Loading')")
     def change(identifier,value):
         js(f"document.getElementById({json.dumps(identifier)}).value={json.dumps(value)};document.getElementById({json.dumps(identifier)}).dispatchEvent(new Event('change',{{bubbles:true}}))")
+        wait_for("!document.querySelector('#count').textContent.startsWith('Loading') && !document.querySelector('#detail').hasAttribute('aria-busy')")
     def snapshot(name,offset=None):
         if not args.screenshots:return
         if offset is not None:js(f"window.scrollTo({{top:{offset},behavior:'instant'}})")
@@ -60,83 +64,113 @@ def main():
         args.screenshots.mkdir(parents=True,exist_ok=True)
         (args.screenshots/(name+'.png')).write_bytes(base64.b64decode(shot['data']))
     call('Runtime.enable');call('Page.enable');call('Network.enable')
+    call('Network.setCacheDisabled',{'cacheDisabled':True})
     call('Emulation.setDeviceMetricsOverride',{'width':1440,'height':1050,'deviceScaleFactor':1,'mobile':False})
     navigate()
-    assert js("document.querySelectorAll('.plot-point').length") == 1994
-    assert js("document.querySelectorAll('.table-item').length") == 16
-    assert js("document.querySelectorAll('.figure-card').length") == 7
-    snapshot('desktop',0)
-    js("document.querySelector('#explorer').scrollIntoView({behavior:'instant'})")
-    snapshot('explorer')
-    # Search must preserve percentiles from the full reference population.
+    assert js("Object.keys(EXPLORER_GEOMETRY).length")==1
+    assert js("typeof EXPLORER_NEIGHBOURHOODS==='undefined'")
+    assert js("document.querySelectorAll('.plot-point').length")==1994
+    assert js("document.querySelectorAll('.table-item').length")==16
+    assert js("document.querySelectorAll('.paper-figure').length")==7
+    snapshot('desktop-v3',0)
+    js("document.querySelector('.population-plot').scrollIntoView({behavior:'instant'})")
+    snapshot('explorer-v3')
     js("document.querySelector('#search').value='New York';document.querySelector('#search').dispatchEvent(new Event('input'))")
-    time.sleep(.3)
-    assert js("document.querySelectorAll('.plot-point').length") > 1
-    assert js("document.querySelector('#count').textContent.includes('1,994 of')") is False
-    # Verify the generated CSV contains actual filtered observations and stored units.
+    time.sleep(.25);wait_for("!document.querySelector('#count').textContent.startsWith('Loading')")
+    count=js("document.querySelectorAll('.plot-point').length")
+    assert 1<count<1994
+    # The available point values must match the unfiltered source population.
+    assert js("document.querySelector('.measure-table tr[data-estimator=ess] td:last-child').textContent")=='93.5'
+    js("document.querySelector('#reset').click()")
+    wait_for("document.querySelectorAll('.plot-point').length===1994")
+    change('model','qwen')
+    assert js("document.querySelector('#depth option:checked').textContent")=='Intermediate · layer 14'
+    change('depth','late');change('estimator','mle');change('band','high');change('sort','high')
+    displayed=js("[...document.querySelectorAll('.excerpt-bottom strong')].map(e=>parseFloat(e.textContent.split('ID ')[1].replace(',','')))")
+    assert displayed==sorted(displayed,reverse=True)
+    # Pair the same excerpt across settings and make both axes into percentiles.
+    change('plot-mode','compare');change('compare-model','apertus');change('compare-depth','intermediate');change('chart-scale','percentile')
+    assert js("!document.querySelector('#compare-controls').hidden && document.querySelector('.plot-diagonal')!==null")
+    assert js("document.querySelectorAll('.plot-point').length")>300
+    # Selecting a point opens the text. Arrow keys retain a single roving tab stop.
+    js("document.querySelector('.plot-point').dispatchEvent(new MouseEvent('click',{bubbles:true}))")
+    active=js("document.querySelector('.plot-point.selected').dataset.example")
+    assert active in js("document.querySelector('#detail .detail-head').textContent")
+    js("document.querySelector('.plot-point.selected').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}))")
+    assert js("document.querySelectorAll('.plot-point[tabindex=\"0\"]').length")==1
+    js("document.querySelector('.plot-point.selected').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))")
+    assert js("document.activeElement.id")=='detail'
+    # Missing FCI is never rendered as zero, and its percentile denominator shrinks.
+    navigate('?depth=early&estimator=fci&example=q-502')
+    assert js("document.querySelector('[data-estimator=fci] td').textContent")=='Unavailable'
+    assert js("document.querySelector('#detail').textContent.includes('1,993')")
+    assert js("document.querySelectorAll('.plot-point').length")==1993
+    # Locality is a verified 498-excerpt subset, with explicit k and shell ranks.
+    navigate('?example=q-14&measure=radius_ratio')
+    assert js("document.querySelectorAll('.plot-point').length")==498
+    assert js("Object.keys(EXPLORER_NEIGHBOURHOODS).length")==1
+    js("document.querySelectorAll('#detail > details')[1].open=true")
+    wait_for("document.querySelector('.neighbourhood-table')!==null")
+    change('neighbour-k','500');change('neighbour-kind','shell')
+    assert js("document.querySelector('#detail').textContent.includes('101–500')")
+    assert js("document.querySelector('#detail').textContent.includes('400 neighbours')")
+    assert js("document.querySelector('#detail').textContent.includes('k = 1,000')")
+    original=pd.read_parquet(Path(__file__).resolve().parents[1]/'data/derived/neighbourhood_locality_metrics.parquet')
+    actual=original.loc[(original.model=='Pythia-6.9B')&(original.layer==16)&(original.query_position==14)&(original.kind=='shell')&(original.k==500)].iloc[0]
+    recorded=js("EXPLORER_NEIGHBOURHOODS['pythia.intermediate'].rows.find(r=>r[0]===14&&r[1]==='shell'&&r[2]===500)")
+    assert recorded[7]==actual.radius_ratio
+    # Three estimators and raw fraction units survive a real CSV download.
     with tempfile.TemporaryDirectory(prefix='geometry-export-') as directory:
-        call('Browser.setDownloadBehavior', {'behavior':'allow','downloadPath':directory})
-        expected_rows=js("document.querySelectorAll('.plot-point').length")
+        call('Browser.setDownloadBehavior',{'behavior':'allow','downloadPath':directory})
+        js("document.querySelector('#search').value='q-14';document.querySelector('#search').dispatchEvent(new Event('input'))")
+        time.sleep(.25);wait_for("document.querySelectorAll('.plot-point').length===1")
         js("document.querySelector('#download-filtered').click()")
-        deadline=time.monotonic()+10; exported=[]
+        deadline=time.monotonic()+10;exported=[]
         while time.monotonic()<deadline:
             exported=list(Path(directory).glob('*.csv'))
             if exported:break
             time.sleep(.1)
-        assert exported,'Filtered CSV was not downloaded'
+        assert exported,'CSV was not downloaded'
         with exported[0].open(newline='') as stream:rows=list(csv.DictReader(stream))
-        assert len(rows)==expected_rows
-        assert all('new york' in r['text'].lower() for r in rows)
-        first=rows[0]
-        expected_density=js(f"EXPLORER_DATA.excerpts.find(e=>e.queryIndex==={int(first['query_index'])}).features[EXPLORER_DATA.features.findIndex(f=>f.id==='lexical_density')]")
-        assert float(first['lexical_density'])==expected_density
-        call('Browser.setDownloadBehavior', {'behavior':'default'})
-    js("document.querySelector('#reset').click()")
-    change('model','qwen')
-    assert js("document.querySelector('[data-depth=intermediate] small').textContent") == '14'
-    assert js("document.querySelector('#count').textContent.includes('Qwen2.5-7B')")
-    js("document.querySelector('[data-depth=late]').click()")
-    change('estimator','mle')
-    assert js("document.querySelector('#detail').textContent.includes('layer 27 · MLE')")
-    change('band','high')
-    assert js("[...document.querySelectorAll('.excerpt-bottom span')].every(e=>parseFloat(e.textContent.replace('Percentile ',''))>=80)")
-    change('sort','high')
-    displayed=js("[...document.querySelectorAll('.excerpt-bottom strong')].map(e=>parseFloat(e.textContent.replace('ID ','').replace(',','')))")
-    assert displayed==sorted(displayed,reverse=True)
-    js("document.querySelector('#detail .detail-actions button').click();document.querySelectorAll('.excerpt-item')[1].click()")
-    assert js("!document.querySelector('#comparison').hidden && document.querySelectorAll('.compare-table tbody tr').length===48")
+        assert len(rows)==1
+        row=rows[0];assert row['excerpt_key']=='q-14' and row['id_k']=='1000' and row['diagnostic_k']=='500'
+        assert float(row['radius_ratio'])==actual.radius_ratio
+        full=pd.read_parquet(Path(__file__).resolve().parents[1]/'data/derived/main_targets.parquet')
+        query=full.loc[(full.model_key=='pythia')&(full.layer==16)&(full.query_index==14)].iloc[0]
+        assert float(row['ess_id'])==query.pointwise_ess
+        assert float(row['mle_id'])==query.pointwise_mle
+        feature=pd.read_parquet(Path(__file__).resolve().parents[1]/'data/derived/features.parquet').set_index('query_index')
+        assert float(row['lexical_density'])==feature.loc[14,'lexical_density']
+        call('Browser.setDownloadBehavior',{'behavior':'default'})
     change('plot-feature','lexical_density')
-    assert js("document.querySelector('.feature-row.active strong').textContent.endsWith('%')")
+    val=js("document.querySelector('.feature-row.active td').textContent")
+    assert abs(float(val.rstrip('%'))-feature.loc[14,'lexical_density']*100)<.051
+    js("document.querySelector('#feature-search').value='nominal';document.querySelector('#feature-search').dispatchEvent(new Event('input'))")
+    assert 0<js("document.querySelectorAll('.feature-row').length")<46
+    # All-model comparison is requested explicitly; all nine chunks then load.
+    js("document.querySelectorAll('#detail > details')[0].open=true")
+    wait_for("Object.keys(EXPLORER_GEOMETRY).length===9 && document.querySelector('#detail .compare-table tbody tr')!==null")
+    assert js("document.querySelectorAll('#detail .compare-table tbody tr').length")==9
+    # No diagnostics are fabricated for an excerpt outside the locality sample.
+    navigate('?example=q-1140&measure=radius')
+    js("document.querySelectorAll('#detail > details')[1].open=true")
+    wait_for("document.querySelector('#detail').textContent.includes('was not in the 500-query')")
+    assert js("document.querySelector('#plot-selection').textContent.includes('no available')")
     js("document.querySelector('.figure-image').click()")
     assert js("document.querySelector('#figure-dialog').open")
-    js("document.querySelector('#close-figure').click();document.querySelector('.table-item').open=true")
-    assert js("document.querySelectorAll('.table-item .result-table tr').length")>100
-    # Direct links preserve missing measurements and must not display null as zero.
-    navigate('?depth=early&estimator=fci&example=q-502')
-    assert js("document.querySelector('#detail .score-strip strong').textContent")=='Unavailable'
-    assert js("document.querySelector('#detail').textContent.includes('1,993')")
-    assert js("document.querySelectorAll('.plot-point').length")==1993
-    navigate('?model=apertus&depth=late&estimator=mle&example=q-723&feature=upos_dist_NOUN')
-    assert js("document.querySelector('#detail .eyebrow').textContent")=='Excerpt #723'
-    assert js("document.querySelector('#model').value")=='apertus'
-    assert js("document.querySelector('#plot-feature').value")=='upos_dist_NOUN'
-    # The actual display should retain the lexical-density fraction convention.
-    expected=js("(()=>{const e=EXPLORER_DATA.excerpts.find(x=>x.id==='q-723');return e.features[EXPLORER_DATA.features.findIndex(x=>x.id==='lexical_density')]*100})()")
-    change('plot-feature','lexical_density')
-    actual=js("parseFloat(document.querySelector('.feature-row.active strong').textContent)")
-    assert abs(expected-actual)<.051,(expected,actual)
-    # All download links must resolve under a repository subpath or root.
-    assert js("Promise.all([...document.querySelectorAll('#tables a,.figure-links a,#archive-files a')].map(a=>fetch(a.href).then(r=>r.ok))).then(a=>a.every(Boolean))")
-    for width,height,name in [(390,844,'mobile'),(768,1024,'tablet')]:
+    js("document.querySelector('#close-figure').click()")
+    assert js("Promise.all([...document.querySelectorAll('a[href]')].filter(a=>a.origin===location.origin&&!a.hash).map(a=>fetch(a.href,{method:'HEAD'}).then(r=>r.ok))).then(a=>a.every(Boolean))")
+    for width,height,name in [(390,844,'mobile-v3'),(768,1024,'tablet-v3')]:
         call('Emulation.setDeviceMetricsOverride',{'width':width,'height':height,'deviceScaleFactor':1,'mobile':True})
-        js("document.querySelector('#comparison').hidden=true;document.querySelectorAll('.table-item').forEach(e=>e.open=true)")
-        assert js("document.documentElement.scrollWidth <= innerWidth"),f'Horizontal overflow at {width}'
+        js("document.querySelectorAll('.table-item').forEach(e=>e.open=true)")
+        time.sleep(.2)
+        assert js("document.documentElement.scrollWidth<=innerWidth"),f'Page overflow at {width}'
         snapshot(name,0)
-        js("document.querySelector('#explorer').scrollIntoView({behavior:'instant'})")
-        snapshot(name+'-explorer')
+        js("document.querySelector('.reading-grid').scrollIntoView({behavior:'instant'})")
+        snapshot(name+'-excerpt')
     assert not errors,errors
     assert not failures,failures
-    print(json.dumps({'status':'passed','browser':'Chrome DevTools','checks':['filtered CSV export','filters','sort','model-specific layers','comparison','missing estimate','deep links','feature units','downloads','mobile/tablet layout'],'javascript_errors':len(errors),'failed_requests':len(failures)},indent=2))
+    print(json.dumps({'status':'passed','checks':['progressive loading','search','model/layer filters','sorting','paired model/layer graph','point-to-excerpt','keyboard navigation','missing FCI','neighbourhood cohort and shell ranks','source-precision CSV','feature definitions and units','all-model comparison','real downloads','mobile/tablet layout'],'javascript_errors':len(errors),'failed_requests':len(failures)},indent=2))
     ws.close()
 
 

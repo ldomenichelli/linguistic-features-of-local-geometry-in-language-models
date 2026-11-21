@@ -1,0 +1,18 @@
+{
+  "manuscript.tex": {
+    "sha256": "cd7070bd49e3676d9a9e57fbc9f992fa089dcd356682afb1181447bd50cfd22e",
+    "bytes": 116695
+  },
+  "supplied-paper.pdf": {
+    "sha256": "efdce6b4c888d43567e19d4f4a7acb83eb2609633ce9d8f8e49535944b6983a3",
+    "bytes": 1863543
+  },
+  "project-code.zip": {
+    "sha256": "03448b92717a7dbd4fdaf2d8dbbeb3e42009f2cd76b806ac56c7ff023c0b81d9",
+    "bytes": 221602
+  },
+  "measurements.zip": {
+    "sha256": "7c25d1ce579030867ce136660bf09a6b2e5385a5cb1fa9bd291765fcbc3bcd63",
+    "bytes": 14771285
+  }
+}

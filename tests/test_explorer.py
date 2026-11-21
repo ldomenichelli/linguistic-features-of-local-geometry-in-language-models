@@ -4,13 +4,16 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from check_site import check_data, check_results
+from check_site import check_data, check_results, check_progressive
 from import_current_paper import table_rows
 
 
 class ExplorerIntegrity(unittest.TestCase):
     def test_entire_release_matches_measurements(self):
         check_data()
+
+    def test_progressive_chunks_preserve_source_precision_and_cohort(self):
+        check_progressive()
 
     def test_current_and_archived_downloads_match_sources(self):
         check_results()

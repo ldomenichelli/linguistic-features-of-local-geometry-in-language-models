@@ -17,4 +17,4 @@ jobs:
       - name: Check reproducible explorer payload
         run: |
           make site
-          git diff --exit-code -- docs/assets/explorer.json docs/assets/explorer-data.js docs/assets/explorer-validation.json
+          git diff --exit-code -- docs/assets/explorer.json docs/assets/explorer-index.js docs/assets/geometry docs/assets/neighbourhood docs/assets/explorer-validation.json

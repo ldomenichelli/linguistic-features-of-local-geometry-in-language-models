@@ -11,6 +11,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from explorer_metadata import NEIGHBOURHOOD_METRICS
+
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_LAYERS = {"pythia": [2, 16, 31], "qwen": [2, 14, 27], "apertus": [2, 16, 31]}
 NAMES = {"pythia": "Pythia-6.9B", "qwen": "Qwen2.5-7B", "apertus": "Apertus-8B"}
@@ -62,6 +64,50 @@ def import_excerpts(source: Path, features: pd.DataFrame) -> None:
     output.write_text(json.dumps(records, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
+
+def write_js(path, namespace, key, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    encoded=json.dumps(value, ensure_ascii=False, allow_nan=False, separators=(",", ":")).replace("</", "<\\/")
+    if key is None: source=f"window.{namespace}={encoded};\n"
+    else: source=f"window.{namespace}=window.{namespace}||{{}};window.{namespace}[{json.dumps(key)}]={encoded};\n"
+    path.write_text(source)
+
+
+def build_progressive(payload, out):
+    alignment=json.loads((ROOT/'data/explorer/neighbourhood_alignment.json').read_text())
+    locality_path=ROOT/'data/derived/neighbourhood_locality_metrics.parquet'
+    assert digest(locality_path)==alignment['locality_sha256']
+    locality=pd.read_parquet(locality_path)
+    assert sorted(locality.query_position.unique())==alignment['positions']
+    assert all(v['aligned_excerpts']==498 for v in alignment['verified_settings'])
+    manifest={}; local_manifest={}
+    for model in payload['models']:
+        for layer in model['layers']:
+            key=f"{model['id']}.{layer['id']}"
+            records={str(e['queryIndex']):[v for estimator in TARGETS for v in e['scores'][model['id']][layer['id']][estimator]] for e in payload['excerpts']}
+            path=out/'geometry'/f"{model['id']}-{layer['id']}.js"
+            write_js(path,'EXPLORER_GEOMETRY',key,{'records':records})
+            manifest[key]={'path':f'assets/geometry/{path.name}','sha256':digest(path),'bytes':path.stat().st_size}
+            group=locality.loc[(locality.model==model['label'])&(locality.layer==layer['number'])]
+            rows=[]
+            for row in group.sort_values(['query_position','kind','k']).itertuples():
+                if row.query_position not in alignment['aligned_positions']: continue
+                rows.append([int(row.query_position),row.kind,int(row.k),int(row.rank_start),int(row.n_neighbors),*[number(getattr(row,col[0])) for col in NEIGHBOURHOOD_METRICS]])
+            assert len(rows)==4980
+            path=out/'neighbourhood'/f"{model['id']}-{layer['id']}.js"
+            write_js(path,'EXPLORER_NEIGHBOURHOODS',key,{'columns':['query_index','kind','k','rank_start','n_neighbors',*[m[0] for m in NEIGHBOURHOOD_METRICS]],'rows':rows})
+            local_manifest[key]={'path':f'assets/neighbourhood/{path.name}','sha256':digest(path),'bytes':path.stat().st_size,'rows':len(rows)}
+    bootstrap={k:v for k,v in payload.items() if k!='excerpts'}
+    bootstrap['schemaVersion']=3
+    bootstrap['paper']=json.loads((ROOT/'configs/site.json').read_text())
+    bootstrap['excerpts']=[{k:v for k,v in e.items() if k!='scores'} for e in payload['excerpts']]
+    bootstrap['geometryManifest']=manifest
+    bootstrap['neighbourhoodManifest']=local_manifest
+    bootstrap['neighbourhoodMetrics']=[{'id':k,'label':label,'unit':unit,'definition':definition,'granularity':'query neighbourhood'} for k,label,unit,definition in NEIGHBOURHOOD_METRICS]
+    bootstrap['neighbourhoodCoverage']={'sample':500,'aligned':498,'positions':alignment['aligned_positions'],'k':[100,500,1000,2000,3000],'kinds':['cumulative','shell'],'sha256':digest(locality_path)}
+    write_js(out/'explorer-index.js','EXPLORER_INDEX',None,bootstrap)
+
+
 def build(source: Path | None = None) -> dict:
     feature_path = ROOT / "data/derived/features.parquet"
     target_path = ROOT / "data/derived/main_targets.parquet"
@@ -85,7 +131,7 @@ def build(source: Path | None = None) -> dict:
         if "frequency_class" in key: unit = "class"
         values = pd.to_numeric(frame[key], errors="raise")
         assert not np.isinf(values).any()
-        features.append({"id": key, "label": label, "family": row["family"], "definition": row["definition"], "unit": unit, "min": number(values.min()), "max": number(values.max()), "p05": number(values.quantile(.05)), "p95": number(values.quantile(.95))})
+        features.append({"id": key, "label": label, "family": row["family"], "granularity": "excerpt aggregate", "definition": row["definition"], "unit": unit, "min": number(values.min()), "max": number(values.max()), "p05": number(values.quantile(.05)), "p95": number(values.quantile(.95))})
     ids = frame.query_index.to_list()
     scores = {int(q): {} for q in ids}
     revisions = {}
@@ -112,13 +158,15 @@ def build(source: Path | None = None) -> dict:
     for _, row in frame.iterrows():
         q = int(row.query_index); text = texts[q]
         assert text["text_sha256"] == row.text_sha256 == hashlib.sha256(text["text"].encode()).hexdigest()
-        excerpts.append({"id": f"q-{q}", "queryIndex": q, "text": text["text"], "source": text["source"], "paperExample": q in paper_ids, "features": [number(row[col]) for col in columns], "scores": scores[q]})
+        excerpts.append({"id": f"q-{q}", "queryIndex": q, "text": text["text"], "textSha256": text["text_sha256"], "source": text["source"], "paperExample": q in paper_ids, "features": [number(row[col]) for col in columns], "scores": scores[q]})
     payload = {"schemaVersion": 2, "meta": {"title": "Linguistic Features of Local Geometry in Language Models", "population": len(frame), "geometricPopulation": 2000, "referenceSize": 15000, "k": 1000, "percentilePopulation": "All available finite estimates among the 1,994 evaluation excerpts with an aligned linguistic profile, separately for each model, layer, and estimator. Missing estimates are retained as null and never imputed.", "validPopulation": {k: v for k, v in populations.items() if k.count('.') == 2}, "frequencyControls": "The three frequency controls are the shared Pythia-1.4B-tokenizer proxies in the released profiling table, not independently recomputed per model.", "sources": {"features": digest(feature_path), "targets": digest(target_path), "excerpts": digest(texts_path)}}, "models": [{"id": m, "label": NAMES[m], "revision": revisions[m], "layers": [{"id": d, "number": n, "label": d.title()} for d, n in zip(DEPTHS, layers)]} for m, layers in MODEL_LAYERS.items()], "estimators": [{"id": e, "label": e.upper()} for e in TARGETS], "features": features, "excerpts": excerpts}
     out = ROOT / "docs/assets"; out.mkdir(parents=True, exist_ok=True)
     encoded = json.dumps(payload, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     (out / "explorer.json").write_text(encoded + "\n")
-    (out / "explorer-data.js").write_text("window.EXPLORER_DATA=" + encoded.replace("</", "<\\/") + ";\n")
-    report = {"excerpts": len(excerpts), "features": len(features), "model_depth_settings": len(MODEL_LAYERS) * len(DEPTHS), "estimator_settings": len(MODEL_LAYERS) * len(DEPTHS) * len(TARGETS), "verified_text_hashes": len(excerpts), "paper_examples": sum(e["paperExample"] for e in excerpts), "population_by_setting": payload["meta"]["validPopulation"], "sources": payload["meta"]["sources"]}
+    build_progressive(payload, out)
+    legacy = out / "explorer-data.js"
+    if legacy.exists(): legacy.unlink()
+    report = {"excerpts": len(excerpts), "features": len(features), "model_depth_settings": len(MODEL_LAYERS) * len(DEPTHS), "estimator_settings": len(MODEL_LAYERS) * len(DEPTHS) * len(TARGETS), "verified_text_hashes": len(excerpts), "paper_examples": sum(e["paperExample"] for e in excerpts), "population_by_setting": payload["meta"]["validPopulation"], "locality_aligned_queries": 498, "sources": payload["meta"]["sources"]}
     (out / "explorer-validation.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
     return payload

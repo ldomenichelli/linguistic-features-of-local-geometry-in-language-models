@@ -52,3 +52,7 @@ logs/
 # Local anonymity/audit reports
 anonymity-audit*
 secret-scan*
+
+# Rebuilt site downloads and repository source index
+/docs/downloads/
+/docs/repository/repository-data.js

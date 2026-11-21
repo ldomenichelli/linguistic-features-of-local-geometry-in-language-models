@@ -13,7 +13,8 @@ The static site in [`docs/`](docs/) includes:
 - **1,994 original evaluation excerpts**, each joined to its released feature vector by a verified text SHA-256;
 - **46 features**, with definitions, units, and missing values preserved;
 - **27 measured settings**: three models × three depths × three ID estimators;
-- text and source filters, within-setting ID percentiles, two-excerpt comparisons, a selectable feature/ID scatterplot, CSV export, and shareable excerpt URLs;
+- text, source, percentile, and feature-value filters; a selectable feature/geometry scatterplot; paired model/layer plots; per-excerpt all-model tables; two-text comparisons; and full-precision CSV export;
+- **498 aligned locality-audit excerpts**, with recorded Euclidean radii, distances, source composition, and TF-IDF diagnostics for five neighbourhood sizes and cumulative/shell intervals;
 - **all 7 figures and 16 tables from the current manuscript**, with full captions and downloadable PNG/PDF, CSV, and original table TeX;
 - the earlier reproduction bundle and its additional geometry, neighbourhood, feature-family, source, lexical, and perplexity analyses.
 
@@ -25,6 +26,10 @@ make serve
 ```
 
 The site works entirely in the browser. It displays saved measurements; it does not run a language model or predict ID for new text. Percentiles use all available aligned observations within each model/layer/estimator before filtering. The measured evaluation set has 2,000 queries; the browser includes the 1,994 with aligned linguistic profiles. One early-layer Pythia FCI measurement is unavailable and remains null.
+
+The page now uses a compact academic layout with the actual abstract, supplied paper PDF, current manuscript TeX, central figures, and separate code/data downloads. The supplied PDF is an earlier version; the site explains its difference from the current TeX snapshot. Missing DOI/arXiv/GitHub URLs are not invented.
+
+Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
 
 GitHub Pages deployment is prepared in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). See [PUBLISHING.md](PUBLISHING.md) for the repository name and activation steps. The local site is not evidence of an online deployment.
 
@@ -48,7 +53,7 @@ make PYTHON=.venv/bin/python site
 make PYTHON=.venv/bin/python check
 ```
 
-`make paper` rebuilds the **earlier reproducible artifact bundle** under `results/paper/`; it does not overwrite the current-manuscript snapshot. `make site` regenerates the explorer from the released Parquet tables and packaged excerpts, then checks all site downloads and both result manifests. It requires no original working directories or model weights. The committed static site can be served without installing analysis packages.
+`make paper` rebuilds the **earlier reproducible artifact bundle** under `results/paper/`; it does not overwrite the current-manuscript snapshot. `make site` regenerates the explorer from the released Parquet tables and packaged excerpts, then checks all site downloads and both result manifests. It requires no original working directories or model weights. The static HTML/JS can be served without analysis packages. Run `make site` once to generate the actual downloadable ZIPs and repository source browser before sharing the complete site.
 
 To refit the downstream models and compare against the earlier recorded reference results:
 
@@ -83,4 +88,4 @@ The full pipeline in `src/full_pipeline/` requires separately acquired corpus da
 | `scripts/`, `src/full_pipeline/` | Build, validation, analysis, and full-pipeline code |
 | `configs/`, `tests/` | Experiment settings and integrity / regression checks |
 
-No code license has been added. Third-party excerpts retain their source terms; see [DATA.md](DATA.md#interactive-excerpt-release). Citation metadata is in [CITATION.cff](CITATION.cff); no publication venue or DOI is asserted.
+The browser code is in `docs/`; [SITE.md](SITE.md) documents the website build and updates. No code license has been added. Third-party excerpts retain their source terms; see [DATA.md](DATA.md#interactive-excerpt-release). Citation metadata is in [CITATION.cff](CITATION.cff); no publication venue or DOI is asserted.

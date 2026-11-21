@@ -34,6 +34,7 @@
     "apertus.late.mle": 1994,
     "apertus.late.fci": 1994
   },
+  "locality_aligned_queries": 498,
   "sources": {
     "features": "d5107d8cf48a085ac4b28c9d021570824980647701021736aa80655280f7e21f",
     "targets": "7b8c9116f45f04747a9ce7cc19278a9a835a390390ea6f881214da72b2d3b2e8",

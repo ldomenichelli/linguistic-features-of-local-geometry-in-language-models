@@ -31,7 +31,10 @@ def read_js(path, name):
 
 def check_data():
     payload = json.loads((DOCS / 'assets/explorer.json').read_text())
-    assert payload == read_js(DOCS / 'assets/explorer-data.js', 'EXPLORER_DATA')
+    bootstrap=read_js(DOCS / 'assets/explorer-index.js', 'EXPLORER_INDEX')
+    assert bootstrap['excerpts']==[{k:v for k,v in e.items() if k!='scores'} for e in payload['excerpts']]
+    assert bootstrap['features']==payload['features']
+    assert bootstrap['meta']==payload['meta']
     features = pd.read_parquet(ROOT / 'data/derived/features.parquet').set_index('query_index').sort_index()
     targets = pd.read_parquet(ROOT / 'data/derived/main_targets.parquet')
     excerpts = payload['excerpts']
@@ -131,8 +134,65 @@ def check_links():
         if not urlsplit(path).scheme: assert (DOCS/'assets'/path).is_file()
 
 
+
+def read_chunk(path, namespace, key):
+    source=path.read_text();prefix=f'window.{namespace}[{json.dumps(key)}]='
+    assert prefix in source and source.endswith(';\n'),path
+    return json.loads(source.split(prefix,1)[1][:-2])
+
+
+def check_progressive():
+    bootstrap=read_js(DOCS/'assets/explorer-index.js','EXPLORER_INDEX')
+    full=json.loads((DOCS/'assets/explorer.json').read_text())
+    assert len(bootstrap['geometryManifest'])==9 and len(bootstrap['neighbourhoodManifest'])==9
+    local=pd.read_parquet(ROOT/'data/derived/neighbourhood_locality_metrics.parquet')
+    aligned=bootstrap['neighbourhoodCoverage']['positions']
+    proof=json.loads((ROOT/'data/explorer/neighbourhood_alignment.json').read_text())
+    assert aligned==proof['aligned_positions'] and len(aligned)==498
+    assert proof['locality_sha256']==sha(ROOT/'data/derived/neighbourhood_locality_metrics.parquet')
+    assert bootstrap['neighbourhoodCoverage']['sha256']==proof['locality_sha256']
+    count=0
+    for m in bootstrap['models']:
+        for l in m['layers']:
+            key=f"{m['id']}.{l['id']}"
+            entry=bootstrap['geometryManifest'][key];path=safe_download(entry['path']);assert sha(path)==entry['sha256']
+            chunk=read_chunk(path,'EXPLORER_GEOMETRY',key)
+            assert len(chunk['records'])==1994
+            for e in full['excerpts']:
+                expected=[v for est in ['ess','mle','fci'] for v in e['scores'][m['id']][l['id']][est]]
+                assert chunk['records'][str(e['queryIndex'])]==expected
+            entry=bootstrap['neighbourhoodManifest'][key];path=safe_download(entry['path']);assert sha(path)==entry['sha256']
+            chunk=read_chunk(path,'EXPLORER_NEIGHBOURHOODS',key)
+            frame=pd.DataFrame(chunk['rows'],columns=chunk['columns']).rename(columns={'query_index':'query_position'})
+            expected=local.loc[(local.model==m['label'])&(local.layer==l['number'])&local.query_position.isin(aligned),frame.columns].sort_values(['query_position','kind','k']).reset_index(drop=True)
+            pd.testing.assert_frame_equal(frame,expected,check_dtype=False,check_exact=True)
+            count+=len(frame)
+    assert count==44820
+    return {'progressive_geometry_files':9,'progressive_locality_files':9,'verified_locality_rows':count}
+
+
+def check_downloads():
+    import zipfile
+    manifest=json.loads((DOCS/'assets/downloads-manifest.json').read_text())
+    for name,metadata in manifest.items():
+        path=safe_download('downloads/'+name)
+        assert sha(path)==metadata['sha256'] and path.stat().st_size==metadata['bytes']
+        if path.suffix=='.zip':
+            with zipfile.ZipFile(path) as archive:assert archive.testzip() is None
+    with zipfile.ZipFile(DOCS/'downloads/measurements.zip') as archive:
+        for name in ['data/derived/features.parquet','data/derived/main_targets.parquet','data/derived/neighbourhood_locality_metrics.parquet','data/explorer/excerpts.json','data/explorer/neighbourhood_alignment.json']:
+            assert archive.read(name)==(ROOT/name).read_bytes()
+    with zipfile.ZipFile(DOCS/'downloads/project-code.zip') as archive:
+        for name in ['docs/assets/app.js','docs/index.html','scripts/build_explorer.py']:
+            assert archive.read(name)==(ROOT/name).read_bytes()
+        assert not any(Path(n).name.startswith('.env') for n in archive.namelist())
+    paper=json.loads((ROOT/'configs/site.json').read_text())
+    assert paper['manuscriptSha256']==sha(DOCS/'downloads/manuscript.tex')
+    assert paper['paperPdfSha256']==sha(DOCS/'downloads/supplied-paper.pdf')
+
+
 def main():
-    report={**check_data(), **check_results()};check_links()
+    report={**check_data(), **check_results(), **check_progressive()};check_links();check_downloads()
     print(json.dumps({'status':'passed',**report},indent=2))
 
 

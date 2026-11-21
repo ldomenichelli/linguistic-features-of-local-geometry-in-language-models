@@ -20,7 +20,7 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-analysis.txt
       - run: python -m pip install -r requirements-analysis.txt
-      - run: make check-site
+      - run: make site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

@@ -5,7 +5,7 @@ OUTPUT_DIR ?= results/generated
 PAPER_OUTPUT_DIR ?= results/paper
 REFERENCE_DIR ?= results/reference
 
-.PHONY: help paper check-paper check-experiments analysis analysis-extended verify test anonymity check site check-site serve browser-test
+.PHONY: help paper check-paper check-experiments analysis analysis-extended verify test anonymity check site check-site serve browser-test site-assets
 
 help:
 	@echo "Available targets:"
@@ -65,9 +65,10 @@ check: paper check-paper check-experiments test check-site
 # The current manuscript snapshot is immutable; this regenerates browser data.
 site:
 	$(PYTHON) scripts/build_explorer.py
+	$(PYTHON) scripts/build_site_assets.py
 	$(PYTHON) scripts/check_site.py
 
-check-site:
+check-site: site-assets
 	$(PYTHON) scripts/check_site.py
 
 serve:
@@ -76,3 +77,6 @@ serve:
 # Start make serve and a Chrome DevTools endpoint before running this optional check.
 browser-test:
 	$(PYTHON) scripts/check_browser.py --url http://127.0.0.1:8765/
+
+site-assets:
+	$(PYTHON) scripts/build_site_assets.py
