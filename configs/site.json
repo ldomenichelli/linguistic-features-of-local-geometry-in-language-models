@@ -11,5 +11,5 @@
   "manuscriptSha256": "cd7070bd49e3676d9a9e57fbc9f992fa089dcd356682afb1181447bd50cfd22e",
   "paperPdfSha256": "efdce6b4c888d43567e19d4f4a7acb83eb2609633ce9d8f8e49535944b6983a3",
   "paperVersionNote": "The supplied PDF is an earlier manuscript version. The abstract and current result tables on this page follow the later TeX snapshot, which is also downloadable. No DOI or arXiv URL was supplied.",
-  "codeUrl": null
+  "codeUrl": "https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models"
 }

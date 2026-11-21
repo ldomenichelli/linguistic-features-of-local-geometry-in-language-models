@@ -27,7 +27,7 @@ make serve
 
 The site works entirely in the browser. It displays saved measurements; it does not run a language model or predict ID for new text. Percentiles use all available aligned observations within each model/layer/estimator before filtering. The measured evaluation set has 2,000 queries; the browser includes the 1,994 with aligned linguistic profiles. One early-layer Pythia FCI measurement is unavailable and remains null.
 
-The page now uses a compact academic layout with the actual abstract, supplied paper PDF, current manuscript TeX, central figures, and separate code/data downloads. The supplied PDF is an earlier version; the site explains its difference from the current TeX snapshot. Missing DOI/arXiv/GitHub URLs are not invented.
+The page now uses a compact academic layout with the actual abstract, supplied paper PDF, current manuscript TeX, central figures, and separate code/data downloads. The supplied PDF is an earlier version; the site explains its difference from the current TeX snapshot. The public repository is [ldomenichelli/linguistic-features-of-local-geometry-in-language-models](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models). No DOI or arXiv URL was supplied.
 
 Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
 

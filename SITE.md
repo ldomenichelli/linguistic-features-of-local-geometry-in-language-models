@@ -29,7 +29,7 @@ The locality controls select one of five k values and either a cumulative neighb
 - Token-level geometric scores and word-aligned annotations are not supplied. Neighbour texts, hidden states, and raw reference arrays are not packaged.
 - Checkpoint measurements are available in the data download and paper results. The interactive per-excerpt comparison currently covers the nine main model/layer settings.
 - No DOI or arXiv URL was provided. The supplied PDF predates the current TeX snapshot; the site identifies that version difference. It provides both real downloads.
-- A public GitHub URL is not displayed until it has been verified. Code and data are available through actual ZIP downloads in the meantime.
+- The public GitHub repository URL is verified and recorded in `configs/site.json`. Code and data are also available as ZIP downloads.
 
 ## Progressive loading
 

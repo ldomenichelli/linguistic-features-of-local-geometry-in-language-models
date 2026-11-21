@@ -8,28 +8,23 @@ linguistic-features-of-local-geometry-in-language-models
 
 The intended owner is `ldomenichelli`. No code license has been selected. Do not add a blanket license to the third-party excerpts.
 
-## Publish
+## Repository
 
-Create an empty **public** repository under that owner with the name above, without initializing a README, `.gitignore`, or license. From this local repository:
+The public repository has been created at:
+
+<https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models>
+
+The local `main` branch is published through the owner’s SSH connection. Existing release commits use Lucia Domenichelli’s verified GitHub noreply identity as both author and committer. Do not rewrite published history when updating ordinary project files.
+
+After making and checking changes:
 
 ```bash
-git remote add origin git@github.com:ldomenichelli/linguistic-features-of-local-geometry-in-language-models.git
-git push -u origin main
+git push origin main
 ```
-
-If GitHub CLI is installed and authenticated, it can create the repository and push the local history in one operation:
-
-```bash
-gh repo create ldomenichelli/linguistic-features-of-local-geometry-in-language-models \
-  --public --source=. --remote=origin --push \
-  --description 'Paper results, reproducibility materials, and an interactive explorer of linguistic features and pointwise intrinsic dimension'
-```
-
-These are alternative publication paths; do not run both repository-creation steps.
 
 ## Activate the site
 
-In the new repository, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). After enabling Pages, run **Actions → Deploy project explorer → Run workflow** if the initial push occurred before activation.
+For the one-time GitHub Pages activation, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Before activation, the workflow builds and checks the site but skips deployment with a setup note in its run summary. After enabling Pages, run **Actions → Deploy project explorer → Run workflow** if the initial push occurred before activation.
 
 Once the deployment succeeds, the expected project URL is:
 
