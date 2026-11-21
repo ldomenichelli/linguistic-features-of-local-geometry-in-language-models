@@ -12,7 +12,7 @@ This repository combines a current-manuscript result snapshot with the existing 
 
 `make check` passed: archived artifact regeneration and value comparisons; 28 experiment imports; 18 source/TF-IDF out-of-fold comparisons; 90 locality settings; 24 layers; 16 unit/integration tests; and complete explorer/result integrity checks.
 
-`python3 scripts/check_browser.py` passed in headless Chrome: filtering, sorting, model-specific layers, estimator changes, pinned comparison, missing values, excerpt deep links, feature units, all download links, and responsive layout at mobile/tablet widths. No JavaScript exceptions or failed HTTP requests were observed. Desktop and mobile screenshots were inspected.
+`python3 scripts/check_browser.py` passed in headless Chrome: filtering, sorting, model-specific layers, estimator changes, pinned comparison, missing values, excerpt deep links, feature units, all download links, the contents and original numeric units of a filtered CSV export, and responsive layout at mobile/tablet widths. No JavaScript exceptions or failed HTTP requests were observed. Desktop and mobile screenshots were inspected.
 
 The expensive full downstream refit and fresh language-model inference were not rerun for this packaging task. Current tables are transcriptions of the supplied manuscript, not new experiment estimates. The static browser uses the saved measurements.
 

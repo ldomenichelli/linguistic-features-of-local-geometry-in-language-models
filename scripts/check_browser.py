@@ -9,6 +9,8 @@ Use --screenshots /tmp/project-preview to save desktop/mobile PNG previews.
 from __future__ import annotations
 import argparse
 import base64
+import csv
+import tempfile
 import json
 import time
 import urllib.request
@@ -71,6 +73,24 @@ def main():
     time.sleep(.3)
     assert js("document.querySelectorAll('.plot-point').length") > 1
     assert js("document.querySelector('#count').textContent.includes('1,994 of')") is False
+    # Verify the generated CSV contains actual filtered observations and stored units.
+    with tempfile.TemporaryDirectory(prefix='geometry-export-') as directory:
+        call('Browser.setDownloadBehavior', {'behavior':'allow','downloadPath':directory})
+        expected_rows=js("document.querySelectorAll('.plot-point').length")
+        js("document.querySelector('#download-filtered').click()")
+        deadline=time.monotonic()+10; exported=[]
+        while time.monotonic()<deadline:
+            exported=list(Path(directory).glob('*.csv'))
+            if exported:break
+            time.sleep(.1)
+        assert exported,'Filtered CSV was not downloaded'
+        with exported[0].open(newline='') as stream:rows=list(csv.DictReader(stream))
+        assert len(rows)==expected_rows
+        assert all('new york' in r['text'].lower() for r in rows)
+        first=rows[0]
+        expected_density=js(f"EXPLORER_DATA.excerpts.find(e=>e.queryIndex==={int(first['query_index'])}).features[EXPLORER_DATA.features.findIndex(f=>f.id==='lexical_density')]")
+        assert float(first['lexical_density'])==expected_density
+        call('Browser.setDownloadBehavior', {'behavior':'default'})
     js("document.querySelector('#reset').click()")
     change('model','qwen')
     assert js("document.querySelector('[data-depth=intermediate] small').textContent") == '14'
@@ -116,7 +136,7 @@ def main():
         snapshot(name+'-explorer')
     assert not errors,errors
     assert not failures,failures
-    print(json.dumps({'status':'passed','browser':'Chrome DevTools','checks':['filters','sort','model-specific layers','comparison','missing estimate','deep links','feature units','downloads','mobile/tablet layout'],'javascript_errors':len(errors),'failed_requests':len(failures)},indent=2))
+    print(json.dumps({'status':'passed','browser':'Chrome DevTools','checks':['filtered CSV export','filters','sort','model-specific layers','comparison','missing estimate','deep links','feature units','downloads','mobile/tablet layout'],'javascript_errors':len(errors),'failed_requests':len(failures)},indent=2))
     ws.close()
 
 
