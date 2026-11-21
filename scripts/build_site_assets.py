@@ -35,7 +35,7 @@ def build():
     data_files=[p for folder in ['data','paper','results/reference'] for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     write_zip(dest/'measurements.zip',data_files)
     code_files=[p for folder in ['scripts','src','tests','configs','.github'] for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
-    code_files += [p for p in ROOT.iterdir() if p.is_file() and (p.suffix in {'.md','.txt','.cff'} or p.name in {'Makefile','.gitignore'})]
+    code_files += [p for p in ROOT.iterdir() if p.is_file() and (p.suffix in {'.md','.txt','.cff'} or p.name in {'Makefile','.gitignore','.gitattributes'})]
     code_files += [DOCS/'index.html',*[DOCS/'assets'/name for name in ['app.js','style.css','favicon.svg']]]
     write_zip(dest/'project-code.zip',code_files)
     tracked=subprocess.check_output(['git','-C',str(ROOT),'ls-files','--cached','--others','--exclude-standard'],text=True).splitlines()
@@ -44,7 +44,7 @@ def build():
         path=ROOT/name
         if not path.is_file():continue
         preview=None
-        if path.suffix in {'.py','.md','.html','.css','.js','.yaml','.yml','.cff','.tex','.txt'} or path.name in {'Makefile','.gitignore'}:
+        if path.suffix in {'.py','.md','.html','.css','.js','.yaml','.yml','.cff','.tex','.txt'} or path.name in {'Makefile','.gitignore','.gitattributes'}:
             if path.stat().st_size<160000 and not name.startswith(('docs/assets/geometry/','docs/assets/neighbourhood/')):
                 try:preview=path.read_text()
                 except UnicodeDecodeError:pass
