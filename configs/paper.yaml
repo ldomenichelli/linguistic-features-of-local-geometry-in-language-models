@@ -1,0 +1,161 @@
+schema_version: 1
+study:
+  title: "Linguistic Features of Local Geometry in Language Models"
+  artifact_inventory:
+    figures: 6
+    tables: 17
+
+random_seed: 42
+
+data:
+  source_project: "The Pile"
+  seen_member: "train/00.jsonl.zst"
+  unseen_member: "test.jsonl.zst"
+  preparation:
+    tokenizer_model: "EleutherAI/pythia-1.4b"
+    tokenizer_revision: "main"
+    packaging_time_main_commit: "fedc38a16eea3bd36a96b906d78d11d2ce18ed79"
+    tokenizer_revision_pinned_in_release_code: true
+    min_words: 6
+    max_tokens: 100
+    truncate_at_last_period: true
+    normalize_whitespace: true
+    filter_emails: true
+    filter_code_like_text: true
+    filter_number_heavy_text: true
+    minimum_letter_ratio: 0.65
+  sample_counts:
+    seen_selected: 17000
+    reference: 15000
+    eval_known: 2000
+    unseen_selected: 2000
+    eval_unknown: 2000
+  public_analysis_artifacts_are_text_free: true
+  paper_table_13_contains_quoted_text: true
+  retained_sha256:
+    seen_source_decompressed: "133538a67030fc5acfb291bb940d1c821e0b6086c68e7a5e3c667ad1f03061dc"
+    unseen_source_decompressed: "f87cb69612a54c672cb5afb0f3221ec15c05fae1f34798ae8973561a4b6074da"
+    seen_prepared_jsonl: "aa68c72954efcec7a66d30f0071ec42a00bec901a8f26937008b7ab6e9f9b071"
+    unseen_prepared_jsonl: "147c14d6e318228e09ab6983693f5cd94f1279a0b91670831f0814bb865f3aae"
+
+geometry:
+  representation: "last token hidden state"
+  reference_size: 15000
+  k: 1000
+  targets:
+    - mle
+    - ess
+    - fci_local_adaptation
+  pyfci:
+    commit: "20280aa8c9ed619ee9e30a2e425d46a282a7419b"
+    random_seed: 42
+
+models:
+  pythia_6_9b:
+    display_name: "Pythia-6.9B"
+    model_id: "EleutherAI/pythia-6.9b-deduped"
+    historical_revision: "main"
+    historical_revision_pinned: false
+    packaging_time_main_commit: "372b1c08d9b5b0fc18ce86bbf294930e26e66ed5"
+    packaging_commit_is_historical_proof: false
+    selected_layers: [2, 16, 31]
+  qwen2_5_7b:
+    display_name: "Qwen2.5-7B"
+    model_id: "Qwen/Qwen2.5-7B"
+    historical_revision: "main"
+    historical_revision_pinned: false
+    packaging_time_main_commit: "d149729398750b98c0af14eb82c78cfe92750796"
+    packaging_commit_is_historical_proof: false
+    selected_layers: [2, 14, 27]
+  apertus_8b:
+    display_name: "Apertus-8B"
+    model_id: "swiss-ai/Apertus-8B-2509"
+    historical_revision: "96982d7c559fab9c2b19b6934ad28499c5c341e9"
+    historical_revision_label: "step2627139-tokens15T"
+    historical_revision_pinned: true
+    selected_layers: [2, 16, 31]
+
+linguistic_features:
+  parser:
+    system: "UDPipe 2"
+    model: "english-ewt-ud-2.17-251125"
+    model_license_recorded_in_conllu: "CC BY-NC-SA"
+    model_redistributed: false
+  profiling_ud_descriptors: 43
+  frequency_summaries:
+    - min_frequency_class
+    - median_frequency_class
+    - max_frequency_class
+  frequency_proxy_provenance:
+    tokenizer_model: "EleutherAI/pythia-1.4b"
+    tokenizer_revision: "main"
+    packaging_time_main_commit: "fedc38a16eea3bd36a96b906d78d11d2ce18ed79"
+    inventory: "Pile token-frequency inventory"
+    inventory_exact_build_provenance_retained: false
+    model_specific: false
+  total_predictors: 46
+  profiling_ud_exact_revision_retained: false
+  raw_length_controls:
+    - n_sentences
+    - n_tokens
+    - tokens_per_sent
+    - char_per_tok
+
+analysis:
+  cross_validation:
+    splitter: "KFold"
+    folds: 5
+    shuffle: true
+    random_state: 42
+    source_stratified: false
+  preprocessing:
+    imputation: "fold-local median"
+    scaling: "fold-local StandardScaler for linear models"
+  regression:
+    ridge:
+      alpha: 1.0
+    random_forest:
+      n_estimators: 300
+      min_samples_leaf: 2
+      random_state: 42
+  classification:
+    label_rule:
+      low_quantile: 0.20
+      high_quantile: 0.80
+      middle_rows_excluded: true
+    logistic_regression:
+      class_weight: "balanced"
+      max_iter: 3000
+      random_state: 42
+    random_forest:
+      n_estimators: 300
+      min_samples_leaf: 2
+      class_weight: "balanced_subsample"
+      random_state: 42
+  permutation_importance:
+    repeats: 8
+    random_state: 42
+    evaluation: "held-out fold"
+    regression_metric: "R2 decrease"
+    classification_metric: "ROC-AUC decrease"
+    selected_top_n: 5
+  ale:
+    evaluation: "held-out rows only"
+    initial_quantile_bins: 10
+    minimum_test_rows_per_bin: 15
+    effect_unit: "training-target standard deviations"
+    contrast_quantiles: [0.10, 0.90]
+    bootstrap_replicates: 1000
+    minimum_agreeing_folds: 4
+    approximately_monotonic_threshold: 0.8
+
+reproducibility_boundaries:
+  manuscript_source_included: false
+  raw_text_dataset_included: false
+  table_13_quoted_excerpts_included: true
+  representations_included: false
+  historical_raw_checksums_retained: true
+  compressed_download_checksums_retained: false
+  figure_2_archived_layer: 12
+  figure_2_manuscript_caption_layer: 16
+  paper_era_apertus_aggregates_match_pinned_bundle: false

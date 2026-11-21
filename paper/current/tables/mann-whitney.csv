@@ -1,0 +1,9 @@
+cell_1,cell_2,cell_3,cell_4,cell_5
+Profiling-UD feature,Association,Feature value,ESS ID,Representative excerpt
+upos_PROPN,High → high ID,19.5%,179.520,“Any piece about New York City has a heavyweight champion to contend with-E.B. White's Here Is New York-but André Aciman's Shadow Cities comes out swinging.”
+char_per_tok,High → low ID,9.75,43.780,“Plasma levels of trimethoprim and sulfonamide after administration of trimethoprim-sulfamethoxazole and trimethoprim-sulfamoxole.”
+upos_NOUN,High → low ID,48%,50.740,“Determination of tricarboxylic acid cycle acids and other related substances in cultured mammalian cells by gradient ion-exchange chromatography with suppressed conductivity detection.”
+dep_nsubj,High → high ID,14.3%,209.190,"“Mine, too, I've felt that there is more to the Yithians than most other mythos races they're not just purely malicious or uncaring as so many seem to be.”"
+verbal_root,High → high ID,100%,186.820,"“When I heard that Children Of Bodom was putting out a new record, I was both excited and hesitant at the same time.”"
+n_tokens,High → high ID,98,195.390,"“We hear it from you all the time and we feel it too: community is what we do best. We bring together a diverse group of creative people who are living lives they love and YOU are part of that. You connect, share, motivate, and inspire each other. You are movers & shakers. You are the ones who burn the midnight oil and wake up at the crack of dawn. You save your money to invest in your future. You load up trucks and package delicate things.”"
+upos_PRON,High → high ID,16.7%,198.890,“In other news: I've re-discovered my love for Bismuth.”

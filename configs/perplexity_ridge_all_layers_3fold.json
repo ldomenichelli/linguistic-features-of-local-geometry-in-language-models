@@ -1,0 +1,18 @@
+{
+  "aggregate_level": "sentence_layer",
+  "features": [
+    "log_perplexity"
+  ],
+  "group_cols": [
+    "split_name",
+    "layer_name"
+  ],
+  "k": 1000,
+  "reference_size": 15000,
+  "n_splits": 3,
+  "n_modeling_rows": 96000,
+  "targets": [
+    "mle",
+    "ess"
+  ]
+}

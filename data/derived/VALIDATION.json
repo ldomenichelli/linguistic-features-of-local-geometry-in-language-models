@@ -1,0 +1,488 @@
+{
+  "checkpoint_targets": {
+    "artifact_checks": {
+      "checkpoint.apertus.tokens-000210b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000210b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000210b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000420b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000420b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000420b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000840b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000840b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-000840b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-001680b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-001680b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-001680b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-003570b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-003570b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-003570b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-007232b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-007232b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-007232b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-015000b.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-015000b.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.apertus.tokens-015000b.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.final-main.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.final-main.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 1,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.final-main.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-000512.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-000512.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-000512.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-008000.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-008000.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-008000.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-021000.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-021000.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-021000.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-055000.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-055000.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "checkpoint.pythia.step-055000.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      }
+    },
+    "checkpoints_by_family": {
+      "apertus": 7,
+      "pythia": 5
+    },
+    "rows": 72000,
+    "unique_keys": 72000
+  },
+  "feature_alignment": {
+    "predictors": 46,
+    "query_index_max": 1999,
+    "query_index_min": 0,
+    "rows": 1994,
+    "text_fingerprints": 1994,
+    "unique_query_indices": 1994
+  },
+  "main_targets": {
+    "artifact_checks": {
+      "main.apertus.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.apertus.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.apertus.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.pythia.layer-16": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.pythia.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 1,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.pythia.layer-31": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.qwen.layer-14": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.qwen.layer-2": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      },
+      "main.qwen.layer-27": {
+        "aligned_feature_rows": 1994,
+        "alignment_mismatches": 0,
+        "null_metrics": {
+          "pointwise_ess": 0,
+          "pointwise_fci_id": 0,
+          "pointwise_mle": 0
+        },
+        "rows": 2000
+      }
+    },
+    "models": [
+      "apertus",
+      "pythia",
+      "qwen"
+    ],
+    "rows": 18000,
+    "unique_keys": 18000
+  },
+  "privacy": {
+    "personal_identifiers": 0,
+    "provenance_path_columns": 0,
+    "raw_text_columns": 0,
+    "text_representations": "sha256-only-in-feature-table"
+  },
+  "status": "passed"
+}

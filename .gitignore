@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+.venv-*/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*~
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw/interim text and large model artifacts
+data/raw/
+data/interim/
+artifacts/
+outputs/
+work/
+cache/
+.cache/
+offload/
+models/
+tokenizers/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.jsonl
+*.jsonl.zst
+*.conllu
+
+# Generated analysis (reference outputs remain tracked)
+results/generated/
+results/paper/
+logs/
+*.log
+
+# Local anonymity/audit reports
+anonymity-audit*
+secret-scan*

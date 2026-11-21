@@ -1,0 +1,14 @@
+cell_1,cell_2
+Layer,Five largest held-out RF permutation importances (Δ R²)
+Pythia-6.9B,
+2,"n_tokens (.159), upos_PROPN (.041), upos_PUNCT (.033), dep_nsubj (.020), char_per_tok (.018)"
+16,"upos_NOUN (.149), char_per_tok (.091), upos_PRON (.074), upos_PROPN (.067), verbal_root (.044)"
+31,"upos_NOUN (.075), upos_PROPN (.061), verbal_root (.040), upos_PRON (.032), dep_nsubj (.020)"
+Qwen2.5-7B,
+2,"n_tokens (.163), verbal_root (.042), upos_PUNCT (.033), char_per_tok (.019), upos_NUM (.015)"
+14,"char_per_tok (.136), upos_PRON (.107), dep_nsubj (.053), upos_PROPN (.047), upos_NOUN (.030)"
+27,"verbal_root (.138), upos_NOUN (.125), upos_PROPN (.123), dep_nsubj (.029), char_per_tok (.027)"
+Apertus-8B,
+2,"n_tokens (.199), verbal_root (.032), n_sentences (.019), upos_PUNCT (.012), char_per_tok (.010)"
+16,"upos_NOUN (.137), dep_nsubj (.054), char_per_tok (.039), upos_PROPN (.037), verbal_root (.032)"
+31,"upos_PROPN (.148), dep_nsubj (.055), n_tokens (.040), verbal_root (.034), upos_PRON (.026)"

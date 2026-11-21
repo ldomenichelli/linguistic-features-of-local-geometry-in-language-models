@@ -1,0 +1,5 @@
+cell_1,cell_2,cell_3,cell_4
+Model,Early,Intermediate,Late
+Pythia-6.9B,2: .088,16: .373,31: .299
+Qwen2.5-7B,2: .095,14: .490,27: .348
+Apertus-8B,2: -.097,16: .159,31: .124

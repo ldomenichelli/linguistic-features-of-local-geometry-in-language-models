@@ -1,0 +1,47 @@
+family,feature,definition
+Surface and lexical composition,n_sentences,Number of sentences detected by the UD parser.
+Surface and lexical composition,n_tokens,"Number of UD word tokens, distinct from the number of language-model subword tokens."
+Surface and lexical composition,tokens_per_sent,Mean number of UD word tokens per parser-detected sentence.
+Surface and lexical composition,char_per_tok,Mean number of characters per non-punctuation UD token.
+Dependency-tree geometry,avg_links_len,"Mean absolute head-dependent distance in UD tokens, excluding punctuation dependencies."
+Dependency-tree geometry,max_links_len,"Maximum head-dependent distance, using the same dependency filtering."
+Dependency-tree geometry,avg_max_depth,Mean maximum root-to-leaf dependency-tree depth across parser-detected sentences.
+Clausal and verbal-predicate structure,avg_prepositional_chain_len,Mean depth of recursively embedded prepositional or adpositional modifier chains.
+Clausal and verbal-predicate structure,avg_subordinate_chain_len,Mean depth of recursively embedded subordinate-clause chains.
+Clausal and verbal-predicate structure,avg_token_per_clause,Mean number of UD tokens per clause.
+Clausal and verbal-predicate structure,avg_verb_edges,"Mean number of eligible dependency links attached to each verbal head, excluding punctuation and copular links."
+Clausal and verbal-predicate structure,subordinate_proposition_dist,Percentage of clauses classified as subordinate rather than main clauses.
+Clausal and verbal-predicate structure,verbal_root_perc,Percentage of parser-detected sentences whose dependency root is tagged as VERB.
+Linear order,subj_pre,Percentage of subject dependents preceding their governing verbal head.
+Linear order,obj_post,Percentage of core-object dependents following their governing verbal head.
+Linear order,subordinate_post,Percentage of subordinate-clause heads following their governing head.
+Dependency-relation distributions,dep_dist_compound,Percentage of UD dependency relations labelled compound.
+Dependency-relation distributions,dep_dist_nmod,Percentage of UD dependency relations labelled nominal modifier.
+Dependency-relation distributions,dep_dist_nsubj,Percentage of UD dependency relations labelled nominal subject.
+Dependency-relation distributions,dep_dist_obj,Percentage of UD dependency relations labelled core object.
+Dependency-relation distributions,dep_dist_obl,Percentage of UD dependency relations labelled oblique nominal.
+Morphosyntactic information,upos_dist_ADJ,Percentage of UD tokens tagged ADJ.
+Morphosyntactic information,upos_dist_ADP,Percentage of UD tokens tagged ADP.
+Morphosyntactic information,upos_dist_ADV,Percentage of UD tokens tagged ADV.
+Morphosyntactic information,upos_dist_AUX,Percentage of UD tokens tagged AUX.
+Morphosyntactic information,upos_dist_CCONJ,Percentage of UD tokens tagged CCONJ.
+Morphosyntactic information,upos_dist_DET,Percentage of UD tokens tagged DET.
+Morphosyntactic information,upos_dist_NOUN,Percentage of UD tokens tagged NOUN.
+Morphosyntactic information,upos_dist_NUM,Percentage of UD tokens tagged NUM.
+Morphosyntactic information,upos_dist_PART,Percentage of UD tokens tagged PART.
+Morphosyntactic information,upos_dist_PRON,Percentage of UD tokens tagged PRON.
+Morphosyntactic information,upos_dist_PROPN,Percentage of UD tokens tagged PROPN.
+Morphosyntactic information,upos_dist_PUNCT,Percentage of UD tokens tagged PUNCT.
+Morphosyntactic information,upos_dist_VERB,Percentage of UD tokens tagged VERB.
+Morphosyntactic information,lexical_density,"Percentage of word tokens assigned a content-word UPOS tag: NOUN, VERB, ADJ, or ADV."
+Auxiliary morphology,aux_mood_dist_Ind,Among tokens tagged AUX: percentage marked Mood=Ind.
+Auxiliary morphology,aux_num_pers_dist_Sing+3,Among tokens tagged AUX: percentage jointly marked Number=Sing and Person=3.
+Auxiliary morphology,aux_tense_dist_Pres,Among tokens tagged AUX: percentage marked Tense=Pres.
+Lexical-verb morphology,verbs_form_dist_Inf,Percentage of VERB tokens marked as infinitives.
+Lexical-verb morphology,verbs_form_dist_Part,Percentage of VERB tokens marked as participles.
+Lexical-verb morphology,verbs_mood_dist_Ind,Percentage of VERB tokens marked for indicative mood.
+Lexical-verb morphology,verbs_tense_dist_Past,Percentage of VERB tokens marked for past tense.
+Lexical-verb morphology,verbs_tense_dist_Pres,Percentage of VERB tokens marked for present tense.
+Tokenizer frequency controls,median_frequency_class,Median frequency class across model tokens in the input.
+Tokenizer frequency controls,max_frequency_class,"Largest frequency class in the input, corresponding to its rarest token under the frequency table."
+Tokenizer frequency controls,min_frequency_class,"Smallest frequency class in the input, corresponding to its most frequent token under the frequency table."

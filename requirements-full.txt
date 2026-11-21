@@ -1,0 +1,22 @@
+# Recorded full research environment (CPython 3.10.12).
+-r requirements-analysis.txt
+
+accelerate==1.12.0
+datasets==4.1.0
+hdbscan==0.8.41
+huggingface-hub==0.36.0
+numba==0.60.0
+plotly==5.24.1
+sentence-transformers==4.1.0
+spacy==3.8.7
+streamlit==1.55.0
+sympy==1.14.0
+tabulate==0.9.0
+textstat==0.7.13
+tokenizers==0.22.1
+torch==2.8.0
+transformers==4.57.3
+umap-learn==0.5.6
+
+# Exact VCS revision recorded by the installed package metadata.
+pyFCI @ git+https://github.com/vittorioerba/pyFCI.git@20280aa8c9ed619ee9e30a2e425d46a282a7419b

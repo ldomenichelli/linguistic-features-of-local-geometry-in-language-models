@@ -1,0 +1,3027 @@
+{
+  "version": 1,
+  "mode": "archived_numeric_results",
+  "sources": [
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-12.k-1000.ref-15000",
+      "sha256": "ca0190504776faedc251c61c085607a47986980a3a5980539ff659e736cc4e98"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-12.k-1000.ref-15000",
+      "sha256": "e40ff7b43e3a0217d55fbabfa415919f3dcd18a67b47118f94d9407da6312e6a"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-12.k-1000.ref-15000",
+      "sha256": "11051b1c17d025175857912728598dd13ae701f9d638fd732d6a0723e87a477c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-12.k-100.ref-15000",
+      "sha256": "237c6eb73b706504fd5949c4c83ad4583e789221dc635a0bb8a3c1ac8098b7e3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-12.k-10.ref-15000",
+      "sha256": "e6ba5ee21207f0762ceddacb55eed3327978572b45255c330ed6f1dc781bf007"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-12.k-500.ref-15000",
+      "sha256": "f8b127ac65328e2aaa9f321a44a679fd4211236651df56e05e0491c579437da1"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-12.k-500.ref-15000",
+      "sha256": "71726505cb35b7c707f48d74f8593169a85c33d1d2b3acbd1569c86b85a4fa57"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-12.k-500.ref-15000",
+      "sha256": "bb3d7e7bc3837f8036d7dee327fd36f5a61d194a758b2e0b62a9f7c11ce6e573"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-13.k-1000.ref-15000",
+      "sha256": "1ebd28cc14cfa6e9df00079e3ba507f48f4c6ba93318eab6156a5055ecde8e70"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-13.k-1000.ref-15000",
+      "sha256": "2843f62fb9042a3b045fb209fecbe307c31330a338188901b463493dd30e5280"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-13.k-1000.ref-15000",
+      "sha256": "c1498b38de0e3ae5943d4d590bced5d471c015c62169b59f18ed0e008c0345bb"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-13.k-100.ref-15000",
+      "sha256": "c1e244fe24f03be5ea874ee29340fb5748fd2f2a0c05e90802e0894aa8d08f1a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-13.k-10.ref-15000",
+      "sha256": "2be5fc0f87356234bf96d197830640b7af657afc8371db7461e47495f132feac"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-13.k-500.ref-15000",
+      "sha256": "141094935cebcbe78ed96c34ba362c88404541b466e476bebc9cd4e7282c6344"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-13.k-500.ref-15000",
+      "sha256": "4746bac84fa7f811cbf2571f44de3bae00c27de5a2453fcf71b1bf2f6be8a281"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-13.k-500.ref-15000",
+      "sha256": "cfd68c88ff657228a8d88baf6969020c3dc543c65251e6863fe512ba37198753"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-1.k-1000.ref-15000",
+      "sha256": "66744d91c97eae583654a3176b621ac62e9496c5b39ae53b8afb4f216f7297ba"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-1.k-1000.ref-15000",
+      "sha256": "e5266b4eb4a1fac2bb09ec2687982cd7d7f623ba63bd24b92f1291673528606a"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-1.k-1000.ref-15000",
+      "sha256": "dbdc4629e385ed822cc49df7d946b59855136efd9227e9a7059efe6451a7daa6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-1.k-100.ref-15000",
+      "sha256": "80355160041b6a5bdba9b39480debcf5590bab11f9a439019efe4907cdf6c6c3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-1.k-10.ref-15000",
+      "sha256": "834f41dd66f1ae8c5a070423eb6745bd388512a6f80448bede5b2b53e8ce15c5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-1.k-500.ref-15000",
+      "sha256": "8fc945a2e4767c9e8d49dd5c0205696feba73d9379dde757a42eb1e84b7ea2f6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-1.k-500.ref-15000",
+      "sha256": "7f75c6e78e73350025172b68f645a36c5cac7a2fcbc366dfeeadf0704e50cb59"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-1.k-500.ref-15000",
+      "sha256": "056f5f4203493f507fad505dcb477924d1ef4b079c3e3e6494f683fa263ee39c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-23.k-1000.ref-15000",
+      "sha256": "6cfe15fd06e0bc0431a036b91f45427c09890a873f17a6498e933305610a1ad4"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-23.k-1000.ref-15000",
+      "sha256": "20aace8b91dfda006cc822abfb476851d348c3a6b9e2f6fabc67f255ca8a2f25"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-23.k-1000.ref-15000",
+      "sha256": "49eddb5ac4cc016e3b6e35f05c3fd40fbc0b6db84cc5e6864bde46e8c0d68267"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-23.k-100.ref-15000",
+      "sha256": "f8c4efd6430cd37afe4c49662c81e381244cd2983d9280d7eddf113c2da7e6af"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-23.k-10.ref-15000",
+      "sha256": "35d10c96692b5a11c1c3d820746d9cbf1886ab7aa53229c60f161b8a5fd8b35a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-23.k-500.ref-15000",
+      "sha256": "a7f920c38fc3df2ad0cd59c5d56ea4dcf56b2b32aad3a91539836dff1baa07fe"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-23.k-500.ref-15000",
+      "sha256": "cd9a4135557d6f3324df7e812087f089c9173deb76cdb5dfe513f6a3fb41152d"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-23.k-500.ref-15000",
+      "sha256": "fe95697b7a7fccce71ef893094eb4aa8b819859ec9690f3c5729d8435241c09f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-24.k-1000.ref-15000",
+      "sha256": "1510474d4603b5cd4b39cf73106c4bfe39866722564f2b1c3376418afd4b086a"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-24.k-1000.ref-15000",
+      "sha256": "9474551c9b9405c50d0e1d6b34b0639a7f8b95caa393e63f2745c0ef831da3cb"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-24.k-1000.ref-15000",
+      "sha256": "a57f0557d57ebed2e0f4d6e3904a8ef1d795241b247f8229d4395649713c813e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-24.k-100.ref-15000",
+      "sha256": "40d54eff9a57f7caa50ce42272a9072194784e9348187a24cccdbb5b09e105e7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-24.k-10.ref-15000",
+      "sha256": "e3700529b66236f3150c3264db72958d41d9c6f7374536a8c772a82bbc5d683f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-24.k-500.ref-15000",
+      "sha256": "521369419da293f3ed9ed0a1c201810bd85fd23e2803906ecc8eae8a25079616"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-24.k-500.ref-15000",
+      "sha256": "2a2c0957c0ccadb63c606f87792f8caea7ab66472997b31d7a71def95daf3fb6"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-24.k-500.ref-15000",
+      "sha256": "9ba4d1caacf892661415037e467370bc23f7b377e7597a0dfd1e9eeb340c22d3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-2.k-1000.ref-15000",
+      "sha256": "77171c704ecc4e20c4a1d70c0c08999803914ee7c058243c0595a4d69ae7aaa8"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-2.k-1000.ref-15000",
+      "sha256": "99903aba5782e312e9db18f281c1ba1db4d513b1ee75848919d70d1ed31d35b1"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-2.k-1000.ref-15000",
+      "sha256": "1547bc9a8beb474aa8d91f9d431d690af4a2742fb443b8d6bee3de3d802fe107"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-2.k-100.ref-15000",
+      "sha256": "dd3c75eb7edc5baa8a64aec1f08947c9547b446c363816fa06bb9c8232b2fb79"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-2.k-10.ref-15000",
+      "sha256": "67cdccf85389ea0b089906ce989d9e4663f2e024543419310ab1bd383f422ee6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-1.4b.id.layer-2.k-500.ref-15000",
+      "sha256": "4e1b058e0b77836173be4158045b74e291475d0f0de4a5f12ffb4d400e8c8208"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-1.4b.id.layer-2.k-500.ref-15000",
+      "sha256": "338e22b94194e9d34b2ca79784f07e48096a4f4799f187272269f4dc91182396"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-1.4b.id.layer-2.k-500.ref-15000",
+      "sha256": "ff001d5255da5667f247a68c48314a26221f43592b469c0a740c4e2230d83209"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-16.k-100.ref-15000",
+      "sha256": "910731dd633f470d8dc5993058b768407b4a495e46f360d3e3b939a03d7f1fde"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-16.k-100.ref-15000",
+      "sha256": "cdebe80249db56a60b17584426fdc65a216749eafd4eb384e732f6caee5c91fa"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-16.k-100.ref-15000",
+      "sha256": "85f69896bcea6a518bdd9ef482d39f10180bd06a47b1468e7badd34a78c49863"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-16.k-10.ref-15000",
+      "sha256": "6b2e88f625d4746563b59a98095f506796e7455fc6a3413f06e6d9732888404c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-16.k-10.ref-15000",
+      "sha256": "cfb696f7cb02967b09c191dba74524a3248aa8ef5cbe865b5d5cd42d3158aff1"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-16.k-10.ref-15000",
+      "sha256": "a9d4e692d79ba89e4098eb55d40eabd00d1572fb485d97731f7b97b6723908b8"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-16.k-2000.ref-15000",
+      "sha256": "7db2ee289f0f27d057efb987abdb306829433ee1a97e6d5684bb2f9d9b8eed7d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-16.k-2000.ref-15000",
+      "sha256": "c4d487b4b309fa48a276430025c37f047cfc33cf98502f6fb2143ca4af4085d8"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-16.k-2000.ref-15000",
+      "sha256": "41b8d116356f841c73a7345886bb615008d2d4af4811838b88425fde84cc06ec"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-16.k-3000.ref-15000",
+      "sha256": "24a0c565c7f219495b605bc1d9356b6b3d40431f6ad179e684b7c0cd8fd85f4d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-16.k-3000.ref-15000",
+      "sha256": "cab2c2052f9482edebaa425bc4f13b8e3f3b901484c7cda562738e71202aabe3"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-16.k-3000.ref-15000",
+      "sha256": "33c99b0c91e38432967d5923218199368783a5e3341d070e92c920f03be3c2b5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-16.k-500.ref-15000",
+      "sha256": "361a29d3f213888711de1465000e5c87689d2df3267c251d81e2933ec7067ebb"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-16.k-500.ref-15000",
+      "sha256": "995fe108e0347c838c273aa53cd2fa88795b4f1bf5b560332ae9526240147f64"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-16.k-500.ref-15000",
+      "sha256": "31ca67b258e05b8f3832aaf34a63270b88278d0061dc2c148ec615ff10a31270"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-17.k-100.ref-15000",
+      "sha256": "d9f2640e62d65baf4c1749e3e3a438bdd87e0b45b44c401c3372ab553551df8d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-17.k-100.ref-15000",
+      "sha256": "19e1cebe6280bcc2178ea65202583beff689898c6980b66a15e306b71ac1236c"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-17.k-100.ref-15000",
+      "sha256": "9d1780a2065233d0647b047afa84b525ec75c0cdb3c987e92ef5083de9a8212f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-17.k-10.ref-15000",
+      "sha256": "e72a225dab5074717df090772992f3c0768793a909bf40ce3725f0db2d3467c5"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-17.k-10.ref-15000",
+      "sha256": "e04cd487095d2d649bc38ee7bc67e9b88b79c0c0cbf36f8e4b7edfec1a701c06"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-17.k-10.ref-15000",
+      "sha256": "51506f44a04385ba0d9ef6c9f25e2a07f77d08916ab95bb152f57a766b3fb4a9"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-17.k-2000.ref-15000",
+      "sha256": "0eaa3ae7c547cd2939808c76fe177b563531dbbce0f71c47c4a2f68df9bb05cf"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-17.k-2000.ref-15000",
+      "sha256": "6b316f8636f229c8fcd0090bd3d0861ad20af242d650e8ee10ca6afc1a71c402"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-17.k-2000.ref-15000",
+      "sha256": "73402f964465d6b71a9386ff38d91a48249202aa14cffb6849d2a86d1dbb29ae"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-17.k-3000.ref-15000",
+      "sha256": "576ba1427adfa2a9e5a3f1bdc91198099df709e8888f537f63051093663162c6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-17.k-3000.ref-15000",
+      "sha256": "5408b8ede1b5a0872333aa4e74315e3ca2f122732358f432b8bd1cf0ec3209e6"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-17.k-3000.ref-15000",
+      "sha256": "31a4674d1c46a1c09d6a4b2b46111d6128cdad528d6b30e9faec6d2c9656e49d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-17.k-500.ref-15000",
+      "sha256": "ec8fa06f2825d3da1dce5367a0ad702c4c8d9e7b6e382724a8e8dfa5f480b29f"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-17.k-500.ref-15000",
+      "sha256": "5a401ee93a2a0f4783f1cf1a351788b463c25b01e6e8a05e24e5599b4f5a26a9"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-17.k-500.ref-15000",
+      "sha256": "262e0c07a5d6ed98b318322f0467e8927634d53db50e967d07888a06ec1c66e1"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-1.k-100.ref-15000",
+      "sha256": "fdd0cd2c9a96016489b004e06e7a551ecf9f01e418e9afdd8e2ff61ce505f129"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-1.k-100.ref-15000",
+      "sha256": "1f070b7f6dff08ad25a2439a7d142808bcce474651ade4c422d76418e840d965"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-1.k-100.ref-15000",
+      "sha256": "9f197916c26bf8d882663147ca339e0b74f47093610bb876009d34b35368532d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-1.k-10.ref-15000",
+      "sha256": "e84ffd84dff8498e675aafca10f959f5407296431bf627fd1e93bf5dd8cbe339"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-1.k-10.ref-15000",
+      "sha256": "ec12edd7dbc2d44a3c6e669cd9c5d8ba862a2693dab8313476214e0b24045287"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-1.k-10.ref-15000",
+      "sha256": "c1b342138db0317cee78305c989ea5edf29454a395cccb99bdb4f743ddf7bbf4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-1.k-2000.ref-15000",
+      "sha256": "e2b9f9739e6b359366322a7fa6e7360ff56e77495edfaffbbeb357b0c45f25d3"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-1.k-2000.ref-15000",
+      "sha256": "0a30a4fa08b2cadb41fb8c1164bd1f320e1dd73f49a28401a0528929c5c94442"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-1.k-2000.ref-15000",
+      "sha256": "5923305a3da6ced2856c3e274eb5afa01769a3389fe8d3686c82618adfd520f4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-1.k-3000.ref-15000",
+      "sha256": "8510311283aa218231b2de72ca83245b167bbf87ec5aeac1e6fcce7baf43e22a"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-1.k-3000.ref-15000",
+      "sha256": "d85c0304f503e19d7ee4a79b30c63048ac66310bcea49a76d149fbfa9ee31e83"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-1.k-3000.ref-15000",
+      "sha256": "5536e6ebbb092097e4040a80b2d47b22578673a0acb18e3578214fdf204954d7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-1.k-500.ref-15000",
+      "sha256": "9a3e120f8f94864c1d11b5a1bb02e792819fed3696aab2540f06a9639a48d179"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-1.k-500.ref-15000",
+      "sha256": "e9a1aa16ab257dc98a78bdb8bb26c5829dd13a64aaa2a48ee1cf1e23ebcfda37"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-1.k-500.ref-15000",
+      "sha256": "81707ab0ce17ca487dc2a487b06beb7e22f4bf0f1d6be04be46631cd133dae0e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-2.k-100.ref-15000",
+      "sha256": "950c2c61ffa6486e4fda293c6751d5aa885947d3641b6e737e1b943f472e1f9d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-2.k-100.ref-15000",
+      "sha256": "353b92a027d141aa32f2db39aaf58bf2ba31286fbb50f9700089fc298133732d"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-2.k-100.ref-15000",
+      "sha256": "87d40d4c471cb0fa581dd1edce20c7955850505c2051c828297a3cb57a7ff6f1"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-2.k-10.ref-15000",
+      "sha256": "0049e18898377f63f9d74067a8bdae4ffc5ea23b275cea756d27da8d02ec843d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-2.k-10.ref-15000",
+      "sha256": "ec93622e21408a47833b64e6054cc110eaa36fb7d57bdb4e6d23f560101b9509"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-2.k-10.ref-15000",
+      "sha256": "8041522a3dae71fc4dad8ed260199c61323d83fc91a991e0a2655875ade2ab59"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-2.k-2000.ref-15000",
+      "sha256": "0c613fa551ffa23a1d260c6b3c43d2a36e11dec255fc99e44ddf1309e75391ad"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-2.k-2000.ref-15000",
+      "sha256": "1f752b39c725aa780c037ae8aa5bb1ceb87079ed910a3463c9f81951e31cdf27"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-2.k-2000.ref-15000",
+      "sha256": "6651123c40928792a9cd6a787de7a2466b635590adff55fd610a0f404e764faf"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-2.k-3000.ref-15000",
+      "sha256": "4f349f606e62a6a2c14bd39ca280bc5fe4de75a2e3b22ffcb169141c65875f02"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-2.k-3000.ref-15000",
+      "sha256": "f7e9b9a57d93c97e59a813d5604e0e722e9fd4a8b80bc257fc68504f67717c1e"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-2.k-3000.ref-15000",
+      "sha256": "aaf559eb847d51de2cac79896bd10675d546aeaa384b7cb0ba0f3cbe96bf7ec8"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-2.k-500.ref-15000",
+      "sha256": "ae6cc5089fbeada7c32acf901dd4ee4055e26298157b965d0fda70a2e2b47eff"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-2.k-500.ref-15000",
+      "sha256": "f3774f57b62f5776dce3499395ae16dab73ae4f6ff767caa0e4ff142f169348c"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-2.k-500.ref-15000",
+      "sha256": "6136e4f5adfca8a1a7d183875dd473f4489550b345da0edf0faf25ea4bedcf17"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-31.k-100.ref-15000",
+      "sha256": "fc21df2ad416e9badeb909e28989534a5b2d3d510cca9c7412433f467d93a517"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-31.k-100.ref-15000",
+      "sha256": "c8fd8d5fc267cc8c37e154c1fa0457d05f3c38b83cc076468d3f035a66c24b63"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-31.k-100.ref-15000",
+      "sha256": "12803b029695945e82ce3d3f11d8f4e05d320f15e457f5190ae1573bcde879c6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-31.k-10.ref-15000",
+      "sha256": "19b9e52c9821fe03b91d68ab092f8cd018b91e549de1079f60e7a61a9e3d3e7b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-31.k-10.ref-15000",
+      "sha256": "9c7dbeaddca4ec9ecf160b57a44f52461106a8a9d571a3d6c0665a5b836a8364"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-31.k-10.ref-15000",
+      "sha256": "58e066a48624ae98c7380df96d8718cd1edf8266a45cd728722c98cfbf430269"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-31.k-2000.ref-15000",
+      "sha256": "49535242227a128ce3f26a2c59fa407909d2675e16f58fdcef43bcf14b67c2f9"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-31.k-2000.ref-15000",
+      "sha256": "3e46e808a9f1c229a0ddd66e9ec253aaabef9234fc0bb3873baf546dcd97ee28"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-31.k-2000.ref-15000",
+      "sha256": "3f5efac209d864b75ed4bf2ff1377255ac2c09456903d470ff5b16185e17870d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-31.k-3000.ref-15000",
+      "sha256": "a0ba0f7b2b0b35410181e857d954611a4a79f4b7ef9578cb0d2ba77e503216fe"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-31.k-3000.ref-15000",
+      "sha256": "858fb338d4ce06130ddf565df97870942f7a53916ee3adc38e32735a0017dbc9"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-31.k-3000.ref-15000",
+      "sha256": "0afbe2f68cfd960803ace7b29eb8f022c9b7c626c60072aa60b2ed30c71c95fa"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-31.k-500.ref-15000",
+      "sha256": "1a8c9d2453dd566f3cd954b4dc727854b29d017b98cdcf58821e9217662c249c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-31.k-500.ref-15000",
+      "sha256": "15a07f58ae520cdcbd1d8fac98699feebe0be3f44c062d9ae0bd66143db68728"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-31.k-500.ref-15000",
+      "sha256": "a95b25e57b5394b4dddb9c02ee6b4e3b63f155113c6d1ade3243451cd4ae8127"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-32.k-100.ref-15000",
+      "sha256": "eeb66a333d9d70132fef8a92e786ad24c2ff6f0f25b513be1a864859d09a5ffb"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-32.k-100.ref-15000",
+      "sha256": "602dcc4832c4b70eff5a74627d78cc6ec2e97685306d1c4afacff6ad9342a61a"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-32.k-100.ref-15000",
+      "sha256": "0100b5bac82e7ae0d8e5682152aa9619a4c001a49b9bbbd138aa9bc7d2c03cb3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-32.k-10.ref-15000",
+      "sha256": "6ebeea0e53fe15c0e2a675bd7607f659841c273f5cf100c84191454a3422372d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-32.k-10.ref-15000",
+      "sha256": "4c38e2af832f8d7ffa6206cc208df1aeb99496482b2426dba15a89f11cbe65ab"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-32.k-10.ref-15000",
+      "sha256": "f571a1c1625e0af323abb4f29bde2b8989c5ed6621e16385496341f7f28122ab"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-32.k-2000.ref-15000",
+      "sha256": "baae738d8e4801ae186282dbf08a5846d3895d54567565a51e785acb8081befc"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-32.k-2000.ref-15000",
+      "sha256": "f49a02e01efc59956582c7e0a113b0efc78fe500c1a98004fde0c74defd0a355"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-32.k-2000.ref-15000",
+      "sha256": "3001ffaa712e22177232df2be2a27ef1590218ce0d9021e47d303ba43e33834d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-32.k-3000.ref-15000",
+      "sha256": "6534e2e053871441539be8a78096c4cc01d3b580b2735426ca66b27e84321f6d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-32.k-3000.ref-15000",
+      "sha256": "396666e2edb6308fa5ec59c3d1c8e47c87a1b08dcb6e114c8de574e104012fe8"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-32.k-3000.ref-15000",
+      "sha256": "b7fc12168b57f067ee3a6e9e321e8d41c91272d0d5e80a8edf5507cf38203c19"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.ess.layer-32.k-500.ref-15000",
+      "sha256": "0254ae010e74c209134bd6e0109dbcdfc9a7e514630a1c338bf03735c7879f27"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.ess.layer-32.k-500.ref-15000",
+      "sha256": "d3d0ab7da5ded320ca7b2e545aff63e958b589f5bc2c5d56456475e97749ae12"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.ess.layer-32.k-500.ref-15000",
+      "sha256": "204e02382f2ea6ee2ff8f3faaeaf404d6ee8fc52889e573fe9ec83cdc1b36ca0"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-16.k-100.ref-15000",
+      "sha256": "e1173d74438ba01c9e766ba05cc835b14beb472fd07f48377b1cb880189719ca"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-16.k-10.ref-15000",
+      "sha256": "9f74c7cfd9b2dab65c0e62aa63449856bee72a53e9225f3061a12e12587f0c90"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-16.k-2000.ref-15000",
+      "sha256": "1bb4da17c0c7c21785b42c2f586b39327f959a01233fd0f4dc2cc0bb40ae4a3a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-16.k-3000.ref-15000",
+      "sha256": "86cf7bc371d70201e4ccff421965fc00b779a6c36e05822b8634de057cb80e2d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-16.k-500.ref-15000",
+      "sha256": "152be4eacd8d44ccc33ca4ca8b9c8d50ccbe2585d014faf817396dee2fcf9fdf"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-17.k-100.ref-15000",
+      "sha256": "34cc1ac1ee5b69e2d1976ecf595148f0ad7daf40f35206d4eb5b7c1709f7ff5b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-17.k-10.ref-15000",
+      "sha256": "d72eb21b37b24cbc6fb34736491b9620ca7e4748700a662186f5c495413ec8e9"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-17.k-2000.ref-15000",
+      "sha256": "c4e7289bce95214568242c09cc0b47e58a25a5c7d3fb6fd9f2c910b916825c5f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-17.k-3000.ref-15000",
+      "sha256": "ef71df3d46500508af2ea31fc4d6ba831c821e8bd6766029bf6d5aeade6c3f5d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-17.k-500.ref-15000",
+      "sha256": "b9a01b8aac1bcba3f3f01a974b89b2afec6508eb191dca0f94fb568c8dd50ca0"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-1.k-100.ref-15000",
+      "sha256": "e36f106439e7af29985c576991cd6e716a0aab7d686940502a97cac1077e9fa6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-1.k-10.ref-15000",
+      "sha256": "f471f946f5749beac18dd34f178cf7e5c25400074dbeffedc78f6b783249d148"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-1.k-2000.ref-15000",
+      "sha256": "d86f5f0e916c690253bea391a48ccde46c9f5b394eb360d1452d6a4ed73262aa"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-1.k-3000.ref-15000",
+      "sha256": "113b3ad90ee340408810e1195089c55d692dad98bd92b3ae85023f5d41c9f424"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-1.k-500.ref-15000",
+      "sha256": "314e063c1df244ac77d8a7e069ea0b8f1c33faa1a9e026f917ca63b25c04ce8e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-2.k-100.ref-15000",
+      "sha256": "d4538b8a34e3132f72ae219ec727cd67533e5a402a17c4248e3f3ca69ad3ceb9"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-2.k-10.ref-15000",
+      "sha256": "caf8551cef29234222b0fcff32e344ca3c6df257da6d6b1ba9ac0c85031fe674"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-2.k-2000.ref-15000",
+      "sha256": "25aad0b1b08f11ab4db9f22cda9e4cbc5aea89a4824938503c622a424d837678"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-2.k-3000.ref-15000",
+      "sha256": "3159d86d74b70360272abaf2d4da22e882c10200b8391882723fd3f1978b3da4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-2.k-500.ref-15000",
+      "sha256": "5f66b2a760169d2543946c244d018db82b36ba5376a4de5343f91442483f7fcf"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-31.k-100.ref-15000",
+      "sha256": "a750a898c500664c8bb6fbce4c6da15b0884f3b56050f9e9c6bf27078d3b3e96"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-31.k-10.ref-15000",
+      "sha256": "597746ed1dddf917dbb7b4799bdbe6217353387d0940d66aa00d969e2f4ae490"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-31.k-2000.ref-15000",
+      "sha256": "08ce5362e0b635905671cdb0c514438b4126832548924cbc9737a2c487c4f135"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-31.k-3000.ref-15000",
+      "sha256": "9f3e1be875ea3816a851f154162441810e0a0aa776e314e8f8c57fcc94afc8b7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-31.k-500.ref-15000",
+      "sha256": "d205e743e3a130604a350ff56963666c2db25a709d857821596750a830c74be5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-32.k-100.ref-15000",
+      "sha256": "4bf2229a2da6eeec4eb60495d0b45ed99a308ff1d2bf686f9afdbeb299bd1e3f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-32.k-10.ref-15000",
+      "sha256": "6006a937fa360af6b7fa62499b834f88db0088473ead6677a1dd908e6f312a5d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-32.k-2000.ref-15000",
+      "sha256": "0a35fce64ba1c1082525690da3d4fd73576209537d4bbc12b7d170b29ee9081d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-32.k-3000.ref-15000",
+      "sha256": "7a99523d9f13ea57ff0abdf9559f069693bec8d2be7a0c66283a6dc84cff906b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.fci_pyfci.layer-32.k-500.ref-15000",
+      "sha256": "71c9ce9ec80aa03346f643b3db5f3e7b7a598797e0b83e63c649d239ab362474"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-16.k-100.ref-15000",
+      "sha256": "b99e9f3a51682165e81ef26afd031164ce1049ffe6f6b477a5825a218d98ddcb"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-16.k-100.ref-15000",
+      "sha256": "115e0f43be303034eccfbba869bbda9841d28781331809657f96b84c2c27a1b7"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-16.k-100.ref-15000",
+      "sha256": "a706cfa54f0d71c0dff8c1eb0ba1e71eaa4c5ec51242ce17d8928d186f700432"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-16.k-10.ref-15000",
+      "sha256": "7f8f2da9c2896e3f2333881ff1a1ecc71393da5d3fe4f787e2854424ceec21a7"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-16.k-10.ref-15000",
+      "sha256": "52704465b73ce12b43d7e891c12449ad86c3c0249a22f544a02f345e63a06305"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-16.k-10.ref-15000",
+      "sha256": "901be84ec9c55a00e1acc7488e65bf8c8010aae88cac57276f3a1d76a876e447"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-16.k-2000.ref-15000",
+      "sha256": "e75b47b200b04e27b44c5cd4341cb976333a8abaeb7aac20b90575d01806dc29"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-16.k-2000.ref-15000",
+      "sha256": "a06b219480a26cad36c392d1d6b5d261fa1b4bbec4e0774b4589d1450b2ab14c"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-16.k-2000.ref-15000",
+      "sha256": "2df2082d2318b5e4493f398ee172d94b09238a9d8d3b1466b307e9361fc19625"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-16.k-3000.ref-15000",
+      "sha256": "816d8d5ed5d6c025d580b0c179225e06f7eab57ac4e3740595ef94e433a1ce5e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-16.k-3000.ref-15000",
+      "sha256": "2716c6989aa62cadffd59d94c26ae96faac382fd4008d03c99ab3a0d7124b3be"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-16.k-3000.ref-15000",
+      "sha256": "671f5a832e0a32a8aa3fc63a21afc5131555d9462eae6ad65cc61bb617b7464b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-16.k-500.ref-15000",
+      "sha256": "3b1cc5f83d696dd760dc815aeae0c119e8363b1d2286d5d183cdc1e8604a305a"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-16.k-500.ref-15000",
+      "sha256": "9cf4b8af1df0e0891d24e5362cfcf9a3e9225fa680b54e4a1a9ae66231507849"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-16.k-500.ref-15000",
+      "sha256": "81c93dee3211c4d02839c0475c8829cfc18e5a21cc6a23dcbc70a5a1080a94e8"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-17.k-100.ref-15000",
+      "sha256": "a01f9fc9fa6b265ad52301ad4f4b7b555d7e5170758734bb8604335946d1bb34"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-17.k-100.ref-15000",
+      "sha256": "e6d15c456fa1f341ed079834a06892dddff16941c1e29a9600f1b1c38d20541c"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-17.k-100.ref-15000",
+      "sha256": "04cae147d7fa8fe5b98ef80083769d87534a7a5f0874bbda9f8585ba02494b0b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-17.k-10.ref-15000",
+      "sha256": "781fdceb12fa7961a9911de2a566c46d4adc55f0f7ee4bb4b06a5144d67e968c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-17.k-10.ref-15000",
+      "sha256": "c72627b40067ac2c11902c17d7d2ba97782e2694e870159d1b5038ef8898e2c7"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-17.k-10.ref-15000",
+      "sha256": "fbceb536738a5463001fa1832bb4c4aff27c195b219bec7227e6a50ab29f568f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-17.k-2000.ref-15000",
+      "sha256": "f642c2fa5b1f2c1e663c52cbd3c9a3c002c77e024aa1453b4b4976cced49afaa"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-17.k-2000.ref-15000",
+      "sha256": "ba7d4d8d1bfb522d1380c7ef0aa6c5f3e39e4222cb274dcd6c8153d8fdc681b1"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-17.k-2000.ref-15000",
+      "sha256": "dc13c55d8d1658cc95139611b8b81c23ae824cac0491c2adf9c671a9a477cded"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-17.k-3000.ref-15000",
+      "sha256": "a9c2fa90f318278d87afdcf75f817606b9519b74f7c554ebc675941a360b1c96"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-17.k-3000.ref-15000",
+      "sha256": "98f4e8a246af74e6d63e8356a331ea32533319e1a82575cf5b3bfa598c7a4532"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-17.k-3000.ref-15000",
+      "sha256": "9d56b3f4c08a8066040d6683fcbca55ae93c034730557acb24ea364e61451980"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-17.k-500.ref-15000",
+      "sha256": "161393e68308dd6ad845063b73e1af90703cc2e5e47cf5839a77230278e09fa4"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-17.k-500.ref-15000",
+      "sha256": "43e36937752e3933abc202123ddf72fb760cca0f27bf2b4a96622226b166db5f"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-17.k-500.ref-15000",
+      "sha256": "db893255a251b5c5c666800e901ff0f14f9ddac8c562778f62c52b0e3cf21493"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-1.k-100.ref-15000",
+      "sha256": "f00111dd30e49452d0ee145329fea0d887bcd5d3db791092a57ee6dccac48381"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-1.k-100.ref-15000",
+      "sha256": "064ea41b8ffc6f07628657e6f048348cff714265cc645258206b8b51f99d4162"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-1.k-100.ref-15000",
+      "sha256": "47cf15c92ea6dc420d64c603d048ca8795e97ca6db4931a55df9e461adecf571"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-1.k-10.ref-15000",
+      "sha256": "3da17fbf99ecc66c19a5c92f77da6f7e2b649a417195005cf6cbc673fae8786c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-1.k-10.ref-15000",
+      "sha256": "d696841d6294b21352dc42a5daa263b9374abc5d3eb976e012fb3529f6ad0653"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-1.k-10.ref-15000",
+      "sha256": "35e926f829539cf32b6a65f8fc07984dc66b56845b1d8cddadb6c8f15fb6f937"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-1.k-2000.ref-15000",
+      "sha256": "7684f943e0e58821253b0e7d2455548a34fe2b6d9365b3735d06558dfe99d1a0"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-1.k-2000.ref-15000",
+      "sha256": "3a9b506edc6e1819864dfc7ba2dc8388b55f7911875f99181531b3b8d9c949de"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-1.k-2000.ref-15000",
+      "sha256": "d39c5190c1fba4d6761c46f4bc768fd8ed162e149ac8c6a12b5295f0f3931043"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-1.k-3000.ref-15000",
+      "sha256": "7e7c3683c0650b0bccb5471ee21a96c2529c859c327f17fbd134d1480c19e56b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-1.k-3000.ref-15000",
+      "sha256": "d0676fa4efcbc4c25c5fc4286b333fb26c7a1db0637a25110371ea75e4bbc343"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-1.k-3000.ref-15000",
+      "sha256": "e1de49c6717a10dcc927342464e1828777b361a7bd779fd3f8d25178368821b7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-1.k-500.ref-15000",
+      "sha256": "62ed433e75bc5da1d3528e971afa687ecd888f627fbe7d404200709bf5c32d10"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-1.k-500.ref-15000",
+      "sha256": "c1ea88e3cddc49128b9f015d87fd9d4dda28573f1ac7627939c016cdce27d946"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-1.k-500.ref-15000",
+      "sha256": "ed325bdc72df91b55de00c2aa217efe84cd09e60b6e156ad01d9efea17ca5d0d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-2.k-100.ref-15000",
+      "sha256": "0df15f2ae643fe7aeb4d09afd3aa9ef8298b893e4b37c52bbcb22fb00334543b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-2.k-100.ref-15000",
+      "sha256": "87c67f399dcfb98689422817c3742e2d3a6a1c5ecbe78b2fd54669e132f84255"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-2.k-100.ref-15000",
+      "sha256": "fe91dfc9ae6b79e17a7094001d2d36a3cdaf4988cc81c5418e9c92a4b420a7a7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-2.k-10.ref-15000",
+      "sha256": "6dfc01898f19478f746e0bd9b3324e1ed7da9def4c98f4b920beebd54641ee17"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-2.k-10.ref-15000",
+      "sha256": "ffdedc29c864d6a1f6ea44d2f2c28d15016355cdde9dd79fe8338d6d1c4c56af"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-2.k-10.ref-15000",
+      "sha256": "70bd1afe30ddde756c236aa8746f1065c67446f10c4bfb9d5aa7af4f8ae1e400"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-2.k-2000.ref-15000",
+      "sha256": "1b7c88a8ad52c7c2339491f2ec79025c5cd2a087c1b6533cedf254feae7b5c20"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-2.k-2000.ref-15000",
+      "sha256": "0e6cdae643f2e82cd69e7e30766b02a7095a8c6481da0890af66ffe6eb33981b"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-2.k-2000.ref-15000",
+      "sha256": "f2e366337a18de233320935ff5ef9d341d9f2369dc61c41f4e59a13de5b50c1c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-2.k-3000.ref-15000",
+      "sha256": "6f75dc6c4751e0eecd3e242e1ed8b852cc1d3e5e61fac40c87c7ee4d266b296d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-2.k-3000.ref-15000",
+      "sha256": "9de704402e6896c9ae8ed09fc27654f326a45b99a17ec5c9072e40c99d54207e"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-2.k-3000.ref-15000",
+      "sha256": "da180465ce5cc5314623a7d20c0b51fd20242534fe4acd10b712db3c684706e5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-2.k-500.ref-15000",
+      "sha256": "080558a4c4a8a309b26a2d44c3936acbc5bb0bd89e2306fdd12f3a2755805476"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-2.k-500.ref-15000",
+      "sha256": "4a9895d4d8dad44aa10141c500b656eb779424877f84d9e918732fe1fefd49f6"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-2.k-500.ref-15000",
+      "sha256": "c8dcc08f8ab8e9e4c65fae4a0c21bb6efd63158817f407803e3ae1b9b4217730"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-31.k-100.ref-15000",
+      "sha256": "a1faacc4aec7552960a9db954710a70fc583f9834459384fb70707c540a3d38f"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-31.k-100.ref-15000",
+      "sha256": "df7698ea1245342ecb5c3105a9b04bc4e4724591582b06eb2e14c046faf7ea81"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-31.k-100.ref-15000",
+      "sha256": "61aacd0ed54efc2a04be5cc3e193e4f69095770dcb971354512f960d1293a987"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-31.k-10.ref-15000",
+      "sha256": "59646df67aabae023b73f19dcdeb86dc2b84e09335fe33db0de7c81ed3814e52"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-31.k-10.ref-15000",
+      "sha256": "73cdc14ecf328be05ebec923b57cee57809b028577e9a115aedb397caefe3abb"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-31.k-10.ref-15000",
+      "sha256": "f67f78f57550b4ded238b78c5eaf3b2bc873a2d4778017f69f0348e151ac487a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-31.k-2000.ref-15000",
+      "sha256": "5d18c55bb0f2cf87c022e35cb4185226cacc1cf9ebf259c72bcaca646e9220fb"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-31.k-2000.ref-15000",
+      "sha256": "a1f25b02151b777e2ecfe352119caab97a09dd539f923598d5172e2b89c299f4"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-31.k-2000.ref-15000",
+      "sha256": "5051d0dc8017da421be7ecb1f8ef92f40c52257ca62f04612d936c81ae48b0f0"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-31.k-3000.ref-15000",
+      "sha256": "77778948248abf0bfde74d61c7c1522282db66fe9d063b1bb7baf7fd6bb1f59a"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-31.k-3000.ref-15000",
+      "sha256": "22bcf78fbcf62abcb301ffa1f1ed30398d805e71e30f8f64a6a6a32406b645e6"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-31.k-3000.ref-15000",
+      "sha256": "934ab4e869f98cf0a4af6e4cc3a244e27dc13e89c4492528cf4f60d209e19e28"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-31.k-500.ref-15000",
+      "sha256": "b487c4e3345f57447b5d34597749cea920ca043834cd7512e56ed6e521162dfa"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-31.k-500.ref-15000",
+      "sha256": "5140cf01601826cf825d03b3df390b1d1fcf828a4fa6a9b05a3e61a8f3a58906"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-31.k-500.ref-15000",
+      "sha256": "613bcc4731107dc3494d0f5963e4d537ac8d91d95747608fc81c95fbb05e9edf"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-32.k-100.ref-15000",
+      "sha256": "2d53363967d4daba2ff739e8b75feb7bea79be873d369d465d05254e7f1829f5"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-32.k-100.ref-15000",
+      "sha256": "dbfdbcf2edf866f7ec533caf486c37cac4bc7f2a6919d5fd42922b9aafd4a4c4"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-32.k-100.ref-15000",
+      "sha256": "3fcd1f983e40d1afdbe7e46caf2d95f9db90dab942926f4502e23da44eea221b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-32.k-10.ref-15000",
+      "sha256": "8e2c878f00df74802018eb1c7688609c9cb912d7b7b0c00f518cd76e5f857df3"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-32.k-10.ref-15000",
+      "sha256": "d0ea0bc659c16087c1562b109b02dfb0714953856fdccd478d75c49d13716031"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-32.k-10.ref-15000",
+      "sha256": "f6c6c60f36e019cd4e082a07ac7a22b840c0d8d35d25fd514299c900d616c170"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-32.k-2000.ref-15000",
+      "sha256": "6c242fb5365373f457c44092dac66a99bcfe7515ff15b2cbe23b3fbc287819c9"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-32.k-2000.ref-15000",
+      "sha256": "ce1d225d2d29384d96bc66c3a20d952963c661cb973b326aeb7e49d31aae23e9"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-32.k-2000.ref-15000",
+      "sha256": "c19e41261c279645e55550ba36d46a03feba0a5a97cdb7fa0ff6aec20bb25c1d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-32.k-3000.ref-15000",
+      "sha256": "023a1ed8f93ce952eb6195f01e96e0728dfd1419dfc626a61b7ecf2ae0a928ef"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-32.k-3000.ref-15000",
+      "sha256": "0d76124ae7c1a046a97b586849b85920967d894a44d7a3f71cdb3998acdfe23a"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-32.k-3000.ref-15000",
+      "sha256": "5e8501fae2b28957ddf4aad2f005e60ca7ec6e8025f5a7b8f912955e99306c80"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.pythia-6.9b.id.layer-32.k-500.ref-15000",
+      "sha256": "beb4d1e933af33a7a2c2af6d8088975f6b698e8243b9fb84b1a65a9f3e4adf47"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.pythia-6.9b.id.layer-32.k-500.ref-15000",
+      "sha256": "7ada7c47e71f11c5c146f22bde131be2f8a72d0ffa4239d3be41234782bf989a"
+    },
+    {
+      "logical_id": "feature_family_ablations.pythia-6.9b.id.layer-32.k-500.ref-15000",
+      "sha256": "61b09bd4d40f90f7b429410ab0945a0d50adb3bfd5ccf1bf5b9e23f1d4a755b2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-14.k-100.ref-15000",
+      "sha256": "335457040b485f606c0f59206c21dcdb46210372001151412d002d04e84efc5c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-14.k-100.ref-15000",
+      "sha256": "742fc303f1e4e47352759300d32d3bdd7289ad4833ff4023cba7694dd43140ba"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-14.k-100.ref-15000",
+      "sha256": "0e71051d358a7b33b64265f95c6555b9bc44a36d62a621898b6299d6162faaa1"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-14.k-10.ref-15000",
+      "sha256": "2d00affda7a95b6ba003a09343b5eeffaa419390c0ace0c6ab1b4a2b28e089e0"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-14.k-10.ref-15000",
+      "sha256": "772237878341898f0d234e448e01aa2bbaba4e43cb58222e7c75bb05375f48f0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-14.k-10.ref-15000",
+      "sha256": "d453e6bed48014688d1716d5dcf42ca3218010591505f3dda885feeb41dc05ce"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-14.k-2000.ref-15000",
+      "sha256": "b489b4f6067976e0cd14c5f3641392451e468849f03711a3a16f679291c2dac2"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-14.k-2000.ref-15000",
+      "sha256": "b1b9e5ebfe46133c63d5bac4d4b5443960fe5ef8d8cb68af83f523e9d33cf443"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-14.k-2000.ref-15000",
+      "sha256": "cb28e0bdd803553428ced8fd7e598f9d4728dfe65c222456e807aa782134365d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-14.k-3000.ref-15000",
+      "sha256": "8a3bcd7b3478ce3c018e2133e90f627941df613f8c0899b26999ea83cd735a45"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-14.k-3000.ref-15000",
+      "sha256": "1ee483915f9120fbd4bcafeedcc0ff07aebeba9765e0c8df556e8b3a076c5b77"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-14.k-3000.ref-15000",
+      "sha256": "1e86702b55940e5e29dcc26c5c94f35d30102408cb640f2540fb3a7926d46fe5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-14.k-500.ref-15000",
+      "sha256": "02e52d6c1b83fb149ed8844baa90d29a077a029d81d89bba23c3c73fed6e6167"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-14.k-500.ref-15000",
+      "sha256": "3b721e0ba43abb310bc9d74467111eee6a736b5e23451aafae7dadbd75864131"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-14.k-500.ref-15000",
+      "sha256": "2aaefed73c25ae99b861ffb2c7d3dd092fc1ef41ebdca85d00f3b8b414435239"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-15.k-100.ref-15000",
+      "sha256": "8479dc63504ddf42cd72f7af75797a09ebf8068a0cf536e56858191b2d303841"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-15.k-100.ref-15000",
+      "sha256": "3315c14a0f520b1de50aac506bab55010569a64788016b95914a6bf00384ea9d"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-15.k-100.ref-15000",
+      "sha256": "457a459e441a72d7faf2f69405c876e2fe627b4a9d58c21280130bb41d3406da"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-15.k-10.ref-15000",
+      "sha256": "787f433d61e9fe9907f4925fdda5478420504e2d6734fe6442a6973bec0bd60f"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-15.k-10.ref-15000",
+      "sha256": "7b451e180a451c0df4c73d75a8d1705cb260afb0461827b0389c63f4952da3b9"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-15.k-10.ref-15000",
+      "sha256": "2a136e912b54d6f1fa4eff263fb59bb85a50317cb96ba9744b32298a03fe117d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-15.k-2000.ref-15000",
+      "sha256": "8daf40eb6ad6352d158b2574ddf2107ebc2ebddfc2278751705e36b2dfad31a2"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-15.k-2000.ref-15000",
+      "sha256": "e9d225ddcc84592298462eee5bd91383d5c712b3286bd804f6d349d9587ec291"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-15.k-2000.ref-15000",
+      "sha256": "35d561f1522ebaa020b704b31ec21744b38d45931afce502696812503bfadbcd"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-15.k-3000.ref-15000",
+      "sha256": "91c934408540059beeff5bf3579233d911acb3d2669323faa44c1d41a45d8ea8"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-15.k-3000.ref-15000",
+      "sha256": "cfc8eddc9f9879b8aa2d9778300797c9cd66357c8fb0ba6d1c44a087de6d73d0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-15.k-3000.ref-15000",
+      "sha256": "d02eccb77a3e1f309e8edda73a8bdad56aa7f02cc3b57624f5bc7ec924aea5a4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-15.k-500.ref-15000",
+      "sha256": "85b877b96c38f6452e0a88d774b03a7f39d2334b28c7842d4a5bd781565794d3"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-15.k-500.ref-15000",
+      "sha256": "b4b7a0017cf28ceee2127aaadfffbee3e03c693ea660ff8e584301ae4b692d23"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-15.k-500.ref-15000",
+      "sha256": "451269c173dc89d7ffa4bfe9cffb3110e9bd8b3f6290d065e649da428c22f787"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-1.k-100.ref-15000",
+      "sha256": "f3838ed0429dd797b5cdd62f140c446959a6e0ead2ed88f8b8663f06d55e4bc1"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-1.k-100.ref-15000",
+      "sha256": "222020218677e5ac62dd6e5a6447c197238d1805834676af3a3f81476aacae5a"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-1.k-100.ref-15000",
+      "sha256": "768caa4e9a0e9dbb81a61ccef1195d8d1644969c7cd1bf39076d2282ac03c9dc"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-1.k-10.ref-15000",
+      "sha256": "aa8a45d2995b9fd6662a9b021a10fca27beeeed99b2ea477a3fa4605f1e7f1af"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-1.k-10.ref-15000",
+      "sha256": "d69deb8750d72ceef711029f663a1a361d1c04fb1032f0826d49162e2dd87bf1"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-1.k-10.ref-15000",
+      "sha256": "08ebd5406a888f0c3ad842acd6dc3cc6ed0904f404abc99ccaa094983af53a4e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-1.k-2000.ref-15000",
+      "sha256": "7c70aa00f334be75c29d8e8612028d14e82620021746bd1bcc6f799ea7e266f2"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-1.k-2000.ref-15000",
+      "sha256": "3fe746ae507c0101b4c36804f98a3a92b8ef49f7f8b1a6da74c2707258af57e8"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-1.k-2000.ref-15000",
+      "sha256": "8c264cd3b438d69f2dbd231c3756e5d370aa7a57ac344b99d89565410a559229"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-1.k-3000.ref-15000",
+      "sha256": "d3d11171613bb171fcf0971e3a32a4f9814480abdb91656262fc534973b03c7d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-1.k-3000.ref-15000",
+      "sha256": "1207c52bfa66960a26aa1f0b980ee670388a495865fc3f434d2bd921ee81a0d4"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-1.k-3000.ref-15000",
+      "sha256": "f06a4b6b9b351f45e782451e8826348b53bebfd140d9597e724d4fc898659fa2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-1.k-500.ref-15000",
+      "sha256": "92b1771fefcebc9064cd8ded0b97824f50460301e84a7e77a3246e631ce241e8"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-1.k-500.ref-15000",
+      "sha256": "5e8f68d9aa96e6f02a30624d9c5a6628e42ee7ddbafccd95270fccbd17a58d5b"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-1.k-500.ref-15000",
+      "sha256": "f148b57d518221b8465aaba864006374b70595fc4c74f65d6cc7c40d35527ce9"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-27.k-100.ref-15000",
+      "sha256": "63aa2d4f3a622b390b7b1716a285fc12f9e82cb8afd23051a79194d3dd8e5dc4"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-27.k-100.ref-15000",
+      "sha256": "8a219a9cb37c626959f1d303c3354cfe50ed90a57dbcdc656158e8857fe51eee"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-27.k-100.ref-15000",
+      "sha256": "103f8bf6c6afae8d78539a21cc59ecc0fb175d93ba53de3d65d9056d60ad5b8d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-27.k-10.ref-15000",
+      "sha256": "ded9e473993eecd8bcc0792974cc0e796f308818c197623238c35d0949d86bbf"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-27.k-10.ref-15000",
+      "sha256": "3dd8e4c1ef957ca868d76c131458264cd2371c050e01bfc1b283b0c9163ee9a0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-27.k-10.ref-15000",
+      "sha256": "2ce6a6597f527e32484a48ecbb1aebefd786aa5ce93086375ca8d187373e5a84"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-27.k-2000.ref-15000",
+      "sha256": "4ce2ffeb1d60ab200c319ef23ec728de5734d0e91301350b0684184c93532d06"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-27.k-2000.ref-15000",
+      "sha256": "becd593830820d60e2c57f00861d8a5945a61c481e1337c141836a579ad231b2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-27.k-2000.ref-15000",
+      "sha256": "d14d8d206b2c069d10c0770005c374a5b62f02a13223377bb42129332bc37f9b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-27.k-3000.ref-15000",
+      "sha256": "ed95d739248e4e977319509409e43223b19d5f36489a5a0c71a6ba6b21e8a6a2"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-27.k-3000.ref-15000",
+      "sha256": "dede8bfb10ed69fb7eab07d65e25cd3e6729aba971942a0fcfe298bd951e394a"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-27.k-3000.ref-15000",
+      "sha256": "d1030781ecb09baf202410f2a4295b17c4f2077087814043931d47c603114af6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-27.k-500.ref-15000",
+      "sha256": "45dcb3ad646ba2ff364c0e11251770063b09af3b186d8eab576e8838dadb0644"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-27.k-500.ref-15000",
+      "sha256": "c449d67400734b42f2cfcd22d753abbd23ee1edfc336ed456a7a2db440829c90"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-27.k-500.ref-15000",
+      "sha256": "3eeb1248b7ac8807c3b176d3be44dc6b1cf99e041b9e7c011dc75e5a3c4c284b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-28.k-100.ref-15000",
+      "sha256": "cd169a929c39b2874c1228a00845697c5897adf32eb61c3051be65b841ddd171"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-28.k-100.ref-15000",
+      "sha256": "96792c7357da153196e4f1b5c7b7347f89ecec396f58e945c1fe58193c274b8f"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-28.k-100.ref-15000",
+      "sha256": "bd6fd7340f742aa32bf4173cf6fa8dc9f9bcfbf0fa659900fe17c4ad21f60d5e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-28.k-10.ref-15000",
+      "sha256": "e46a70859d760954d3a43403df6e5f39dd3e8cfffd9d828a8f812b134e2a3587"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-28.k-10.ref-15000",
+      "sha256": "4c09e6f01d9a498d153cd187d60114d621174dc0304d29e44d7a7fa7ae337501"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-28.k-10.ref-15000",
+      "sha256": "63b68de9b70fde6ae6add85eb70b79ce3b5e75f34fdb086dcc45fc34e5ca9cb1"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-28.k-2000.ref-15000",
+      "sha256": "4969cbebdb68e5b0f9584d29b5e6071e53f8244022f47410caf9c4bd6a9e10cc"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-28.k-2000.ref-15000",
+      "sha256": "82a469f3ffd84cadf5ed9e2018a7054b02876841a5101c3d97cb5dd152d29749"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-28.k-2000.ref-15000",
+      "sha256": "ea6a6574636d2a138befffad8c7f1acb465116163c81eae724bc9d7fea4d608c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-28.k-3000.ref-15000",
+      "sha256": "73d0a7ec2bb6ce28fd33a028a7abd47a2257029a47b21bd28af2e4ccdbca4cb0"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-28.k-3000.ref-15000",
+      "sha256": "d5cd71fbdb0af0c09f04f0f8e81607960be2de5c8e4a183d52e6d316feeae2c0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-28.k-3000.ref-15000",
+      "sha256": "b61654f8504668d5d8ee510be8e7398a6770c7eb28dca5678f223a2026628b6e"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-28.k-500.ref-15000",
+      "sha256": "53ba35af38d8133aeaa72346fe9a669def776afa02aefaae1209a0ff83ef91e6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-28.k-500.ref-15000",
+      "sha256": "3a95c1ec96ee17edb05083857d32adda52cf8cbf86cf0f04e96c49a8b053e898"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-28.k-500.ref-15000",
+      "sha256": "11615101fbc60f5e99a4225892a01022f91987f3b7aee902d4ca15293c227f52"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-2.k-100.ref-15000",
+      "sha256": "3f1e693004b15f718c434863fd77f30c3ad87dd59f2b326ac167da6301c3360d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-2.k-100.ref-15000",
+      "sha256": "6aaf6962bc7c6591a0ab17ede7a4bcd8e4d913e51988fbdcb031e73eb3554a29"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-2.k-100.ref-15000",
+      "sha256": "7da246fefb49c0769cf56aa2b25804ea9ede080a5813ae86ad00537e18c833cc"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-2.k-10.ref-15000",
+      "sha256": "f38b1f5701b49f9048fdecbf0f1eef758bc2959c853196bf7eac5912da4f910c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-2.k-10.ref-15000",
+      "sha256": "84444e42bff471b86cff5019095483dd564a36f7ae835d9b373693f62df664f0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-2.k-10.ref-15000",
+      "sha256": "02edd0bd2239b64ab3fb9144dfc4b377484ce7ee1e14077e1866b2f2ce62d0eb"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-2.k-2000.ref-15000",
+      "sha256": "e96cb51c034c6a60e70a4ef3254ac4be59e64177f0f39b6d20b2ffd09403bab7"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-2.k-2000.ref-15000",
+      "sha256": "50843b15f8fb8430f299342d64e729cdca6ff5f339ec46378b88ee673f852db8"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-2.k-2000.ref-15000",
+      "sha256": "2116ae443fd2c65ee6b89ca1270c2460ba031367ba73a665fc2fb81812b1d269"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-2.k-3000.ref-15000",
+      "sha256": "c5d689628aa41f917e91fc672cfa714703087fdd0bf3634a74f6e8d4792bb7e5"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-2.k-3000.ref-15000",
+      "sha256": "bf5f33aab4c3409aaa302f0412a1421fb2a42727803dae799f131f9dc97d822c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-2.k-3000.ref-15000",
+      "sha256": "f41d82f290cd35c64c7c040750045f353ac3b1368e0f115862b1541d40b24810"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-2.k-500.ref-15000",
+      "sha256": "992968ad82b9932d0136770e7e9fd9274ab745630af58cf2e7ce227c2a27890c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-2.k-500.ref-15000",
+      "sha256": "a532e70bf35435e0eb28966c52b050a7af88a5c60d521eb95ec4983bc2fb25bb"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-2.k-500.ref-15000",
+      "sha256": "1a7e9aadd53c0a34f5acc89fff95cb2f07588754c0a3f58e9fdad9bdb2947e2d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-3.k-100.ref-15000",
+      "sha256": "9622e8b50c815d360d011999ee51932cfec5466be29af840224d358a6394209d"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-3.k-100.ref-15000",
+      "sha256": "f086c7dd476ef870e356356ffd8223da4c22ffd7e7b20095b5597762bc6a51be"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-3.k-100.ref-15000",
+      "sha256": "f53f7bc8e34d30391a46b14c36ca98bb438573f673c3eac39ce70333242c9f11"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-3.k-10.ref-15000",
+      "sha256": "a383d8a94161fd54da69e73cf3715339c7fd39877911dde549d855f30be679a1"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-3.k-10.ref-15000",
+      "sha256": "c4db8ae883d8de76c4195c71e11d7dd480229bc811af8025094c1f31d4df7595"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-3.k-10.ref-15000",
+      "sha256": "9c9541d08241fe227096c2adf1c44679c5756fe62a417caae730caf02cd67209"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-3.k-2000.ref-15000",
+      "sha256": "fd7a459f9b9c2253403b3ef9ccc9721da3ce7d2163cf3d02ad9d7b2f501bed4e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-3.k-2000.ref-15000",
+      "sha256": "3e0f5ea320b084442d48c76fe8da36645fbe2de93f52d0a283aecbbeab8a39c3"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-3.k-2000.ref-15000",
+      "sha256": "bdc9155ab5873ff19b141bc16ae47654f9e333cd93304f4f2c0aead428117750"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-3.k-3000.ref-15000",
+      "sha256": "251698ddc10e2cebc6d2c1932fcdb4d9f55096f290039aad21726f0c72af9285"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-3.k-3000.ref-15000",
+      "sha256": "ee97c6d0197369451b9997ce3698d93df7a63837169adaf4dbd9952dde188233"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-3.k-3000.ref-15000",
+      "sha256": "070a60d49140be7efc3b56f52cb43a7f9b5311e2effd87d94b0623c51f169db2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-3.k-500.ref-15000",
+      "sha256": "d3507aa9e65342250c301f61abc63af7373789af9554bd2836d2b38bda4e0b5e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-3.k-500.ref-15000",
+      "sha256": "fed1529bca84a5165de6a05fc402df3649224ad0125e1a18124b0f14931d157a"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-3.k-500.ref-15000",
+      "sha256": "af12cfe7b46715f9d40fe309987f1cbbbbcb33b8e82a12f1287948efe44c42d4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-4.k-100.ref-15000",
+      "sha256": "c9632b87321248a2b8f3d56f49a1097e5e9895e7f03633216f3365209504942c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-4.k-100.ref-15000",
+      "sha256": "d8121111c6ca711602c9b4df41b0521ae6a93246ec131deaead050870aeb3ceb"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-4.k-100.ref-15000",
+      "sha256": "093406102922b7d98e725d84e0697da2c3c5d9483a971f6550b6356e9600f196"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-4.k-10.ref-15000",
+      "sha256": "08e5e5c638c526110473323bf5379a304c815fb4b7e8128f96841db3e4faf1a8"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-4.k-10.ref-15000",
+      "sha256": "b6cd6bbd28ad3e2c50a255c702b3df9eb3b48bbbd1fb3dfe9715cb6d7c1a8537"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-4.k-10.ref-15000",
+      "sha256": "7a74e56da29e9a873cf2a05337427c67cd78d1051361237f5cd0786cf3e3ef06"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-4.k-2000.ref-15000",
+      "sha256": "a292f8e339b24b40d7f564f2f0be6e1e28df737086a8cfea9c262aafaa90bef1"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-4.k-2000.ref-15000",
+      "sha256": "22c68741994057d43cbaf5c145e2059825a61d01cbe9ed95a1532c3715c8c3da"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-4.k-2000.ref-15000",
+      "sha256": "2bc379142c80280b3fc100b75fc279800713feb88b7a925875c0cdf9cbc5f94f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-4.k-3000.ref-15000",
+      "sha256": "c746423a7da506fe0b29c880ea8baeadafa861caa15b8241f71169352518c91b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-4.k-3000.ref-15000",
+      "sha256": "5fb02f7908b2390d688d7a9ec808bc1dcb9c5409fc5941f34432168ba0d93c09"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-4.k-3000.ref-15000",
+      "sha256": "2da9532d71be4e969099acac4311a4ab0ac1d02725ae553d2bb1502356814304"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-4.k-500.ref-15000",
+      "sha256": "412253145f55a66bb6e6a38622a70e3110124af6e0e74beb86ef052273dcef72"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-4.k-500.ref-15000",
+      "sha256": "2028207d59a481a6874d0ee5e5e23c7cfb8d21f1fc27069a9a901bb2af79bb7e"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-4.k-500.ref-15000",
+      "sha256": "7de136bb2f11825a2499785360aa1a98ea1c0c635a839c53797a0ca5e3c4a21c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-5.k-100.ref-15000",
+      "sha256": "cd54ab31fd83273b370cf456267264396219684880f4c8635c40d1eccaa9de10"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-5.k-100.ref-15000",
+      "sha256": "b0c9c0e416e46c093b4819b296fced4279546a5a37737968cd8c29b65c253b4c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-5.k-100.ref-15000",
+      "sha256": "22eb75b5e9b965b7c18b1137c2a3778ab6d17a6fa455ae6f342b5ab155ec0ddd"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-5.k-10.ref-15000",
+      "sha256": "afd99897d9dfaa6d3f880bae418d617f46d6c3529e9c6f4836fbe9030413becd"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-5.k-10.ref-15000",
+      "sha256": "819e30d7be8ec80223812fb2cf1a11c01f425ba38120fff36b1e91cc2893e133"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-5.k-10.ref-15000",
+      "sha256": "062f53c9714710230128e306234f8cfa8ea9782e9f3a02c6e18ce528c3459256"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-5.k-2000.ref-15000",
+      "sha256": "b44f509d8f681f11604984e6a0d92977a57ac11d1e541d54c2c40f5e5bb90e13"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-5.k-2000.ref-15000",
+      "sha256": "852cb507f514411046c894ea25a6671bc97ac866f17614122a3351be1f9a76e9"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-5.k-2000.ref-15000",
+      "sha256": "084c4264beff56f49fcc5dde5f672297661b01f4fa9fab551ae617dcd6b3aa19"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-5.k-3000.ref-15000",
+      "sha256": "035ab429fe862f96e37ef18891a137d74c98e4519b4dbd8c4dde1dd21e7af8cc"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-5.k-3000.ref-15000",
+      "sha256": "1417047eba162ca321d48c4a2c29c82c693e6e2c0f9744ed4a45720b7c40f902"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-5.k-3000.ref-15000",
+      "sha256": "7dc00e1995334fa6f74648de00ba51f5d4773f53478a6d911549f1ca34356dc2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-5.k-500.ref-15000",
+      "sha256": "ef5f804f4c71cc299f0b8461f6462b6f5dd7fa3a54b785a28426b6e00233a909"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-5.k-500.ref-15000",
+      "sha256": "2aaee32ec9522927564ee9574e036ba48463fb29419a0d21efe639b0ac32bd47"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-5.k-500.ref-15000",
+      "sha256": "8bbe2db4c9521c11b489e0bffe703ac0b5ef6d93e9e4c7b38f08f8302d8c5b58"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-6.k-100.ref-15000",
+      "sha256": "18ea455d77d6ab7191ea7eae960402084a524c73763b46b6984efff3b21bcfca"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-6.k-100.ref-15000",
+      "sha256": "a751e18486f486ca7c4d1fa7e9d470f38c645d484d91c43d88edbe592d224d0c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-6.k-100.ref-15000",
+      "sha256": "c7f76b65a02787c60e5468ad4a06c8b38ea7ed88b6dcf439470c39fd80cba9d2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-6.k-10.ref-15000",
+      "sha256": "67d037d2ad68103c9ebcfc0531c89e5da1b76ef5646e5a0880dc79fd376deba6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-6.k-10.ref-15000",
+      "sha256": "18efcaea6caeb6e37d6e0d91a5f3202f01b1d1db6b67403a159e92e319540a3c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-6.k-10.ref-15000",
+      "sha256": "28db0ecce85b4153d2f7453d3b3bb0be3b798f45eed3a619448652ed6402645c"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-6.k-2000.ref-15000",
+      "sha256": "8b8660dfc60dca73904e0e35d63aa16ed905e5c818cc181e81ffc5cd6cf92a67"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-6.k-2000.ref-15000",
+      "sha256": "ce07a4f8094ca7b9e1b8ca02f5ae629927e8c6927ce83407ad40ca2822370ac2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-6.k-2000.ref-15000",
+      "sha256": "71a07487e8d39745b7d18f3df13c09911a2afbcb72f7f6de7592c1de8fa3581f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-6.k-3000.ref-15000",
+      "sha256": "8e7051eed804a39ec86aa8e2b0885a4ce1e798637f0b066b27afb1feaaf76f6e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-6.k-3000.ref-15000",
+      "sha256": "a10b6ee17c2c2b8e54f9d674f715c4c4cdbf67775b585e59936a59becfaa84e4"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-6.k-3000.ref-15000",
+      "sha256": "866482cf5e087e44426d397e2b467503636f1c010a8bb185b662524cd30772e5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.fci_pyfci.layer-6.k-500.ref-15000",
+      "sha256": "42689662ebdb6db141921da8bf5a95b22a930f94a9fc13dcfe727223e89d5ec4"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.fci_pyfci.layer-6.k-500.ref-15000",
+      "sha256": "3bc5239a31ab8e531aaad07516cfe8b40e182547e8db45323f3fd9da9674122c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.fci_pyfci.layer-6.k-500.ref-15000",
+      "sha256": "c04b6c3aec7de03af9d8e4a93e89154aa752c25398fd5f30b6b01830fe32b46b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-14.k-100.ref-15000",
+      "sha256": "08310ea2efc7cce5a345259b84729078b69303cdb1236935bf2b78b2baf41b83"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-14.k-100.ref-15000",
+      "sha256": "092606f9b4ae4a7d88cc8169e16778e5b6ddfcd240d379d8167a6b20793fed2b"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-14.k-100.ref-15000",
+      "sha256": "457f26f201fb0466de85aaab03504e91e1febf03ff766650c9374da3cd3cafb5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-14.k-10.ref-15000",
+      "sha256": "cc52cfdb6470edc9b2bde6dfc46066f15878c33f18f74826d6cb0c10e3b2d88e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-14.k-10.ref-15000",
+      "sha256": "93ae9e8d5db948716fd8c61cfccd9780d610a383bb52f58157b96c70e68b84a0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-14.k-10.ref-15000",
+      "sha256": "7a33b79fc48121af316035033a3bbb932b06bdb6d860fbcc0f3929d656ef24a3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-14.k-2000.ref-15000",
+      "sha256": "aa079c007c78686dbcc8d62c24ab3cead9b4179ec79b1682f71cedb99e73b732"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-14.k-2000.ref-15000",
+      "sha256": "c98a7ca6c7fc826aaf24c3e8d537b8e0c371ad186b15b7f7104225891e5cf77a"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-14.k-2000.ref-15000",
+      "sha256": "cea204c08f33a94cb1016de212693f5eb9b1fbce890bea4b52d5dcfa6076142b"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-14.k-3000.ref-15000",
+      "sha256": "ef21b83550117d8e0ea29d6ff7adce1171ad0a5424f8a4ffbfe721cf450929bf"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-14.k-3000.ref-15000",
+      "sha256": "56fdf7a2a1daec1b7e7296124a2df614d22d0e8a13eaa2772cfe1542f174b5a2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-14.k-3000.ref-15000",
+      "sha256": "9e655b8756d6a5d5224a5236d45e3c3bdad05fbc91681f77924934e734a166f6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-14.k-500.ref-15000",
+      "sha256": "8b8f7b29d8d7e9f6f382135ec4884b44d699fb03266918effeed2b8c85b3f199"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-14.k-500.ref-15000",
+      "sha256": "e97c68bae3b148175ac9e4f13015066fc5ddd95484b61be857dd84764ef6e441"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-14.k-500.ref-15000",
+      "sha256": "6371aa01cb116b9160d7b4baf45990239dbbe07b1573800fe826bb46d9124b97"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-15.k-100.ref-15000",
+      "sha256": "62988cca0c350bd601c544f0d8f0db5f5cea4cc78d2d5483fe492a138b6752cf"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-15.k-100.ref-15000",
+      "sha256": "54ef969a1188f522dd07fc1ca09cdaed35b1499812a122d81de784d98cbb002c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-15.k-100.ref-15000",
+      "sha256": "fbda77bd315718d90cf54c10bca620a27a1b591c59fc1490652ad51b957f2f5a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-15.k-10.ref-15000",
+      "sha256": "f9b2040857eeb382cc06ea595a7f61c0133e87d0290166b73f55e4f5360ae875"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-15.k-10.ref-15000",
+      "sha256": "ed2752177a2de526a67d7fb3ca404e5e3cdf7bb70bb05dada7fac4f59b0682bc"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-15.k-10.ref-15000",
+      "sha256": "c0fa7d69a9c17cfcc36636ee7e381cb96747abfd75905c7a40599f850d9e2045"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-15.k-2000.ref-15000",
+      "sha256": "22f4a19a62a555fdd644cbcf094ea43b91d463732f5b86aee18de31e3fcc892c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-15.k-2000.ref-15000",
+      "sha256": "9be7f8d06ae66c4dab540bf49cd1a5a69618e743a5873e07d34702026041da9e"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-15.k-2000.ref-15000",
+      "sha256": "2be9a68a9195e20b4036589a4a5d004d1e809a932d3b48851ac07070551846e7"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-15.k-3000.ref-15000",
+      "sha256": "30dfdddb3b072d299d28555c8b0d931b659fd98b34b259a42a8e9ddbcd716e10"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-15.k-3000.ref-15000",
+      "sha256": "c687dd92b94961b9f5d9215e3b68ddd7254baee608bb7e1cb2c8efc0c0186e17"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-15.k-3000.ref-15000",
+      "sha256": "1e2af44e283c219fb888025bd1835d2ff9820712f0f86c38656df24ac94c5403"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-15.k-500.ref-15000",
+      "sha256": "6b2bbd95e1ae6d5ab655eb5c60bd1117e870e40897e95d1500b05c12d6452300"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-15.k-500.ref-15000",
+      "sha256": "622af6f1348f490f50285167720cd7bdbe60762f6a712b65c7defa6a53932df6"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-15.k-500.ref-15000",
+      "sha256": "108a64d19d0b65a710703d946ce4b8c3f864e755fa27fdfee8e4e484bdf6c30f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-1.k-100.ref-15000",
+      "sha256": "f89ce2204c3fcf4b5fe299db65d3186f27aa6c807f82d1d349ad7e4348ccfaab"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-1.k-100.ref-15000",
+      "sha256": "e4f16ee5e3daeb0345b3fbb0a0019d61e870db8bfe275b9a44fcd7f526631e2f"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-1.k-100.ref-15000",
+      "sha256": "343c4c9b9acbf4536ce4d1cbd99c59fcafe917809b5c6a8a77915c77542323e1"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-1.k-10.ref-15000",
+      "sha256": "46fffc6419029026cb900ebb3d06ed8424cc114c55d5cc6027b603895da4bb9b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-1.k-10.ref-15000",
+      "sha256": "09ac6b6c27a7fdb2e6beaf0e056be38bbd383f5a0a128fa35836e3aa7e6c0b62"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-1.k-10.ref-15000",
+      "sha256": "acb56a3c9e0a1e5a591f8c0d744fa333a9bf97657814387d40b15c48251d636d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-1.k-2000.ref-15000",
+      "sha256": "ba6114bab67d58039a058b598b2258413510ded6d0ba8615c2bb051c39e1c205"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-1.k-2000.ref-15000",
+      "sha256": "11c7c52e0be2ea452c3bfbbf2318ccb0e5c119c4ccf7d4a5c79601edfc426326"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-1.k-2000.ref-15000",
+      "sha256": "49a3be5d706daf1458ebfacdf4e9a2a69e966ee3b878d3b4a048124781f8d5b2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-1.k-3000.ref-15000",
+      "sha256": "c08ab87115dc71757fd38b4ec60a5cc29eab95cb9d73cd4a940f05e403e55970"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-1.k-3000.ref-15000",
+      "sha256": "16237c285c27f6a4b17099e9384b89e7b879fa65ce7e81fc8a7cd93d5efe9af1"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-1.k-3000.ref-15000",
+      "sha256": "fa2e3c123f12d410c5dfc190122b793d5ce4cf8ff9ef921fdc6f75fcd6fed72f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-1.k-500.ref-15000",
+      "sha256": "f63d6a7fe6a8a24d47654ae355b6b3c2f5d821c894be8b930ea1368b05766fa6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-1.k-500.ref-15000",
+      "sha256": "33e23c47cee50f50542bff6c4dfe364c829f3033082ac6277c7e0ece203a99b3"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-1.k-500.ref-15000",
+      "sha256": "1bd1cb9a92ee5de8f1f9e876a88b7a47ce19a8ed8cffb9183ae836e50969377d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-27.k-100.ref-15000",
+      "sha256": "2fee0757fbbdd6d6e779f477efda94cf5bf8cb60ad74d38b06d331d9288346b7"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-27.k-100.ref-15000",
+      "sha256": "de678d11fa31bdcdfd07610ae737f18389161a79c0f752fb41931c78b98b8692"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-27.k-100.ref-15000",
+      "sha256": "64070482ac05cb4c12a401af4b6dd18a0a26cd700398e19ea3a07bff917e6343"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-27.k-10.ref-15000",
+      "sha256": "6fd54c9350c5af343e8a80d563ed30d134b2f912cc6557a9db834a35d1c07ec3"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-27.k-10.ref-15000",
+      "sha256": "4e3f506eb50d9c91209dc25423665e57a482f11a1fe6393bf8e3bb4ee7369a8c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-27.k-10.ref-15000",
+      "sha256": "ac3b79a58b95c88bfea02ac59653028fd06f4967c7ed06ea8c8c0244224d616d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-27.k-2000.ref-15000",
+      "sha256": "da4f7c3f82fdcdf7854892361ba5f1506ae34a05bf703cce4cc95f7f430ee17b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-27.k-2000.ref-15000",
+      "sha256": "cf7c0a792815071977295837a7b6da06a4a6ff1ba5a51756d9616dc3140747f1"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-27.k-2000.ref-15000",
+      "sha256": "d8024de9af708527a22c1eb88e2259a7e2bbc510c03229e6b938b3756c645570"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-27.k-3000.ref-15000",
+      "sha256": "8f12d9360bbf2b6901da6406508dd8a45adc51a3982e1fcf769895384951ef34"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-27.k-3000.ref-15000",
+      "sha256": "d2a2ca031545339bf48bb41fa04cb806bfa9d852ab73bc57c5e7b9f7a239404a"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-27.k-3000.ref-15000",
+      "sha256": "f90c5ee67e5e45645f8802801e9fbe25cc42e55c31364c8b39459fa0baefa7cb"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-27.k-500.ref-15000",
+      "sha256": "94e2d4c10f9443a59867f5a60f80585b10dce2dfd370f0087368ecbc6fb5ab51"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-27.k-500.ref-15000",
+      "sha256": "dfc5dba6523e8dd063626ec7f224675e071570c09b5b7299e464228196dbdf03"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-27.k-500.ref-15000",
+      "sha256": "0b3594ed40652af043ed1ffcc8dfce2ec96f5698109ad4d643e1b3e682829260"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-28.k-100.ref-15000",
+      "sha256": "e752b3bbfd90df60423682403352cdb6742fe06b1bd40b25354c1e225646f734"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-28.k-100.ref-15000",
+      "sha256": "5c373c3c3c6aa224237b2c358af7b4a871e6259784736cb65954c5ff317ba6f0"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-28.k-100.ref-15000",
+      "sha256": "16ad4303879b2666016462a0002e181888c9eaab290d6f133cd33a54315b8e77"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-28.k-10.ref-15000",
+      "sha256": "a2bbcd1e307af35b182ea5bda2718d3d0c0b7ba94586bd6a31a4e502b92c37f8"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-28.k-10.ref-15000",
+      "sha256": "bd7ad75ce97526b1546c2d22601405e93342be23f0d2ff7a7fccc5a55c307883"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-28.k-10.ref-15000",
+      "sha256": "3ce2d1b754f08a4f61a8b57ce068da17a5af9fd5baac7cf4e72cbd844e337ed9"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-28.k-2000.ref-15000",
+      "sha256": "817df553fdcdd5927808d0fcf97e91fc0e0cccaa7468104a766e348a242a36ea"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-28.k-2000.ref-15000",
+      "sha256": "b1a0ab9fbb48cf605bd2c69062dfb29cc0f7dbbb4b5e2888a048a7e61a6b1db2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-28.k-2000.ref-15000",
+      "sha256": "ad08bcfb31d031ca58d7e9d284c0fbe679c37039109f4e34ff05b23796f50276"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-28.k-3000.ref-15000",
+      "sha256": "3a6f2d97a31946fed30731a2bf5717b0b4ee6307b08e8986b3b926078c349be7"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-28.k-3000.ref-15000",
+      "sha256": "fef8396eaaba5480abd064b1343caec826c0d3d7ec0d3ef40f731e2f777d282f"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-28.k-3000.ref-15000",
+      "sha256": "8a8360cc9df6a95ec92f522770456c0b41e0b3acd959ddb0799881d4cd3fd751"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-28.k-500.ref-15000",
+      "sha256": "8c7e406e6ad336b567464de83b7940aa0b6631e50716dd76b2e4b08f49bd9bfd"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-28.k-500.ref-15000",
+      "sha256": "1e8dc908c90ec65cfa26ac48c0151606390684dd63593a61b1d9520e17eb3aba"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-28.k-500.ref-15000",
+      "sha256": "e1b20c1989c8f808f7f56a79779c42ab58d66bf78219d432f6460bed1f857e99"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-2.k-100.ref-15000",
+      "sha256": "e49d3ace9c7ac68b81e12c9afe2a9a52a363dbd7ad7d0bb2c6541f540d21eb83"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-2.k-100.ref-15000",
+      "sha256": "1a57e520aaf8a954916ef6184bada61f9313b7f9a99f765fdc25cd229d451e70"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-2.k-100.ref-15000",
+      "sha256": "116d7996714bb4952d3f69ef0e732eaa1067bb67c6d8808ddb5a5f1a7be60893"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-2.k-10.ref-15000",
+      "sha256": "fbb6f037efb0558eecf4b0f327c893411ee030a45aed457295603c3e07ac30c3"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-2.k-10.ref-15000",
+      "sha256": "17f80573fdb66c776001fea5883ec6eda2f8e0a7e22a0d5ae3391c38e36ac7b1"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-2.k-10.ref-15000",
+      "sha256": "16a62cf0be48bbdf7a3c56d1dd985ed93cdd7022dbfd0d8a85faa66776b714cc"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-2.k-2000.ref-15000",
+      "sha256": "4a751be4553d1dabc1322e404dbed6cc968f019237652690d981fed46bbd2105"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-2.k-2000.ref-15000",
+      "sha256": "0a67518729c0e732dc76b44497494d1758334e13a4125f0d386b439636c27fe2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-2.k-2000.ref-15000",
+      "sha256": "dd0123124ca0f614889bde3f107094efd74b6fa6a7226f4cca91219db4660f90"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-2.k-3000.ref-15000",
+      "sha256": "683439bd5c32ed6ba52226e50aab4c852465fe06bd30ea3069507fa736da358b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-2.k-3000.ref-15000",
+      "sha256": "a091a6a7710b58faa1e7fb5ef0787eeb95af88c27f85e103934255987caae59d"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-2.k-3000.ref-15000",
+      "sha256": "2a65065e2127c6c14d4c5d1e4d64a1d8dbda0b71d79f0f9204518c8388ffa7b5"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-2.k-500.ref-15000",
+      "sha256": "012b0c1ad189fc517b2f69775f1bd147e30ddff4dd910c0a0751f876cfb77366"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-2.k-500.ref-15000",
+      "sha256": "b353220e147acb0576104fe5d4094d60ad7ef2129982e04cc05545f662e1a4f8"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-2.k-500.ref-15000",
+      "sha256": "6073e59fb5f01e9f93796689d0efa450376d7676fd98a3cc1ac957c045754d80"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-3.k-100.ref-15000",
+      "sha256": "e02df34e77f7ea289aa79c8b14b7afdc284bf4c7a53ac2933d4b74a16c26548b"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-3.k-100.ref-15000",
+      "sha256": "e5471dece451cfe388f4078fca1fa42725d64a87015a4d3cddbe489ae999facf"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-3.k-100.ref-15000",
+      "sha256": "ae9de175952d4c922cedd26a937ac28f87257c43b798341342778bd5e93a7515"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-3.k-10.ref-15000",
+      "sha256": "a0e533b234c99c66d5e550cb094827b2b05ade77f49c71000bb818f352a85d6a"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-3.k-10.ref-15000",
+      "sha256": "91cb51876f78f4e2e27940acfc7df16b36dc0206c0100b025918f4724c2749d6"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-3.k-10.ref-15000",
+      "sha256": "9fa754736cd06ab072ab17169666838aab671442453745348195e0bbbcaaf8e8"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-3.k-2000.ref-15000",
+      "sha256": "e7e97f87c6305109f0d5dc29dfaec44824c6510a6ea5be93e71a3e5bb053d5c0"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-3.k-2000.ref-15000",
+      "sha256": "6cd4462b378f96c78d6548c3afd6a2cd7d21f7b47fe9b585287cab357acf0d4e"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-3.k-2000.ref-15000",
+      "sha256": "db32b460bde8b95f9e7faff12558cf05f129d662910bf18948bc585b024530d4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-3.k-3000.ref-15000",
+      "sha256": "39d79a33c97424a4db671f06f7ac42c231f2582aed630ff9fd9ec29860c73261"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-3.k-3000.ref-15000",
+      "sha256": "ef3867428a8bb6f495b20a6296ff87b7e7ab126801e236dbc220cb5591755186"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-3.k-3000.ref-15000",
+      "sha256": "09b96baf1900bd6582dcbfdd63de58be56b4aba6d01fa9e52253cb2896337341"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-3.k-500.ref-15000",
+      "sha256": "f627fc64e0078e5442ee5ae7a16ff761cea43bf540de2ca1ba02089f9f93f024"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-3.k-500.ref-15000",
+      "sha256": "b28a820951e20ea12dceaa538c78418569e6e96608171a0d45ce44ef72a3d8a2"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-3.k-500.ref-15000",
+      "sha256": "34ff589be19f1fe79076f261b65aae86485fb85b92186e000f28fae58907b9cc"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-4.k-100.ref-15000",
+      "sha256": "9cf341cbf4ba7bd5a159a4947915b131036208e37a1666904d099d465b0df5b5"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-4.k-100.ref-15000",
+      "sha256": "057f811f35793b88acfd8877982fe0c7e9f33abc877dfe4f2d3dd146e750a21f"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-4.k-100.ref-15000",
+      "sha256": "43c3555d178425b4d339917885bdceb1fb5e5131fb043f4d18e71e9176c2eb04"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-4.k-10.ref-15000",
+      "sha256": "e9957382778a1bdf37203d03a7f9207be983a39bc75a537774fb3a09fdbdcf02"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-4.k-10.ref-15000",
+      "sha256": "d5a536aebbd7edd9e6633e737a18f9ae61ec526722fcd33aaa061b296c44850c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-4.k-10.ref-15000",
+      "sha256": "785e2472c266ccbb8a6cac439626f46f7cf9c3a9fd1bd4826a0ff5c6b72942f3"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-4.k-2000.ref-15000",
+      "sha256": "bff76d5563121694236bbbcec3c83ce52c7e181261a3f12b6167e641239bb6b4"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-4.k-2000.ref-15000",
+      "sha256": "39161010d5ea344592b8510ef167fac36bdaa1dc893c4705e15643978f9dcb74"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-4.k-2000.ref-15000",
+      "sha256": "08babf4e71657240acb3c64553897b764096f03853fc9b87ccf5172243fafcff"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-4.k-3000.ref-15000",
+      "sha256": "5045c5a43c0ab1ad54e7c958ef89b6cbdb9f95c1cba69ddb3c85fbbd0b162c36"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-4.k-3000.ref-15000",
+      "sha256": "f6e5fc40b5c655a9acda422480826e89f25ea1bf24f7de325d01844d3e52fbaf"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-4.k-3000.ref-15000",
+      "sha256": "72a2c15528770d9b989cb6a22586e30e7228246c6268df3fe349ae40e3616f1f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-4.k-500.ref-15000",
+      "sha256": "2ebe3acf0c6dd594da4ab670e795b6a66f70f2d9656e48f281e3443f642da34c"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-4.k-500.ref-15000",
+      "sha256": "c98e4aaf4105e8882ffd894d90444935092a1df2ace7b17997204b1f2ef0d4be"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-4.k-500.ref-15000",
+      "sha256": "e3d5358331ae993a29cffd556dcae817cbe75585f1916cc99df2472f9a472f71"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-5.k-100.ref-15000",
+      "sha256": "48d44ebbc94cdab42d0443a709129a8736de21ff062d6a574456f357a995b779"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-5.k-100.ref-15000",
+      "sha256": "143a8e9cabca62ec2b685186d44627e3951dce7631a1dbbd6fff28093be2392c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-5.k-100.ref-15000",
+      "sha256": "f6926e834cfd85f4a6078e2ebee474aa5b6612e8fc8f717ae64a2e4cca7e3268"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-5.k-10.ref-15000",
+      "sha256": "d8b6b5996dc168c416b942471c0c3184506d9c2d9d7581f1ae602b7743b4f9c9"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-5.k-10.ref-15000",
+      "sha256": "10f8c3ecded3b1b21d16aef223a8eb7d1142954e739c66dca265b75e55cf0231"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-5.k-10.ref-15000",
+      "sha256": "9025062bf485ae2057d29510e0c1e76cfa467dc182fdfa8f40c7a162b437961f"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-5.k-2000.ref-15000",
+      "sha256": "19691b549c671ccf88a04a4d72b8c52d28063ddd524ad6c6ca20e0a3b0880d9f"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-5.k-2000.ref-15000",
+      "sha256": "e0238ee1a0acb8ee176d6eef6f59e492ae13310d53b46d5db6e1dcd7767db6eb"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-5.k-2000.ref-15000",
+      "sha256": "1f6f66b11dd7901434b8610fa33a081a57df031c396a089814c02b16c1bfe8e6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-5.k-3000.ref-15000",
+      "sha256": "53d38822c9ae5654d751d56e8e53c4f4ca2391821dc7fdfa79e68d08aa8c8588"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-5.k-3000.ref-15000",
+      "sha256": "01418ab49418d977a548ccbc5f6e760535b5ac881158003c192ca86d2c21983c"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-5.k-3000.ref-15000",
+      "sha256": "5c8f2bf43a8723d2b45178c601aa47763f592efbf6d3fe3f811b60fc39817124"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-5.k-500.ref-15000",
+      "sha256": "1dff39cfb21c99f7751239b5f3f84ff7c69aadc8c6c402ffb05f566b51c94c1e"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-5.k-500.ref-15000",
+      "sha256": "2d1063d0f3134f1152e489943250851dfec75ff35c6266069e6f04a907dae0c9"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-5.k-500.ref-15000",
+      "sha256": "a7aac8ecfee6a3b40c8d76dd4b198fe25665e154a5a1ae3a775ae9dea7ef4be0"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-6.k-100.ref-15000",
+      "sha256": "a4ffdc16416a5dbb3c6ce145e7fe12d29daaeaa67a550e96f143cd7a9a0a0851"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-6.k-100.ref-15000",
+      "sha256": "0cf54a9d637e16b772f4c73964558a08029e8b37920319c9af27baa103bafdff"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-6.k-100.ref-15000",
+      "sha256": "758b26c2398312afc8b7db44c030517f6fafbd545eaab1f92f9d0871c12240ae"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-6.k-10.ref-15000",
+      "sha256": "2a53773b197caebdbfa4bb6b8efb342d05cad0f32cfb997241a47e112a57f1fb"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-6.k-10.ref-15000",
+      "sha256": "b8f2186a8a12e063eb35e5bf81ec1e5253623f284074a3d3d5127522160e0467"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-6.k-10.ref-15000",
+      "sha256": "8d48199aa3d1826dee8c87f6e9d5b755760ab60c4be5067aa158e0e2129e31cc"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-6.k-2000.ref-15000",
+      "sha256": "8967d716a8c5c1aaa5ef899a8970fe021440b4521e10444c8ef4ec665613665f"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-6.k-2000.ref-15000",
+      "sha256": "7368c1c20fc1fba1d5dd236124376e04cc225c08149144bb501243506402abf1"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-6.k-2000.ref-15000",
+      "sha256": "5332d840a3781b6edf4d771e51f92fd8ee41132a11b273c4bdf29e42a0754dfd"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-6.k-3000.ref-15000",
+      "sha256": "2f33beeca67844b6348bd106bfdd296750913617d94b7a744f7cac36bd38f8a7"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-6.k-3000.ref-15000",
+      "sha256": "c79448f24a80a01b0410e52e5b67f0c749c8ebad05b6e051d80878c6668918da"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-6.k-3000.ref-15000",
+      "sha256": "30b93fff11df32f5c636a267a5358c4457261d45401060d6fe2062b65353e95a"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.qwen-2.5-7b.id.layer-6.k-500.ref-15000",
+      "sha256": "9ee5925aeb3fe73579a5dfe98d07b71b62ee69728aef5532ebf9ced4fd82fa11"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.qwen-2.5-7b.id.layer-6.k-500.ref-15000",
+      "sha256": "f8bd58a28489f0f23a19321fb8dbdf28c21f6f7fb127693074540c2a9f30bd1e"
+    },
+    {
+      "logical_id": "feature_family_ablations.qwen-2.5-7b.id.layer-6.k-500.ref-15000",
+      "sha256": "1ccc71edef12d9d130b0995d5435a82793d447ef80b6685261924b643bdb00c2"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.apertus-8b.fci_pyfci.layer-2.k-1000.ref-15000",
+      "sha256": "8a8557f26cab801995fbef5c23b053dfd3c5c5b1a0042f6a95373eb6a915211d"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.apertus-8b.id.layer-16.k-1000.ref-15000",
+      "sha256": "a1e8a2f565a7cf74bc2c80526358b0dc975b55f006f6dacb4633fea1cdd59ca6"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.apertus-8b.id.layer-16.k-1000.ref-15000",
+      "sha256": "8542477497f44110e0e0ea154987dd77979667ca410e77b21de421ae6a058670"
+    },
+    {
+      "logical_id": "feature_family_ablations.apertus-8b.id.layer-16.k-1000.ref-15000",
+      "sha256": "ab3a85f6ce6a1a2ce77613a90f1110ec3936f4c2ef5f352fc8ff888133f203c4"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.apertus-8b.id.layer-2.k-1000.ref-15000",
+      "sha256": "80a0d878e4452f46897f15062d543bddf01858429206f26b2ef8f301e9427bee"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.apertus-8b.id.layer-2.k-1000.ref-15000",
+      "sha256": "08bf485709d380f709a57a14cd55301a61f8b332f3a6cae96b88c6505912d1aa"
+    },
+    {
+      "logical_id": "feature_family_ablations.apertus-8b.id.layer-2.k-1000.ref-15000",
+      "sha256": "b6a4e20bd22ce874e3da98136be471ba178c90da542e3138f1bf51cf3b121eb6"
+    },
+    {
+      "logical_id": "layer_neighbourhood_regression.apertus-8b.id.layer-31.k-1000.ref-15000",
+      "sha256": "ee8ac2032626446bf171f30cd7cb544c78e5981414d2d519538afb5c8997bcb5"
+    },
+    {
+      "logical_id": "grouped_permutation_importance.apertus-8b.id.layer-31.k-1000.ref-15000",
+      "sha256": "686223d95f1eb099372131d06f84c78951f90607565c1bf6147cb69caabf73b1"
+    },
+    {
+      "logical_id": "feature_family_ablations.apertus-8b.id.layer-31.k-1000.ref-15000",
+      "sha256": "c590358f99515f87060f33c9405b0a72343191d6753f6985e86f2469259ad04d"
+    },
+    {
+      "logical_id": "neighbourhood_locality.parameters",
+      "sha256": "0ae381013cef0a360f7feaa5221ea9f207032724641d3ca039a488527023391c"
+    },
+    {
+      "logical_id": "neighbourhood_locality.summary",
+      "sha256": "bf594488ac778b5dd6d17ab857e6a22eb10e2d2b8fafe0f5613e9258de158ed0"
+    },
+    {
+      "logical_id": "neighbourhood_locality.validation",
+      "sha256": "b9ffd26dd351d46c44a081b18072fec0338f09b7c5639e0fcd665dcfbc5be7e1"
+    },
+    {
+      "logical_id": "neighbourhood_locality.apertus_layer16_mle_precision",
+      "sha256": "feb925568bd4f8e410aab13da1f0744fa347f03546edaaddd6302d2cf36546aa"
+    },
+    {
+      "logical_id": "neighbourhood_locality.per_query_metrics",
+      "sha256": "ba361de44633670b848dbf6fa07c9354d916586a674f4e5d5d2daf9b803a8d5f"
+    },
+    {
+      "logical_id": "pythia_small_k.distance_profile_summary",
+      "sha256": "af39739ff308a1c541ff63012fa4e0b70db0e4225e2603e986e7ea63cc516e15"
+    },
+    {
+      "logical_id": "pythia_small_k.composition_summary",
+      "sha256": "85bde5ff47081f756ee305272f24a7816fb11921569b5be98129815576400123"
+    },
+    {
+      "logical_id": "pythia_small_k.stability_summary",
+      "sha256": "345e395127df777c73b57e1fedd299c090018b7d06183a63eeaa89cd485191f7"
+    },
+    {
+      "logical_id": "pythia-1.4b.all_layer_id",
+      "sha256": "25e18c3d030b1d81a152b7c717b165facefd3a2ab21faf56a84818eb5dfcd620"
+    },
+    {
+      "logical_id": "perplexity.ess_all_model_layer_k",
+      "sha256": "99f2726cdcd17ecc4303c14acae141b8f6ba22e44cc1db5dc1abd4c126a485ea"
+    },
+    {
+      "logical_id": "perplexity_ridge.all_layers_3fold",
+      "sha256": "4d52695483d4db450cafdc5c6e2188dbf63367e80d3fffaac5888a9517c15c74"
+    },
+    {
+      "logical_id": "perplexity_ridge.all_layers_3fold.parameters",
+      "sha256": "7105b33e6763e5f7ee0d157370c426e222f692010a2ee2264e9a19217fb2930b"
+    },
+    {
+      "logical_id": "perplexity_ridge.eval_known_layer24_5fold",
+      "sha256": "89d74cf46e26434b85b2e49b7726ea2688b5d3edb1e121801f511f0952fb62f1"
+    },
+    {
+      "logical_id": "perplexity_ridge.eval_known_layer24_5fold.parameters",
+      "sha256": "99b69b158dd6b3eaf1228854e43f5424dedbe4fbe4368d0d57bb1d5379f89ef6"
+    },
+    {
+      "logical_id": "source_tfidf_word.parameters",
+      "sha256": "5f761a0723fe7ebe35cd333f9cf9cb1dbce1903928510a75a523e46cdb604a25"
+    },
+    {
+      "logical_id": "source_tfidf_word.nonlinear_incremental_effects",
+      "sha256": "e53f54643e0e65bdc20cecd2bc27dc68f80df920c9c1c2e297a6cf2ffc43bc43"
+    },
+    {
+      "logical_id": "source_tfidf_word.outer_fold_metrics",
+      "sha256": "c4677d61712cdb31c7291ebfc248cea339ffb0cfced72ba08f70d9e3cede3d2e"
+    },
+    {
+      "logical_id": "source_tfidf_word.baseline_alpha_tuning",
+      "sha256": "ee1333048cf6abfac4b11a9b7b9708ab1a8058c8cf7190778c8a74946763c1e9"
+    },
+    {
+      "logical_id": "source_tfidf_word.nonlinear_tuning_choices",
+      "sha256": "b5877aa464052b6163d1807caf1751f662479a27303e3c9895f28f7f1a690131"
+    },
+    {
+      "logical_id": "source_tfidf_word.oof_predictions",
+      "sha256": "fddb3f18c21e992fd6916cf85d43d0b06bf48999f768f57dfcf678ba583ed218"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.parameters",
+      "sha256": "37a3e3d2cd3976f47e31d82bd19a9b8b790526b6b433374369cb645d53a33a64"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.nonlinear_incremental_effects",
+      "sha256": "cd574105c481b49e97e5f0ff13b304300d14f3486bc90dbfc3e6a34467f97b67"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.outer_fold_metrics",
+      "sha256": "930f8c6ad8bb277f35969c1a0018d7144e32839f8e93263148e292112b9d17bd"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.baseline_alpha_tuning",
+      "sha256": "82ce0414aec275237b4262f1e5b68eb42a6274e1c2f9594f8998b7704fd92b23"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.nonlinear_tuning_choices",
+      "sha256": "2c959e6cb4113371552769a78dece471b878f363bdb8ab58529484ece0152259"
+    },
+    {
+      "logical_id": "source_tfidf_word_char.oof_predictions",
+      "sha256": "af7341e4f453126fe262051e99964afd7918c2e6f8c6b845e343c4ad3f0e61e9"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/paper/layer_neighbourhood_regression.csv",
+      "rows": 7434,
+      "columns": [
+        "model_key",
+        "run_kind",
+        "layer",
+        "k",
+        "reference_size",
+        "split",
+        "task_type",
+        "model_name",
+        "n_rows",
+        "n_features",
+        "n_splits",
+        "cv_strategy",
+        "metric_r2_mean",
+        "metric_r2_std",
+        "metric_r2_oof",
+        "metric_mae_mean",
+        "metric_mae_std",
+        "metric_mae_oof",
+        "metric_rmse_mean",
+        "metric_rmse_std",
+        "metric_rmse_oof",
+        "primary_metric_name",
+        "primary_metric_value",
+        "target_name",
+        "feature_subset",
+        "model_family",
+        "status",
+        "n_classes",
+        "class_labels",
+        "metric_roc_auc_mean",
+        "metric_roc_auc_std",
+        "metric_roc_auc_oof",
+        "metric_balanced_accuracy_mean",
+        "metric_balanced_accuracy_std",
+        "metric_balanced_accuracy_oof",
+        "metric_f1_mean",
+        "metric_f1_std",
+        "metric_f1_oof",
+        "metric_precision_mean",
+        "metric_precision_std",
+        "metric_precision_oof",
+        "metric_recall_mean",
+        "metric_recall_std",
+        "metric_recall_oof",
+        "ref_size",
+        "features",
+        "low_threshold",
+        "high_threshold"
+      ],
+      "sha256": "5d48472395679ea00a8b714c2b8c30d15b7b60bcb50a36842ec82c093fd78c32"
+    },
+    {
+      "path": "data/paper/grouped_permutation_importance.csv",
+      "rows": 4320,
+      "columns": [
+        "model_key",
+        "run_kind",
+        "layer",
+        "k",
+        "reference_size",
+        "split",
+        "feature_family",
+        "coarse_family",
+        "n_features",
+        "grouped_permutation_importance_mean",
+        "grouped_permutation_importance_std",
+        "baseline_score_mean",
+        "n_folds",
+        "grouped_permutation_importance_share_abs",
+        "target_name",
+        "task_type",
+        "model_name",
+        "feature_subset"
+      ],
+      "sha256": "489cb42c4c68b5eef18001d075130ea8cb35b0fbc58c025defe90b16675d08c4"
+    },
+    {
+      "path": "data/paper/feature_family_ablations.csv",
+      "rows": 4320,
+      "columns": [
+        "model_key",
+        "run_kind",
+        "layer",
+        "k",
+        "reference_size",
+        "split",
+        "ablation_kind",
+        "target_name",
+        "task_type",
+        "model_name",
+        "feature_subset",
+        "removed_family",
+        "removed_features",
+        "n_features_removed",
+        "n_features_remaining",
+        "baseline_metric_name",
+        "baseline_metric_value",
+        "ablation_metric_value",
+        "metric_drop",
+        "ablation_top_n"
+      ],
+      "sha256": "185b12403c144cf530518bc984f6997dc8eb46a2050180d57bc642176790574e"
+    },
+    {
+      "path": "configs/neighbourhood_locality.json",
+      "sha256": "a54b024a9f98b58c9c8fb0244792167535691e81752406dd6d9646e8baeb644a"
+    },
+    {
+      "path": "data/paper/neighbourhood_locality_summary.csv",
+      "rows": 90,
+      "columns": [
+        "model",
+        "layer",
+        "kind",
+        "rank_start",
+        "k",
+        "n_queries",
+        "n_neighbors",
+        "radius_mean",
+        "radius_median",
+        "radius_q25",
+        "radius_q75",
+        "radius_ratio_mean",
+        "radius_ratio_median",
+        "radius_ratio_q25",
+        "radius_ratio_q75",
+        "same_source_mean",
+        "same_source_median",
+        "same_source_q25",
+        "same_source_q75",
+        "same_source_null_mean",
+        "same_source_null_median",
+        "same_source_null_q25",
+        "same_source_null_q75",
+        "same_source_gain_mean",
+        "same_source_gain_median",
+        "same_source_gain_q25",
+        "same_source_gain_q75",
+        "same_source_gain_ci_low",
+        "same_source_gain_ci_high",
+        "source_entropy_mean",
+        "source_entropy_median",
+        "source_entropy_q25",
+        "source_entropy_q75",
+        "source_entropy_random_mean_mean",
+        "source_entropy_random_mean_median",
+        "source_entropy_random_mean_q25",
+        "source_entropy_random_mean_q75",
+        "unique_sources_mean",
+        "unique_sources_median",
+        "unique_sources_q25",
+        "unique_sources_q75",
+        "tfidf_cosine_mean",
+        "tfidf_cosine_median",
+        "tfidf_cosine_q25",
+        "tfidf_cosine_q75",
+        "tfidf_random_mean",
+        "tfidf_random_median",
+        "tfidf_random_q25",
+        "tfidf_random_q75",
+        "tfidf_gain_mean",
+        "tfidf_gain_median",
+        "tfidf_gain_q25",
+        "tfidf_gain_q75",
+        "tfidf_gain_ci_low",
+        "tfidf_gain_ci_high",
+        "tfidf_source_matched_random_mean",
+        "tfidf_source_matched_random_median",
+        "tfidf_source_matched_random_q25",
+        "tfidf_source_matched_random_q75",
+        "tfidf_source_matched_gain_mean",
+        "tfidf_source_matched_gain_median",
+        "tfidf_source_matched_gain_q25",
+        "tfidf_source_matched_gain_q75",
+        "tfidf_source_matched_gain_ci_low",
+        "tfidf_source_matched_gain_ci_high"
+      ],
+      "sha256": "52647ae4f260fc584ffc0e283de77b0d48607a70191236feedd07c3d760c909a"
+    },
+    {
+      "path": "data/paper/neighbourhood_locality_validation.csv",
+      "rows": 9,
+      "columns": [
+        "model",
+        "layer",
+        "mle_max_relative_error",
+        "mle_median_relative_error",
+        "headline_table_matches",
+        "independent_distance_check",
+        "torch_vs_sklearn_max_distance_relative_error",
+        "torch_mle_vs_saved_max_relative_error",
+        "torch_vs_sklearn_neighbor_overlap_min",
+        "torch_vs_sklearn_neighbor_overlap_mean",
+        "mle_relative_error_q95",
+        "mle_error_over_one_percent_count"
+      ],
+      "sha256": "0574a682be261ab06bca4fb180993526cc86f07756fa2fad1616ad5721c4e26d"
+    },
+    {
+      "path": "data/paper/neighbourhood_locality_apertus_layer16_mle_precision.csv",
+      "rows": 500,
+      "columns": [
+        "query_position",
+        "saved_mle",
+        "recomputed_mle",
+        "relative_error"
+      ],
+      "sha256": "3ec6a246e06da9fc2a4cef4430ad9f75a82676bd8dc1b1db39fd221c949b767c"
+    },
+    {
+      "path": "data/derived/neighbourhood_locality_metrics.parquet",
+      "rows": 45000,
+      "columns": [
+        "model",
+        "layer",
+        "kind",
+        "rank_start",
+        "k",
+        "n_neighbors",
+        "query_position",
+        "query_source",
+        "radius",
+        "random_median_distance",
+        "radius_ratio",
+        "mean_distance",
+        "same_source",
+        "same_source_null",
+        "same_source_gain",
+        "source_entropy",
+        "source_entropy_random_mean",
+        "unique_sources",
+        "tfidf_cosine",
+        "tfidf_random",
+        "tfidf_gain",
+        "tfidf_source_matched_random",
+        "tfidf_source_matched_gain",
+        "zero_distance_fraction"
+      ],
+      "sha256": "5651a6f43d7d25f0669ee50293a87a1a62e4c8302d72457a614fd46e28ef6be7"
+    },
+    {
+      "path": "data/paper/pythia_small_k_distance_profile_summary.csv",
+      "rows": 1188,
+      "columns": [
+        "split",
+        "layer",
+        "layer_name",
+        "metric",
+        "group_k",
+        "score_group",
+        "rank",
+        "median_distance",
+        "mean_distance",
+        "median_logratio_to_group_k",
+        "mean_logratio_to_group_k",
+        "n_queries"
+      ],
+      "sha256": "6058a7ef167e72c8f5f7c19ac1901545c4c323b29ffd8262f4ceef697e0f546d"
+    },
+    {
+      "path": "data/paper/pythia_small_k_composition_summary.csv",
+      "rows": 270,
+      "columns": [
+        "split",
+        "layer",
+        "k",
+        "metric",
+        "score_group",
+        "neighbor_source_entropy_mean",
+        "neighbor_source_entropy_median",
+        "neighbor_source_entropy_normalized_mean",
+        "neighbor_source_entropy_normalized_median",
+        "neighbor_unique_sources_mean",
+        "neighbor_unique_sources_median",
+        "same_source_rate_mean",
+        "same_source_rate_median",
+        "mean_abs_num_tokens_diff_mean",
+        "mean_abs_num_tokens_diff_median",
+        "mean_abs_num_chars_diff_mean",
+        "mean_abs_num_chars_diff_median",
+        "mean_abs_log_token_frequency_diff_mean",
+        "mean_abs_log_token_frequency_diff_median",
+        "mean_tfidf_cosine_mean",
+        "mean_tfidf_cosine_median",
+        "near_duplicate_tfidf_rate_0_85_mean",
+        "near_duplicate_tfidf_rate_0_85_median",
+        "exact_normalized_text_duplicate_rate_mean",
+        "exact_normalized_text_duplicate_rate_median",
+        "same_source_file_rate_mean",
+        "same_source_file_rate_median",
+        "mean_abs_line_index_diff_same_file_mean",
+        "mean_abs_line_index_diff_same_file_median",
+        "near_line_rate_10_same_file_mean",
+        "near_line_rate_10_same_file_median",
+        "near_line_rate_100_same_file_mean",
+        "near_line_rate_100_same_file_median",
+        "d1_mean",
+        "d1_median",
+        "d10_mean",
+        "d10_median",
+        "d50_mean",
+        "d50_median",
+        "d100_mean",
+        "d100_median",
+        "d500_mean",
+        "d500_median",
+        "dk_mean",
+        "dk_median",
+        "distance_cv_mean",
+        "distance_cv_median",
+        "mean_logratio_mean",
+        "mean_logratio_median",
+        "reconstructed_mle_from_distances_mean",
+        "reconstructed_mle_from_distances_median",
+        "score_mean",
+        "score_median"
+      ],
+      "sha256": "7a27d819b21a18fae0501e3b40d65d0afb19e5cc72ee2948e5b185ea55b2f03f"
+    },
+    {
+      "path": "data/paper/pythia_small_k_stability_summary.csv",
+      "rows": 18,
+      "columns": [
+        "split",
+        "layer",
+        "rank",
+        "reference_sample_size",
+        "mean_jaccard",
+        "median_jaccard",
+        "p10_jaccard",
+        "p90_jaccard",
+        "n_queries"
+      ],
+      "sha256": "e8e96d62aede7e1b5e974c717c4fc1cd10d677a4de5f039bf9491603b922ced7"
+    },
+    {
+      "path": "data/paper/pythia_small_all_layer_id.csv",
+      "rows": 6816,
+      "columns": [
+        "model_name",
+        "revision",
+        "layer_idx",
+        "layer_name",
+        "reference_size",
+        "k",
+        "count",
+        "mean",
+        "std",
+        "median",
+        "estimator"
+      ],
+      "sha256": "1a41116bb70173a0125d7604f9aaa3bf217d0d795e3a1774737b0180427fe14a"
+    },
+    {
+      "path": "data/paper/perplexity_ess_layer_neighbourhood.csv",
+      "rows": 21504,
+      "columns": [
+        "split_name",
+        "model_key",
+        "model_label",
+        "model_name",
+        "revision",
+        "layer_idx",
+        "layer_name",
+        "reference_size",
+        "k",
+        "predictor_name",
+        "target_name",
+        "n_rows",
+        "n_rows_finite",
+        "n_unique_predictor",
+        "n_unique_ess",
+        "pearson_r",
+        "pearson_pvalue",
+        "spearman_rho",
+        "spearman_pvalue"
+      ],
+      "sha256": "426a816d03ebaa63e49d559be6dad7bfd7d519f32f89411888ed48c685ebf1b4"
+    },
+    {
+      "path": "configs/perplexity_ridge_all_layers_3fold.json",
+      "sha256": "f6272e77ede34a0cb584c6cad7fb57c01ac17532d1ae90880d65e5629979e0e3"
+    },
+    {
+      "path": "configs/perplexity_ridge_eval_known_layer24_5fold.json",
+      "sha256": "2c51f5439577e1836e757e70acf091506478d0671a1d60e39125d9518f720576"
+    },
+    {
+      "path": "data/paper/perplexity_only_ridge.csv",
+      "rows": 100,
+      "columns": [
+        "run_id",
+        "model_key",
+        "group_scope",
+        "task_type",
+        "target",
+        "model",
+        "n_rows",
+        "n_splits",
+        "features",
+        "r2_mean",
+        "r2_std",
+        "rmse_mean",
+        "rmse_std",
+        "mae_mean",
+        "mae_std",
+        "spearman_rho_mean",
+        "spearman_rho_std",
+        "split_name",
+        "layer_name"
+      ],
+      "sha256": "d12c9f70c2e108f504523f57ad64c7e104a52f47b4abd2b80bab3546cb4143cf"
+    },
+    {
+      "path": "configs/source_tfidf_word.json",
+      "sha256": "e5e80e443912a6c685a65ed07a7942bb127df6819c9f536f06f63f61e865f629"
+    },
+    {
+      "path": "data/paper/source_tfidf_word_nonlinear_incremental_effects.csv",
+      "rows": 9,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "n_rows",
+        "baseline_r2_oof",
+        "augmented_r2_oof",
+        "delta_r2_oof",
+        "delta_r2_ci_low",
+        "delta_r2_ci_high",
+        "delta_r2_familywise_ci_low",
+        "delta_r2_familywise_ci_high",
+        "familywise_comparisons",
+        "bootstrap_probability_delta_gt_zero",
+        "baseline_rmse_oof",
+        "augmented_rmse_oof",
+        "baseline_mae_oof",
+        "augmented_mae_oof",
+        "correction_selected_folds",
+        "median_selected_residual_weight",
+        "bootstrap_reps"
+      ],
+      "sha256": "42a8c961f93950d4f4c8da13f4d519717267092d7cce4c580ddb0281b3e073a7"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_outer_fold_metrics.csv",
+      "rows": 45,
+      "columns": [
+        "model_key",
+        "model",
+        "revision",
+        "layer",
+        "outer_fold",
+        "n_train",
+        "n_test",
+        "selected_baseline_alpha",
+        "qwen_baseline_reference_max_abs_diff",
+        "selected_min_samples_leaf",
+        "selected_max_features",
+        "selected_residual_weight",
+        "selected_inner_mse",
+        "training_residual_mean_removed",
+        "baseline_r2",
+        "augmented_r2",
+        "delta_r2"
+      ],
+      "sha256": "b06f6a0a9ed0ddc8aacd1fb2b3aa84e7c18f8efb6be9fd4a56cf9f45851cd015"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_baseline_alpha_tuning.csv",
+      "rows": 225,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "outer_fold",
+        "alpha",
+        "mean_inner_fold_mse",
+        "pooled_inner_mse",
+        "alpha_index",
+        "selected"
+      ],
+      "sha256": "1ec7bc899d97e079d76cd2a41d64f2a1d96f35f2cd9e5ac09383926e516cd74b"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_nonlinear_tuning_choices.csv",
+      "rows": 1080,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "outer_fold",
+        "baseline_alpha",
+        "min_samples_leaf",
+        "max_features",
+        "residual_weight",
+        "inner_mse",
+        "selected"
+      ],
+      "sha256": "cc4a5d0fddaea78b6ac35bee253b39108f1ce9f9e600eec849bce9ee70616fbc"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_oof_predictions.parquet",
+      "rows": 16794,
+      "columns": [
+        "model_key",
+        "model",
+        "saved_model_name",
+        "revision",
+        "layer",
+        "query_index",
+        "pile_set_name",
+        "source_group",
+        "outer_fold",
+        "target_name",
+        "target_value",
+        "prediction_lexical_source",
+        "prediction_rf_residual",
+        "prediction_lexical_source_plus_rf",
+        "period_final_token_id"
+      ],
+      "sha256": "fddb3f18c21e992fd6916cf85d43d0b06bf48999f768f57dfcf678ba583ed218"
+    },
+    {
+      "path": "configs/source_tfidf_word_char.json",
+      "sha256": "35211a2de6f18ced6721452c69accc95558ff0b5f6bae2f447d159fff27f8947"
+    },
+    {
+      "path": "data/paper/source_tfidf_word_char_nonlinear_incremental_effects.csv",
+      "rows": 9,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "n_rows",
+        "baseline_r2_oof",
+        "augmented_r2_oof",
+        "delta_r2_oof",
+        "delta_r2_ci_low",
+        "delta_r2_ci_high",
+        "delta_r2_familywise_ci_low",
+        "delta_r2_familywise_ci_high",
+        "familywise_comparisons",
+        "bootstrap_probability_delta_gt_zero",
+        "baseline_rmse_oof",
+        "augmented_rmse_oof",
+        "baseline_mae_oof",
+        "augmented_mae_oof",
+        "correction_selected_folds",
+        "median_selected_residual_weight",
+        "bootstrap_reps"
+      ],
+      "sha256": "07dc537fcd94669577dfd100bc2ee35cc6518a450dadc0fc8e510b7ec59b0d09"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_char_outer_fold_metrics.csv",
+      "rows": 45,
+      "columns": [
+        "model_key",
+        "model",
+        "revision",
+        "layer",
+        "outer_fold",
+        "n_train",
+        "n_test",
+        "selected_baseline_alpha",
+        "qwen_baseline_reference_max_abs_diff",
+        "selected_min_samples_leaf",
+        "selected_max_features",
+        "selected_residual_weight",
+        "selected_inner_mse",
+        "training_residual_mean_removed",
+        "baseline_r2",
+        "augmented_r2",
+        "delta_r2"
+      ],
+      "sha256": "19f10789bbfb1966055057c6052384b2b8b88952e8188891da698c79855d03a1"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_char_baseline_alpha_tuning.csv",
+      "rows": 225,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "outer_fold",
+        "alpha",
+        "mean_inner_fold_mse",
+        "pooled_inner_mse",
+        "alpha_index",
+        "selected"
+      ],
+      "sha256": "156d21259064d15623e8bc4ca80037da3aa3fe010bcc351a069c8542603a4202"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_char_nonlinear_tuning_choices.csv",
+      "rows": 1080,
+      "columns": [
+        "model_key",
+        "model",
+        "layer",
+        "outer_fold",
+        "baseline_alpha",
+        "min_samples_leaf",
+        "max_features",
+        "residual_weight",
+        "inner_mse",
+        "selected"
+      ],
+      "sha256": "d46bdb40e0ad8d8017221488760d6200f1df62e749754402dba446559aa13099"
+    },
+    {
+      "path": "results/reference/source_tfidf_word_char_oof_predictions.parquet",
+      "rows": 16794,
+      "columns": [
+        "model_key",
+        "model",
+        "saved_model_name",
+        "revision",
+        "layer",
+        "query_index",
+        "pile_set_name",
+        "source_group",
+        "outer_fold",
+        "target_name",
+        "target_value",
+        "prediction_lexical_source",
+        "prediction_rf_residual",
+        "prediction_lexical_source_plus_rf",
+        "period_final_token_id"
+      ],
+      "sha256": "e715666591ec00053a307c5b39c2560d2355631787518766cf2a3d4e99430bfd"
+    }
+  ],
+  "notes": [
+    "No source files were deleted.",
+    "Raw excerpts and personal paths are excluded.",
+    "Run-kind labels distinguish legacy ID, ESS-only and pyFCI runs; they must not be pooled as independent replicates.",
+    "These historical grids are separate from the pinned main-model bundle."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "excerpts": 1994,
+  "features": 46,
+  "model_depth_settings": 9,
+  "estimator_settings": 27,
+  "verified_text_hashes": 1994,
+  "paper_examples": 7,
+  "population_by_setting": {
+    "pythia.early.ess": 1994,
+    "pythia.early.mle": 1994,
+    "pythia.early.fci": 1993,
+    "pythia.intermediate.ess": 1994,
+    "pythia.intermediate.mle": 1994,
+    "pythia.intermediate.fci": 1994,
+    "pythia.late.ess": 1994,
+    "pythia.late.mle": 1994,
+    "pythia.late.fci": 1994,
+    "qwen.early.ess": 1994,
+    "qwen.early.mle": 1994,
+    "qwen.early.fci": 1994,
+    "qwen.intermediate.ess": 1994,
+    "qwen.intermediate.mle": 1994,
+    "qwen.intermediate.fci": 1994,
+    "qwen.late.ess": 1994,
+    "qwen.late.mle": 1994,
+    "qwen.late.fci": 1994,
+    "apertus.early.ess": 1994,
+    "apertus.early.mle": 1994,
+    "apertus.early.fci": 1994,
+    "apertus.intermediate.ess": 1994,
+    "apertus.intermediate.mle": 1994,
+    "apertus.intermediate.fci": 1994,
+    "apertus.late.ess": 1994,
+    "apertus.late.mle": 1994,
+    "apertus.late.fci": 1994
+  },
+  "sources": {
+    "features": "d5107d8cf48a085ac4b28c9d021570824980647701021736aa80655280f7e21f",
+    "targets": "7b8c9116f45f04747a9ce7cc19278a9a835a390390ea6f881214da72b2d3b2e8",
+    "excerpts": "ed100850932679b4c141aeac83a457485a53f99098c93851581b43f6009a2601"
+  }
+}

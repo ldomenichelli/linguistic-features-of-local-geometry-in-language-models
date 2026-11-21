@@ -1,0 +1,12 @@
+cell_1,cell_2,cell_3,cell_4,cell_5,cell_6,cell_7,cell_8
+Model,Layer,Linguistic features,,,Baselines,,
+Model,Layer,Full,No frequency,No raw features,TF-IDF frequent,TF-IDF 1–5%,Log perplexity
+Pythia-6.9B,2,.256,.254,.215,.154,.068,-.292
+Pythia-6.9B,16,.505,.504,.476,.274,.221,-.077
+Pythia-6.9B,31,.263,.262,.257,.135,.104,-.133
+Qwen2.5-7B,2,.246,.244,.199,.098,-.017,-.266
+Qwen2.5-7B,14,.547,.547,.527,.323,.269,.006
+Qwen2.5-7B,27,.432,.430,.419,.239,.180,-.105
+Apertus-8B,2,.270,.271,.206,.130,-.031,-.063
+Apertus-8B,16,.439,.439,.416,.258,.199,-.075
+Apertus-8B,31,.311,.307,.291,.193,.121,-.114

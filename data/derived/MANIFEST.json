@@ -1,0 +1,481 @@
+{
+  "bundle_version": 1,
+  "outputs": [
+    {
+      "columns": 48,
+      "file": "features.parquet",
+      "rows": 1994,
+      "schema": [
+        {
+          "dtype": "int64",
+          "name": "query_index"
+        },
+        {
+          "dtype": "object",
+          "name": "text_sha256"
+        },
+        {
+          "dtype": "float64",
+          "name": "aux_mood_dist_Ind"
+        },
+        {
+          "dtype": "float64",
+          "name": "aux_num_pers_dist_Sing+3"
+        },
+        {
+          "dtype": "float64",
+          "name": "aux_tense_dist_Pres"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_links_len"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_max_depth"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_prepositional_chain_len"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_subordinate_chain_len"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_token_per_clause"
+        },
+        {
+          "dtype": "float64",
+          "name": "avg_verb_edges"
+        },
+        {
+          "dtype": "float64",
+          "name": "char_per_tok"
+        },
+        {
+          "dtype": "float64",
+          "name": "dep_dist_compound"
+        },
+        {
+          "dtype": "float64",
+          "name": "dep_dist_nmod"
+        },
+        {
+          "dtype": "float64",
+          "name": "dep_dist_nsubj"
+        },
+        {
+          "dtype": "float64",
+          "name": "dep_dist_obj"
+        },
+        {
+          "dtype": "float64",
+          "name": "dep_dist_obl"
+        },
+        {
+          "dtype": "float64",
+          "name": "lexical_density"
+        },
+        {
+          "dtype": "float64",
+          "name": "max_links_len"
+        },
+        {
+          "dtype": "int64",
+          "name": "n_sentences"
+        },
+        {
+          "dtype": "int64",
+          "name": "n_tokens"
+        },
+        {
+          "dtype": "float64",
+          "name": "obj_post"
+        },
+        {
+          "dtype": "float64",
+          "name": "subj_pre"
+        },
+        {
+          "dtype": "float64",
+          "name": "subordinate_post"
+        },
+        {
+          "dtype": "float64",
+          "name": "subordinate_proposition_dist"
+        },
+        {
+          "dtype": "float64",
+          "name": "tokens_per_sent"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_ADJ"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_ADP"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_ADV"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_AUX"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_CCONJ"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_DET"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_NOUN"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_NUM"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_PART"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_PRON"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_PROPN"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_PUNCT"
+        },
+        {
+          "dtype": "float64",
+          "name": "upos_dist_VERB"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbal_root_perc"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbs_form_dist_Inf"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbs_form_dist_Part"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbs_mood_dist_Ind"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbs_tense_dist_Past"
+        },
+        {
+          "dtype": "float64",
+          "name": "verbs_tense_dist_Pres"
+        },
+        {
+          "dtype": "float64",
+          "name": "min_frequency_class"
+        },
+        {
+          "dtype": "float64",
+          "name": "median_frequency_class"
+        },
+        {
+          "dtype": "float64",
+          "name": "max_frequency_class"
+        }
+      ],
+      "sha256": "d5107d8cf48a085ac4b28c9d021570824980647701021736aa80655280f7e21f"
+    },
+    {
+      "columns": 9,
+      "file": "main_targets.parquet",
+      "rows": 18000,
+      "schema": [
+        {
+          "dtype": "object",
+          "name": "model_key"
+        },
+        {
+          "dtype": "int64",
+          "name": "layer"
+        },
+        {
+          "dtype": "int64",
+          "name": "query_index"
+        },
+        {
+          "dtype": "object",
+          "name": "model_revision"
+        },
+        {
+          "dtype": "int64",
+          "name": "reference_size"
+        },
+        {
+          "dtype": "int64",
+          "name": "k"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_mle"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_ess"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_fci_id"
+        }
+      ],
+      "sha256": "7b8c9116f45f04747a9ce7cc19278a9a835a390390ea6f881214da72b2d3b2e8"
+    },
+    {
+      "columns": 13,
+      "file": "checkpoint_targets.parquet",
+      "rows": 72000,
+      "schema": [
+        {
+          "dtype": "object",
+          "name": "model_family"
+        },
+        {
+          "dtype": "object",
+          "name": "checkpoint"
+        },
+        {
+          "dtype": "int64",
+          "name": "checkpoint_order"
+        },
+        {
+          "dtype": "int64",
+          "name": "training_step"
+        },
+        {
+          "dtype": "Float64",
+          "name": "training_tokens_billion"
+        },
+        {
+          "dtype": "int64",
+          "name": "layer"
+        },
+        {
+          "dtype": "int64",
+          "name": "query_index"
+        },
+        {
+          "dtype": "object",
+          "name": "model_revision"
+        },
+        {
+          "dtype": "int64",
+          "name": "reference_size"
+        },
+        {
+          "dtype": "int64",
+          "name": "k"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_mle"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_ess"
+        },
+        {
+          "dtype": "float64",
+          "name": "pointwise_fci_id"
+        }
+      ],
+      "sha256": "19ed4dc0f3b8a4752baa2b060f9ca82aae3c3148ba54807d528c4dac1f340b2f"
+    }
+  ],
+  "purpose": "Compact, text-free inputs for deterministic reproduction of reported analyses.",
+  "source_artifacts": [
+    {
+      "logical_id": "checkpoint.apertus.tokens-000210b.layer-16",
+      "sha256": "f3e2337d903bc484df23d45fe06f42ba6a933d7817c752ac7e777e8cc5f871de"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000210b.layer-2",
+      "sha256": "ee2753caa8b733d4e5f24a23cb5e0622c11702e90188465eb6e8b5e655e8f316"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000210b.layer-31",
+      "sha256": "2e75cc23c8b849fe5c836e49758cef89fbddaf4cf7e9d951d5c66bbf5d08a37a"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000420b.layer-16",
+      "sha256": "c715d57af087412ef9304ffd7efd58d8a182e0beffaf5b2a7530be9ae81d034c"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000420b.layer-2",
+      "sha256": "3d0833337cb29d4b945735a952dffd56044e9dba0b89aa58c5f364ae1e0bbddd"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000420b.layer-31",
+      "sha256": "c0945bd766471106997ff7d4caf5f16a0529ee7ae12a7293e13ad7e91868b192"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000840b.layer-16",
+      "sha256": "e29e4da4f8fc39aa950c97ca7edf027089b8d860391bd8e869a5a3a404b03cbd"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000840b.layer-2",
+      "sha256": "b04fe912f0f110a74bdf716340f14f31b052932d1084430cbb2ea22e6690eb69"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-000840b.layer-31",
+      "sha256": "d1c0c6c2483f0a8f2575e3c045dca0e0cab7c60464b44fef4736ee9fe0cd30d9"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-001680b.layer-16",
+      "sha256": "d2d17bc37e40b86e8ae7866ba6f284ad74fb00f42be61885cc488b76e0369254"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-001680b.layer-2",
+      "sha256": "8eb13d4bc4ca1f525f172138742b074b7daafd4a210e36b571d23cca18947cc8"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-001680b.layer-31",
+      "sha256": "f1f251e6b4af54c664a696770fe9570238aac5277cff70c0d9921af7e9bd62bb"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-003570b.layer-16",
+      "sha256": "bb636d79712d160c5c0ec6f8db3e826360f9ade9e51cc2e90c428a0ac7dc2a1a"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-003570b.layer-2",
+      "sha256": "48403266180637c0830669669e16951a96ffd81ffcc82641539e30db739abbea"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-003570b.layer-31",
+      "sha256": "35b671e9a32fef57318340e9e31bc4fffc64ffe8fc0f74f72621d382b8d75e30"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-007232b.layer-16",
+      "sha256": "a0f6092fb13ed999b8d43d178dcb3e8a10af07a65da57f1d6d1df9d03754d3fd"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-007232b.layer-2",
+      "sha256": "71437ebe5a0573d04eb257eec02c07e07e85f60f7ef373813acf371e8df5fbe2"
+    },
+    {
+      "logical_id": "checkpoint.apertus.tokens-007232b.layer-31",
+      "sha256": "b021618996ffdc39382accb4a3ee2f5f13e1f059f037bfc13724cf3c090f128e"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-000512.layer-16",
+      "sha256": "cd5815a5eb1fb1b746d103fc7e25287b9062ff26f8a0ad79ee0e67b98d19d3ef"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-000512.layer-2",
+      "sha256": "05d158e5a662e25ca98c93b849178ab75593ea6cd7de58c166f0cbf75ec85f1e"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-000512.layer-31",
+      "sha256": "cc5b29ad6e5819affb7d500587708cd107d3f9c4da2bbd53546830ea9dba98c5"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-008000.layer-16",
+      "sha256": "c440ce4dae2892000afe1a56514dd73d10f0485e7227525b1ba534dc8ffd24e8"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-008000.layer-2",
+      "sha256": "6d7b9fded3f50bfcca7b2666684baf8da15dd7de2816deb06f0a27c35b01221b"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-008000.layer-31",
+      "sha256": "cbef492f2091918a23e491526014673c16b8a3a177a318948cec0e8744a13a7c"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-021000.layer-16",
+      "sha256": "10ed883db61114ea14f33b70d28b2826af5056719bbae3fc848b5f02fd99b3e1"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-021000.layer-2",
+      "sha256": "5f97075139d66f0567ea188b5b8f1b44e695a04f91eab44d7a8275d94f0a8527"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-021000.layer-31",
+      "sha256": "d44f8c38760740e27f3963425eed64dc37b6ad66eafa80b9f3399e24383932cf"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-055000.layer-16",
+      "sha256": "9261353253760257f74bb814b1ccb014dda67f495bd333f7502c1cf2df74ad34"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-055000.layer-2",
+      "sha256": "acd547d75b5bd6e9ded63bfcdec2b0f94b0cc868479d4eaaeef1a80d514dc44b"
+    },
+    {
+      "logical_id": "checkpoint.pythia.step-055000.layer-31",
+      "sha256": "71d62f62466b7b1f5f08cb602f858308cd958fb9bcff0adf6499b52dece12c95"
+    },
+    {
+      "logical_id": "features.profiling-ud-frequency",
+      "sha256": "e7a9b75d1586ba18b535cd4c45754b17c77dcbfeed263996c2b1e8299831c83e"
+    },
+    {
+      "logical_id": "main.apertus.layer-16",
+      "sha256": "39c68054d1f2642ea19ce1de41da190c93cc5b2d12c4bd3fa64cc79255206d5a"
+    },
+    {
+      "logical_id": "main.apertus.layer-2",
+      "sha256": "8cfa26201e4657736f381756b3710b416d0d9ddac41aea1a6c77998d4860bf09"
+    },
+    {
+      "logical_id": "main.apertus.layer-31",
+      "sha256": "d04af77220c59578cccec3397dcfd59ae14cc6f5cceb380d6d9681b8f926fb69"
+    },
+    {
+      "logical_id": "main.pythia.layer-16",
+      "sha256": "62e385121b4255bb7a95d12bddf2a9787f4f22177dbf0ab163db59efe192a3f6"
+    },
+    {
+      "logical_id": "main.pythia.layer-2",
+      "sha256": "eaf5359fc8ef1b17c5d785d41c6d64861743878c4b80fe524748b6ffff5c5675"
+    },
+    {
+      "logical_id": "main.pythia.layer-31",
+      "sha256": "d45b2b61bfe5e4261736b6b99850624c2be392b4436d80dd952b00b873e3d9cd"
+    },
+    {
+      "logical_id": "main.qwen.layer-14",
+      "sha256": "516b22271c72f6b6b8e57b6ca8c28964823da21eeb738b477bd68df2310e9ee5"
+    },
+    {
+      "logical_id": "main.qwen.layer-2",
+      "sha256": "3cb5d6946d91ee91ce0f8b9f2163f308f7a2576a9796a9ecc0d68b386261a6da"
+    },
+    {
+      "logical_id": "main.qwen.layer-27",
+      "sha256": "15d7e43e467a64f310b0006c7d5d863d5162c7fcfdc5f187c093aca8b87b039e"
+    }
+  ],
+  "source_checksum_file": "../../configs/artifacts.sha256",
+  "transformation": [
+    "Retain all numeric and Boolean profiling predictors and rename the stable row key to query_index.",
+    "Replace each feature-row text value with its lowercase hexadecimal SHA-256 fingerprint.",
+    "Validate target alignment against text in memory, then retain only neutral setup fields and pointwise estimates.",
+    "Use three final models, five reported Pythia checkpoints, and seven reported Apertus checkpoints.",
+    "Exclude text, source locations, dataset line numbers, original identifiers, runtime paths, and execution logs."
+  ],
+  "validation_report": "VALIDATION.json"
+}

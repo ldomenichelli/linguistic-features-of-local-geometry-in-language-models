@@ -1,0 +1,28 @@
+cell_1,cell_2
+Layer,Five largest held-out RF permutation importances (Δ R²)
+FCI,
+Pythia-6.9B,
+2,"n_tokens (.128), upos_PROPN (.075), dep_nsubj (.024), char_per_tok (.020), upos_PRON (.017)"
+16,"upos_NOUN (.143), char_per_tok (.079), upos_PROPN (.066), verbal_root (.042), upos_PRON (.035)"
+31,"upos_PROPN (.093), upos_NOUN (.071), verbal_root (.034), upos_PRON (.022), upos_ADV (.018)"
+Qwen2.5-7B,
+2,"n_tokens (.128), verbal_root (.053), upos_PUNCT (.019), char_per_tok (.018), upos_NUM (.015)"
+14,"char_per_tok (.152), upos_PRON (.065), upos_PROPN (.058), dep_nsubj (.047), upos_NOUN (.035)"
+27,"upos_PROPN (.154), verbal_root (.139), upos_NOUN (.062), char_per_tok (.031), upos_ADJ (.015)"
+Apertus-8B,
+2,"n_tokens (.215), verbal_root (.032), n_sentences (.012), upos_PUNCT (.010), char_per_tok (.008)"
+16,"upos_NOUN (.113), upos_PROPN (.047), verbal_root (.044), dep_nsubj (.041), char_per_tok (.041)"
+31,"upos_PROPN (.188), dep_nsubj (.051), verbal_root (.034), n_tokens (.033), upos_PRON (.030)"
+MLE,
+Pythia-6.9B,
+2,"upos_PROPN (.091), upos_PUNCT (.040), upos_NOUN (.026), dep_nsubj (.022), upos_NUM (.017)"
+16,"upos_NOUN (.083), subj_pre (.070), char_per_tok (.058), upos_PROPN (.023), dep_nsubj (.014)"
+31,"upos_PROPN (.079), char_per_tok (.043), dep_nsubj (.033), upos_ADJ (.025), verbal_root (.025)"
+Qwen2.5-7B,
+2,"n_tokens (.041), upos_PROPN (.027), verbal_root (.022), char_per_tok (.019), upos_ADJ (.011)"
+14,"char_per_tok (.092), dep_nsubj (.038), upos_PROPN (.029), dep_compound (.021), upos_NOUN (.018)"
+27,"upos_PROPN (.127), char_per_tok (.034), dep_nsubj (.024), verbal_root (.018), upos_PRON (.017)"
+Apertus-8B,
+2,"n_tokens (.086), upos_PROPN (.066), upos_NOUN (.039), upos_PUNCT (.020), upos_NUM (.017)"
+16,"upos_NOUN (.048), char_per_tok (.043), dep_nsubj (.033), upos_PROPN (.025), n_tokens (.021)"
+31,"upos_PROPN (.124), char_per_tok (.032), dep_nsubj (.027), median_frequency_class (.021), n_tokens (.020)"

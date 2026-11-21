@@ -1,0 +1,38 @@
+cell_1,cell_2
+Feature,Definition
+Profiling-UD descriptors (43 predictors),
+Surface and lexical composition (4 predictors),
+n_sentences,Number of sentences detected by the UD parser.
+n_tokens,"Number of UD word tokens, distinct from the number of language-model subword tokens."
+tokens_per_sent,Mean number of UD word tokens per parser-detected sentence.
+char_per_tok,Mean number of characters per non-punctuation UD token.
+Dependency-tree geometry (3 predictors),
+avg_links_len,"Mean absolute head-dependent distance in UD tokens, excluding punctuation dependencies."
+max_links_len,"Maximum head-dependent distance, using the same dependency filtering."
+avg_max_depth,Mean maximum root-to-leaf dependency-tree depth across parser-detected sentences.
+Clausal and verbal-predicate structure (6 predictors),
+avg_prepositional_chain_len,Mean depth of recursively embedded prepositional or adpositional modifier chains.
+avg_subordinate_chain_len,Mean depth of recursively embedded subordinate-clause chains.
+avg_token_per_clause,Mean number of UD tokens per clause.
+avg_verb_edges,"Mean number of eligible dependency links attached to each verbal head, excluding punctuation and copular links."
+subordinate_proposition_dist,Percentage of clauses classified as subordinate rather than main clauses.
+verbal_root,Percentage of parser-detected sentences whose dependency root is tagged as VERB.
+Linear order (3 predictors),
+subj_pre,Percentage of subject dependents preceding their governing verbal head.
+obj_post,Percentage of core-object dependents following their governing verbal head.
+subordinate_post,Percentage of subordinate-clause heads following their governing head.
+Dependency-relation distributions (5 predictors),
+"dep_\compound, nmod, nsubj, obj, obl\","Five predictors giving the percentages of UD dependency relations labelled as compound, nominal modifier, nominal subject, core object, and oblique nominal."
+Morphosyntactic information (14 predictors),
+"upos_\ADJ, ADP, ADV, AUX, CCONJ, DET, NOUN, NUM, PART, PRON, PROPN, PUNCT, VERB\",Thirteen predictors giving the percentage of UD tokens assigned each listed universal part-of-speech tag.
+lexical_density,"Percentage of word tokens assigned a content-word UPOS tag: NOUN, VERB, ADJ, or ADV."
+Auxiliary morphology (3 predictors),
+aux_mood_dist_Ind; aux_num_pers_dist_Sing+3; aux_tense_dist_Pres,"Among tokens tagged as AUX, the percentages marked Mood=Ind, jointly marked Number=Sing and Person=3, and marked Tense=Pres, respectively."
+Lexical-verb morphology (5 predictors),
+"verbs_form_dist_\Inf, Part\",Two predictors giving the percentages of VERB tokens marked as infinitives and participles.
+verbs_mood_dist_Ind,Percentage of VERB tokens marked for indicative mood.
+"verbs_tense_dist_\Past, Pres\",Two predictors giving the percentages of VERB tokens marked for past and present tense.
+Tokenizer-specific frequency controls (3 predictors),
+median_frequency_class,Median frequency class C_M(t) across the model tokens in the input.
+max_frequency_class,"Largest frequency class in the input, corresponding to its rarest token under the model-specific frequency table."
+min_frequency_class,"Smallest frequency class in the input, corresponding to its most frequent token under the model-specific frequency table."

@@ -1,0 +1,59 @@
+schema_version: 1
+random_seed: 42
+reference_size: 15000
+eval_known_count: 2000
+k: 1000
+target_estimators: [mle, ess, fci_local_adaptation]
+
+pythia_6_9b:
+  model_id: "EleutherAI/pythia-6.9b-deduped"
+  layers: [2, 16, 31]
+  immutable_commits_retained: false
+  packaging_time_main_commit: "372b1c08d9b5b0fc18ce86bbf294930e26e66ed5"
+  packaging_commit_is_historical_proof: false
+  all_prepared_states:
+    - {label: "step 0", revision: "step0", optimizer_step: 0}
+    - {label: "step 16", revision: "step16", optimizer_step: 16}
+    - {label: "1.1B", revision: "step512", optimizer_step: 512, reported: true}
+    - {label: "16.8B", revision: "step8000", optimizer_step: 8000, reported: true}
+    - {label: "44B", revision: "step21000", optimizer_step: 21000, reported: true}
+    - {label: "115B", revision: "step55000", optimizer_step: 55000, reported: true}
+    - {label: "300B", revision: "main", optimizer_step: 143000, reported: true}
+  reported_revisions: ["step512", "step8000", "step21000", "step55000", "main"]
+  note: >-
+    Revision names, including mutable main, were retained without resolved
+    model commits. Token counts are the labels used in the trajectory output.
+
+apertus_8b:
+  model_id: "swiss-ai/Apertus-8B-2509"
+  layers: [2, 16, 31]
+  immutable_commits_retained: true
+  checkpoints:
+    - label: "210B"
+      revision_label: "step50000-tokens210B"
+      optimizer_step: 50000
+      model_commit: "4d1413654b70c14a00c6c3179fc227b5d155ce9e"
+    - label: "420B"
+      revision_label: "step100000-tokens420B"
+      optimizer_step: 100000
+      model_commit: "f559808126bff0db3188ffb2dcc13e5c9423cac5"
+    - label: "840B"
+      revision_label: "step200000-tokens840B"
+      optimizer_step: 200000
+      model_commit: "3294c7d4da373758a57636ef53ea300d9d6e2ffa"
+    - label: "1.68T"
+      revision_label: "step400000-tokens1680B"
+      optimizer_step: 400000
+      model_commit: "f946ef40c610484827fbeaab30efe873d0590e70"
+    - label: "3.57T"
+      revision_label: "step850000-tokens3570B"
+      optimizer_step: 850000
+      model_commit: "ffefc2452dad49c3f7e88af5fb4d8e9e75bf4e97"
+    - label: "7.232T"
+      revision_label: "step1700000-tokens7232B"
+      optimizer_step: 1700000
+      model_commit: "4cd1cd1ff73cbae8bff0b7da149b0a6108d69602"
+    - label: "15T"
+      revision_label: "step2627139-tokens15T"
+      optimizer_step: 2627139
+      model_commit: "96982d7c559fab9c2b19b6934ad28499c5c341e9"

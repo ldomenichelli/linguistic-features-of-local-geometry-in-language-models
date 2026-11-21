@@ -1,0 +1,8 @@
+feature,early_direction,early_models,early_median_d10_90,middle_direction,middle_models,middle_median_d10_90,late_direction,late_models,late_median_d10_90
+upos_PROPN,increasing,1/3,0.176,increasing,3/3,0.133,increasing,3/3,0.307
+char_per_tok,mixed: 2 increasing / 1 decreasing,3/3,0.075,decreasing,3/3,-0.422,decreasing,1/3,-0.120
+upos_NOUN,not selected,0/3,,decreasing,3/3,-0.491,decreasing,2/3,-0.367
+dep_nsubj,increasing,1/3,0.178,increasing,2/3,0.327,increasing,3/3,0.126
+verbal_root,increasing,2/3,0.192,increasing,2/3,0.114,increasing,3/3,0.129
+n_tokens,increasing,3/3,0.454,not selected,0/3,,increasing,1/3,0.147
+upos_PRON,not selected,0/3,,increasing,2/3,0.305,increasing,2/3,0.119

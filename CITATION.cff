@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using these materials."
+type: software
+title: "Linguistic Features of Local Geometry in Language Models"
+version: "2.0.0"
+authors:
+  - family-names: Domenichelli
+    given-names: Lucia
+  - family-names: Macocco
+    given-names: Iuri
+  - family-names: Brunato
+    given-names: Dominique
+  - family-names: Dell'Orletta
+    given-names: Felice
+  - family-names: Baroni
+    given-names: Marco
+abstract: >-
+  Code, released pointwise intrinsic-dimension measurements, linguistic profiles,
+  current manuscript artifacts, additional reproduction results, and an
+  interactive browser of 1,994 aligned evaluation excerpts.
+keywords:
+  - language models
+  - intrinsic dimension
+  - linguistic features
+  - local geometry
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Linguistic Features of Local Geometry in Language Models"
+  authors:
+    - family-names: Domenichelli
+      given-names: Lucia
+    - family-names: Macocco
+      given-names: Iuri
+    - family-names: Brunato
+      given-names: Dominique
+    - family-names: Dell'Orletta
+      given-names: Felice
+    - family-names: Baroni
+      given-names: Marco

@@ -1,0 +1,8 @@
+query_index,feature,association,feature_value,ess_id,representative_excerpt
+1140,upos_PROPN,high to high ID,19.5%,179.52,"Any piece about New York City has a heavyweight champion to contend with—E.B. White’s Here Is New York—but André Aciman’s Shadow Cities comes out swinging."
+723,char_per_tok,high to low ID,9.75,43.78,"Plasma levels of trimethoprim and sulfonamide after administration of trimethoprim-sulfamethoxazole and administration of trimethoprim-sulfamethoxazole and trimethoprim-sulfamoxole."
+1189,upos_NOUN,high to low ID,48.0%,50.74,"Determination of tricarboxylic acid cycle acids and other related substances in cultured mammalian cells by gradient ion-exchange chromatography with suppressed conductivity detection."
+630,dep_nsubj,high to high ID,14.3%,209.19,"Mine, too, I’ve felt that there is more to the Yithians than most other mythos races... they’re not just purely malicious or uncaring as so many seem to be."
+154,verbal_root,high to high ID,100%,186.82,"When I heard that Children Of Bodom was putting out a new record, I was both excited and hesitant at the same time."
+1777,n_tokens,high to high ID,98,195.39,"We hear it from you all the time and we feel it too: community is what we do best. We bring together a diverse group of creative people who are living lives they love and YOU are part of that. You connect, share, motivate, and inspire each other. You are movers & shakers. You are the ones who burn the midnight oil and wake up at the crack of dawn. You save your money to invest in your future. You load up trucks and package delicate things."
+722,upos_PRON,high to high ID,16.7%,198.89,"In other news: I’ve re-discovered my love for Bismuth."
