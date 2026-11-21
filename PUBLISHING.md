@@ -24,7 +24,7 @@ git push origin main
 
 ## Activate the site
 
-For the one-time GitHub Pages activation, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Before activation, the workflow builds and checks the site but skips deployment with a setup note in its run summary. After enabling Pages, run **Actions → Deploy project explorer → Run workflow** if the initial push occurred before activation.
+For the one-time GitHub Pages activation, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow is already in [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Before activation, the workflow builds and checks the site but skips deployment with a setup note in its run summary. Selecting the source does not rerun an already completed workflow. After enabling Pages, run **Actions → Deploy project explorer → Run workflow**, or push the next checked update to `main`, to build and deploy the site.
 
 Once the deployment succeeds, the expected project URL is:
 
