@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Prepare the paper PDF, numeric results, and static repository browser."""
+"""Prepare result downloads and the static repository browser."""
 from __future__ import annotations
-import hashlib
 import json
 import shutil
 import subprocess
@@ -11,12 +10,11 @@ DOCS=ROOT/'docs'
 
 
 def build():
-    dest=DOCS/'downloads';dest.mkdir(exist_ok=True)
-    # Remove previously generated download formats as well as their links.
-    for folder in [dest, DOCS/'results']:
+    (DOCS/'downloads/supplied-paper.pdf').unlink(missing_ok=True)
+    (DOCS/'assets/downloads-manifest.json').unlink(missing_ok=True)
+    for folder in [DOCS/'downloads', DOCS/'results']:
         for path in folder.rglob('*'):
             if path.is_file() and path.suffix in {'.zip', '.tex'}: path.unlink()
-    shutil.copy2(ROOT/'paper/manuscript/supplied-paper.pdf',dest/'supplied-paper.pdf')
     manifest=json.loads((ROOT/'paper/current/manifest.json').read_text())
     # The manuscript is kept outside the public repository. Its recorded digest
     # identifies the snapshot used to transcribe the released CSV tables.
@@ -42,8 +40,6 @@ def build():
     repo=DOCS/'repository';repo.mkdir(exist_ok=True)
     # Source views use textContent; no parsed source is executed by the browser.
     (repo/'repository-data.js').write_text('window.REPOSITORY_DATA='+json.dumps(meta,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')+';\n')
-    report={name:{'sha256':hashlib.sha256((dest/name).read_bytes()).hexdigest(),'bytes':(dest/name).stat().st_size} for name in ['supplied-paper.pdf']}
-    (DOCS/'assets/downloads-manifest.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('Prepared verified downloads and repository browser:',len(files),'files;', {name:round(v['bytes']/1024/1024,2) for name,v in report.items()})
+    print('Prepared result downloads and repository browser:',len(files),'files')
 
 if __name__=='__main__':build()

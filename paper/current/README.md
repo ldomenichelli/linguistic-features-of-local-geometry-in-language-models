@@ -1,6 +1,6 @@
 # Current manuscript results
 
-These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; manuscript sources are not included. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).
+Figures and tables from the current paper. [Earlier results and supporting analyses](../TABLES.md) are available separately.
 
 ## Tables
 

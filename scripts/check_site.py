@@ -179,18 +179,12 @@ def check_progressive():
 
 
 def check_downloads():
-    manifest=json.loads((DOCS/'assets/downloads-manifest.json').read_text())
-    assert set(manifest)=={'supplied-paper.pdf'}
-    for name,metadata in manifest.items():
-        path=safe_download('downloads/'+name)
-        assert sha(path)==metadata['sha256'] and path.stat().st_size==metadata['bytes']
     assert not [p for p in DOCS.rglob('*') if p.is_file() and p.suffix in {'.zip','.tex'}]
     paper=json.loads((ROOT/'configs/site.json').read_text())
     results=json.loads((ROOT/'paper/current/manifest.json').read_text())
     assert paper['manuscriptSha256']==results['manuscriptSha256']
     assert re.fullmatch(r'[0-9a-f]{64}', paper['manuscriptSha256'])
     assert not [p for p in (ROOT/'paper').rglob('*') if p.suffix.lower() in {'.tex','.bib','.sty','.cls'}]
-    assert paper['paperPdfSha256']==sha(DOCS/'downloads/supplied-paper.pdf')
 
 
 def main():

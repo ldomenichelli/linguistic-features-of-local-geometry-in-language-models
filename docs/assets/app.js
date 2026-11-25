@@ -163,8 +163,7 @@ function renderPlot(){
  }
 }
 function renderResearch(){
- $('abstract-text').textContent=D.paper.abstract;$('paper-version-note').textContent=D.paper.paperVersionNote;
- $('paper-links').append(link('Paper (PDF)','downloads/supplied-paper.pdf'));
+ $('abstract-text').textContent=D.paper.abstract;
  if(D.paper.codeUrl)$('paper-links').append(link('GitHub',D.paper.codeUrl));
  for(const f of R.figures){const figure=el('figure','paper-figure'),open=button('',()=>{$('large-figure').src=f.png;$('large-figure').alt=f.caption;$('large-caption').textContent=`Figure ${f.number}. ${f.caption}`;$('figure-dialog').showModal();},'figure-image');open.setAttribute('aria-label',`Enlarge figure ${f.number}`);const img=el('img');img.src=f.png;img.alt=f.caption;img.loading='lazy';open.append(img);figure.append(open);const caption=el('figcaption');caption.append(el('p','',f.caption));const links=el('div','figure-links');if(f.pdf)links.append(link('PDF',f.pdf));links.append(link('PNG',f.png));caption.append(links);figure.append(caption);([2,7].includes(f.number)?$('principal-figures'):$('other-figures')).append(figure);}
  for(const t of R.tables){const details=el('details','table-item'),summary=el('summary');summary.append(el('span','',`Table ${t.number}`),el('strong','',t.title));details.append(summary,el('p','table-caption',t.caption));const links=el('div','table-downloads');links.append(link('CSV',t.csv));details.append(links);const table=el('table','result-table');table.setAttribute('aria-label',t.title);const body=el('tbody');t.rows.forEach((cells,i)=>{const tr=el('tr');cells.forEach((value,j)=>{const c=el(i===0?'th':'td','',value);c.colSpan=t.colspans?.[i]?.[j]||1;tr.append(c);});body.append(tr);});table.append(body);const scroll=el('div','table-scroll');scroll.tabIndex=0;scroll.setAttribute('aria-label',`Scrollable table ${t.number}`);scroll.append(table);details.append(scroll);$('tables').append(details);}

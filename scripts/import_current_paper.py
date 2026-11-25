@@ -158,7 +158,7 @@ def import_results(manuscript: Path, source_root: Path):
     payload = {"schemaVersion": 1, "manuscriptSha256": sha(manuscript), "tables": tables, "figures": figures, "archive": archive, "tableFormat": "CSV cell grids transcribed from the current manuscript. Manuscript sources are not included. Earlier full-precision tidy tables and additional analyses are separately retained in the archive."}
     (dest / "manifest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     (ROOT / "docs/assets/results-data.js").write_text("window.RESULTS_DATA=" + json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n")
-    index = ["# Current manuscript results", "", "These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; manuscript sources are not included. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).", "", "## Tables", ""]
+    index = ["# Current manuscript results", "", "Figures and tables from the current paper. [Earlier results and supporting analyses](../TABLES.md) are available separately.", "", "## Tables", ""]
     for t in tables: index += [f"- **Table {t['number']}** — {t['title']} [CSV](tables/{t['csv'].split('/')[-1]})"]
     index += ["", "## Figures", ""]
     for f in figures: index += [f"- **Figure {f['number']}** — {f['caption']} [PNG](figures/{f['png'].split('/')[-1]})" + (f" · [PDF](figures/{f['pdf'].split('/')[-1]})" if f.get("pdf") else "")]
