@@ -14,8 +14,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    # Public publication is paused. Pushes never deploy; publication requires
-    # an explicit manual opt-in and a public repository.
+    # Public releases use an explicit manual opt-in and a public repository.
     if: inputs.publish_publicly == true && github.event.repository.private == false
     runs-on: ubuntu-latest
     permissions:

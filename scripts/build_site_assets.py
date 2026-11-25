@@ -18,20 +18,22 @@ def build():
             if path.is_file() and path.suffix in {'.zip', '.tex'}: path.unlink()
     shutil.copy2(ROOT/'paper/manuscript/supplied-paper.pdf',dest/'supplied-paper.pdf')
     manifest=json.loads((ROOT/'paper/current/manifest.json').read_text())
-    assert hashlib.sha256((ROOT/'paper/manuscript/manuscript.tex').read_bytes()).hexdigest()==manifest['manuscriptSha256']
+    # The manuscript is kept outside the public repository. Its recorded digest
+    # identifies the snapshot used to transcribe the released CSV tables.
+    config=json.loads((ROOT/'configs/site.json').read_text())
+    assert config['manuscriptSha256']==manifest['manuscriptSha256']
     for folder,web in [('paper/current/tables','current'),('paper/current/figures','figures'),('paper/tables','archive'),('paper/figures','archive')]:
         target=DOCS/'results'/web;target.mkdir(parents=True,exist_ok=True)
         for source in (ROOT/folder).iterdir():
             if source.suffix in {'.csv','.png','.pdf'}:shutil.copy2(source,target/source.name)
-    web_manifest={**manifest,'tables':[{k:v for k,v in table.items() if k!='tex'} for table in manifest['tables']]}
-    (DOCS/'assets/results-data.js').write_text('window.RESULTS_DATA='+json.dumps(web_manifest,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')+';\n')
+    (DOCS/'assets/results-data.js').write_text('window.RESULTS_DATA='+json.dumps(manifest,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')+';\n')
     tracked=subprocess.check_output(['git','-C',str(ROOT),'ls-files','--cached','--others','--exclude-standard'],text=True).splitlines()
     files=[]
     for name in sorted(set(tracked)):
         path=ROOT/name
         if not path.is_file() or path.suffix in {'.tex','.zip'}:continue
         preview=None
-        if path.suffix in {'.py','.md','.html','.css','.js','.yaml','.yml','.cff','.tex','.txt'} or path.name in {'Makefile','.gitignore','.gitattributes'}:
+        if path.suffix in {'.py','.md','.html','.css','.js','.yaml','.yml','.cff','.txt'} or path.name in {'Makefile','.gitignore','.gitattributes'}:
             if path.stat().st_size<160000 and not name.startswith(('docs/assets/geometry/','docs/assets/neighbourhood/')):
                 try:preview=path.read_text()
                 except UnicodeDecodeError:pass

@@ -90,8 +90,7 @@ def safe_download(relative):
 
 def check_results():
     manifest = json.loads((ROOT / 'paper/current/manifest.json').read_text())
-    web_manifest={**manifest,'tables':[{k:v for k,v in table.items() if k!='tex'} for table in manifest['tables']]}
-    assert web_manifest == read_js(DOCS / 'assets/results-data.js', 'RESULTS_DATA')
+    assert manifest == read_js(DOCS / 'assets/results-data.js', 'RESULTS_DATA')
     assert len(manifest['tables']) == 16 and len(manifest['figures']) == 7
     for t in manifest['tables']:
         path = safe_download(t['csv']); assert sha(path) == t['sha256']
@@ -102,8 +101,7 @@ def check_results():
         for actual, cells, sizes in zip(grid[1:], t['rows'], t['colspans']):
             expanded = [value for cell, size in zip(cells, sizes) for value in [cell] + ['']*(size-1)]
             assert actual == expanded + [''] * (width - len(expanded))
-        tex = ROOT/'paper/current/tables'/Path(t['tex']).name
-        assert f"\\label{{{t['label']}}}" in tex.read_text()
+        assert 'tex' not in t and t['label'].startswith('tab:')
         assert not any('@ c' in cell or '\\textbf' in cell for row in t['rows'] for cell in row)
     for f in manifest['figures']:
         for extension in ['png','pdf']:
@@ -188,7 +186,10 @@ def check_downloads():
         assert sha(path)==metadata['sha256'] and path.stat().st_size==metadata['bytes']
     assert not [p for p in DOCS.rglob('*') if p.is_file() and p.suffix in {'.zip','.tex'}]
     paper=json.loads((ROOT/'configs/site.json').read_text())
-    assert paper['manuscriptSha256']==sha(ROOT/'paper/manuscript/manuscript.tex')
+    results=json.loads((ROOT/'paper/current/manifest.json').read_text())
+    assert paper['manuscriptSha256']==results['manuscriptSha256']
+    assert re.fullmatch(r'[0-9a-f]{64}', paper['manuscriptSha256'])
+    assert not [p for p in (ROOT/'paper').rglob('*') if p.suffix.lower() in {'.tex','.bib','.sty','.cls'}]
     assert paper['paperPdfSha256']==sha(DOCS/'downloads/supplied-paper.pdf')
 
 

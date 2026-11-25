@@ -1,6 +1,6 @@
 # Website: data model, updates, and publication
 
-The project website is buildless HTML, CSS, and JavaScript in `docs/`. GitHub Pages can serve it directly. The static files also support a private hosted review. The site never calls a language model, fits a predictor, or computes missing scientific measurements in the browser.
+The project website is buildless HTML, CSS, and JavaScript in `docs/`. GitHub Pages can serve it directly. The same static files are deployed to the hosted project website. The site never calls a language model, fits a predictor, or computes missing scientific measurements in the browser.
 
 ## What is an observation?
 
@@ -28,7 +28,7 @@ The locality controls select one of five k values and either a cumulative neighb
 - Linguistic missing values remain missing in the browser. Fold-local median imputation belongs to prediction experiments only.
 - Token-level geometric scores and word-aligned annotations are not supplied. Neighbour texts, hidden states, and raw reference arrays are not packaged.
 - Checkpoint measurements are available in the repository and paper results. The interactive per-excerpt comparison currently covers the nine main model/layer settings.
-- No DOI or arXiv URL was provided. The supplied PDF predates the current TeX snapshot; the site identifies that version difference. The website provides the PDF; manuscript sources remain in the repository.
+- No DOI or arXiv URL was provided. The supplied PDF predates the current result snapshot; the site identifies that version difference. The website provides the PDF. Manuscript sources are excluded from the repository.
 - The GitHub repository URL is verified and recorded in `configs/site.json`. Website downloads use PDF, CSV, and JSON. ZIP archives and TeX files are neither generated nor served by the site.
 
 ## Progressive loading
@@ -55,7 +55,7 @@ make PYTHON=.venv/bin/python site
 make PYTHON=.venv/bin/python check
 ```
 
-`make site` needs only released files inside this repository. `build_site_assets.py` prepares the supplied paper PDF, figure/result downloads, and a static source browser. It removes legacy ZIP and TeX assets from the website output. The source browser omits ZIP and TeX entries; the complete canonical sources remain in the repository.
+`make site` needs only released files inside this repository. `build_site_assets.py` prepares the supplied paper PDF, figure/result downloads, and a static source browser. It removes legacy ZIP and TeX assets from the website output. The source browser omits ZIP and TeX entries; the released code and numeric data remain in the repository.
 
 When importing a new manuscript snapshot, put its figures in the original source tree, update `FIGURES` in `scripts/import_current_paper.py` if labels change, and run:
 
@@ -65,7 +65,7 @@ python3 scripts/import_current_paper.py \
   --source-root /path/to/experiment-project
 ```
 
-Copy that same TeX snapshot to `paper/manuscript/manuscript.tex` and update the title, abstract, author list, hashes, and version note in `configs/site.json`. Replace the supplied PDF only when a suitable new PDF exists. Update `codeUrl` only with a real, verified repository URL; leave it null otherwise.
+Keep the TeX snapshot outside the repository. Update the title, abstract, author list, hashes, and version note in `configs/site.json`; its `manuscriptSha256` must match the provenance digest generated in `paper/current/manifest.json`. Normal builds validate the released CSVs and figures without requiring manuscript sources. Replace the supplied PDF only when a suitable new PDF exists. Update `codeUrl` only with a real, verified repository URL; leave it null otherwise.
 
 For changed numeric results, update the released Parquet files, their original manifests, and their provenance before rebuilding. A new text cohort must be imported and hash-verified using `build_explorer.py --source-root`. If locality cohorts change, rerun `import_neighbourhood_alignment.py --source-root` against the original query/source mappings. Query counts, settings, and missingness are deliberately asserted for this release; update these documented assertions when changing the experiment design.
 
@@ -78,7 +78,7 @@ make check
 python3 scripts/check_browser.py --screenshots /tmp/local-geometry-preview
 ```
 
-Commit the changed source, manifests, paper snapshot, and generated JS/JSON data chunks. Public Pages publication is paused. The workflow does not run on push, and its manual public opt-in requires a public repository. The private preview uses owner-only Sites permissions. See [PUBLISHING.md](PUBLISHING.md) for access and future publication.
+Commit the changed code, manifests, CSVs, figures, and generated JS/JSON data chunks. Keep manuscript sources outside Git. The Pages workflow uses manual dispatch with an explicit public opt-in and requires a public repository. See [PUBLISHING.md](PUBLISHING.md) for hosting and release instructions.
 
 ## Accessibility and visual conventions
 

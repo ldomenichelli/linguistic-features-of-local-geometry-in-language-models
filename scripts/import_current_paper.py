@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Import displayed results from a supplied manuscript without rerunning experiments.
 
-CSV grids preserve the displayed table structure; TeX snippets are included for
-an exact source transcription. Higher-precision historical CSVs remain in paper/.
+CSV grids preserve the displayed table structure. Manuscript sources stay outside
+the repository. Higher-precision historical CSVs remain in paper/.
 """
 from __future__ import annotations
 
@@ -133,10 +133,8 @@ def import_results(manuscript: Path, source_root: Path):
             for row, sizes in zip(rows, spans):
                 expanded = [value for cell, size in zip(row, sizes) for value in [cell] + [""] * (size - 1)]
                 writer.writerow(expanded + [""] * (width - len(expanded)))
-        tex_path = csv_path.with_suffix(".tex")
-        tex_path.write_text(match[0] + "\n\\caption{" + caption + "}\n\\label{" + label + "}\n")
-        for p in [csv_path, tex_path]: shutil.copy2(p, ROOT / "docs/results/current" / p.name)
-        tables.append({"number": len(tables) + 1, "label": label, "title": plain(caption).split(". ")[0] + ".", "caption": plain(caption), "rows": rows, "colspans": spans, "csv": "results/current/" + csv_path.name, "tex": "results/current/" + tex_path.name, "sha256": sha(csv_path)})
+        shutil.copy2(csv_path, ROOT / "docs/results/current" / csv_path.name)
+        tables.append({"number": len(tables) + 1, "label": label, "title": plain(caption).split(". ")[0] + ".", "caption": plain(caption), "rows": rows, "colspans": spans, "csv": "results/current/" + csv_path.name, "sha256": sha(csv_path)})
     for match in re.finditer(r"\\begin\{figure\*?\}.*?\\end\{figure\*?\}", text, re.S):
         label = re.search(r"\\label\{([^}]+)\}", match[0])[1]
         cap = re.search(r"\\caption\s*\{", match[0]); caption, _ = argument(match[0], cap.end() - 1)
@@ -157,11 +155,11 @@ def import_results(manuscript: Path, source_root: Path):
             if source.suffix not in {".csv", ".png", ".pdf"}: continue
             web = ROOT / "docs/results/archive" / source.name; web.parent.mkdir(parents=True, exist_ok=True); shutil.copy2(source, web)
             archive.append({"name": source.name, "url": "results/archive/" + source.name, "type": source.suffix[1:], "sha256": sha(source)})
-    payload = {"schemaVersion": 1, "manuscriptSha256": sha(manuscript), "tables": tables, "figures": figures, "archive": archive, "tableFormat": "CSV cell grids transcribed from the current manuscript; original TeX snippets retain formatting. Earlier full-precision tidy tables and additional analyses are separately retained in the archive."}
+    payload = {"schemaVersion": 1, "manuscriptSha256": sha(manuscript), "tables": tables, "figures": figures, "archive": archive, "tableFormat": "CSV cell grids transcribed from the current manuscript. Manuscript sources are not included. Earlier full-precision tidy tables and additional analyses are separately retained in the archive."}
     (dest / "manifest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     (ROOT / "docs/assets/results-data.js").write_text("window.RESULTS_DATA=" + json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n")
-    index = ["# Current manuscript results", "", "These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; TeX snippets preserve their source. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).", "", "## Tables", ""]
-    for t in tables: index += [f"- **Table {t['number']}** — {t['title']} [CSV](tables/{t['csv'].split('/')[-1]}) · [TeX](tables/{t['tex'].split('/')[-1]})"]
+    index = ["# Current manuscript results", "", "These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; manuscript sources are not included. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).", "", "## Tables", ""]
+    for t in tables: index += [f"- **Table {t['number']}** — {t['title']} [CSV](tables/{t['csv'].split('/')[-1]})"]
     index += ["", "## Figures", ""]
     for f in figures: index += [f"- **Figure {f['number']}** — {f['caption']} [PNG](figures/{f['png'].split('/')[-1]})" + (f" · [PDF](figures/{f['pdf'].split('/')[-1]})" if f.get("pdf") else "")]
     (dest / "README.md").write_text("\n".join(index) + "\n")

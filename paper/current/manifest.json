@@ -60,7 +60,6 @@
         ]
       ],
       "csv": "results/current/perplexity-ess-correlations.csv",
-      "tex": "results/current/perplexity-ess-correlations.tex",
       "sha256": "2a9f243fa6730980bfe21a79b0b15fca2bc5673d0d6fb0897dbe961be819d98a"
     },
     {
@@ -285,7 +284,6 @@
         ]
       ],
       "csv": "results/current/main-results.csv",
-      "tex": "results/current/main-results.tex",
       "sha256": "0550e6cc0c00b1fe5c7caecb54d9479f0cccfd37ae8747615045de7d0ac4bd15"
     },
     {
@@ -396,7 +394,6 @@
         ]
       ],
       "csv": "results/current/top-features.csv",
-      "tex": "results/current/top-features.tex",
       "sha256": "1ce46369ce438c8abb1b6d33fb274d06855762f4f6245464af39eab540272f2e"
     },
     {
@@ -505,7 +502,6 @@
         ]
       ],
       "csv": "results/current/feature-direction.csv",
-      "tex": "results/current/feature-direction.tex",
       "sha256": "7adb2dd01ae1f0227027fb94d1bf3f80f53fe1a3793c9c5a9d1499d76842aa4c"
     },
     {
@@ -782,7 +778,6 @@
         ]
       ],
       "csv": "results/current/apertus-checkpoint-ess-importance.csv",
-      "tex": "results/current/apertus-checkpoint-ess-importance.tex",
       "sha256": "02c557f2e5c8b78d9559e0343f726e701ff699598581888c7c2665a98bb3bbd6"
     },
     {
@@ -1073,7 +1068,6 @@
         ]
       ],
       "csv": "results/current/alternative-estimator-ablation.csv",
-      "tex": "results/current/alternative-estimator-ablation.tex",
       "sha256": "6e232247e6deff702e794a64f5cb2b4ccb7f93a879130f9330bbbc3fca9bfa4a"
     },
     {
@@ -1286,7 +1280,6 @@
         ]
       ],
       "csv": "results/current/alternative-estimator-importance.csv",
-      "tex": "results/current/alternative-estimator-importance.tex",
       "sha256": "db83b4828156a9906c69df6637f776d6e80ccc5c584cd5b65160b0279da0388f"
     },
     {
@@ -1987,7 +1980,6 @@
         ]
       ],
       "csv": "results/current/k-layer-sensitivity.csv",
-      "tex": "results/current/k-layer-sensitivity.tex",
       "sha256": "577d66b51392e9add80190da529089911f9dfedd0208688f83e5959b841aa97c"
     },
     {
@@ -2112,7 +2104,6 @@
         ]
       ],
       "csv": "results/current/importance-sensitivity.csv",
-      "tex": "results/current/importance-sensitivity.tex",
       "sha256": "6c5a15fa6368609f8f31e8db787e5be5bc1417f797f3d49a3b507370bda26157"
     },
     {
@@ -2265,7 +2256,6 @@
         ]
       ],
       "csv": "results/current/pile-split-id-robustness.csv",
-      "tex": "results/current/pile-split-id-robustness.tex",
       "sha256": "fc3ba60432a36fc76518e77a28b3773201221bbdbbe147a2d05841bec6554111"
     },
     {
@@ -2464,7 +2454,6 @@
         ]
       ],
       "csv": "results/current/ess-classification-features.csv",
-      "tex": "results/current/ess-classification-features.tex",
       "sha256": "978ad72761cb6a78a4d9768821c96b9171093f9f51ebd12d0140c66a3f96c552"
     },
     {
@@ -2589,7 +2578,6 @@
         ]
       ],
       "csv": "results/current/mann-whitney.csv",
-      "tex": "results/current/mann-whitney.tex",
       "sha256": "a1cf1a689bcb67f7f1e7014ed4cbaed8a0c27077bb242020ac63ce1e85c4b6c3"
     },
     {
@@ -3068,7 +3056,6 @@
         ]
       ],
       "csv": "results/current/lexical-classification.csv",
-      "tex": "results/current/lexical-classification.tex",
       "sha256": "6f2f10f85dc60bbb557ea5494a5d42108a9a6d63dfbe0727ee2a4fa1f28bf76b"
     },
     {
@@ -3547,7 +3534,6 @@
         ]
       ],
       "csv": "results/current/lexical-regression.csv",
-      "tex": "results/current/lexical-regression.tex",
       "sha256": "958d3aac66df5668cf3e48b5b40a008ea8f37e3e592b7c6a37d59bfda696bf3d"
     },
     {
@@ -3752,7 +3738,6 @@
         ]
       ],
       "csv": "results/current/pythia-feature.csv",
-      "tex": "results/current/pythia-feature.tex",
       "sha256": "089ea862ca58e4d02c2856a011e7c3e1dd6da61a90de8dde35548d826143a3eb"
     },
     {
@@ -4041,7 +4026,6 @@
         ]
       ],
       "csv": "results/current/retained-profiling-ud-features.csv",
-      "tex": "results/current/retained-profiling-ud-features.tex",
       "sha256": "fb4dc37c265e3ca1cb6a03be73d3375a8a68d2ae2bff9629d2981311d39a70c9"
     }
   ],
@@ -4364,5 +4348,5 @@
       "sha256": "c83d6094e51d35b2c781c1569b13e6355427d36409c54d960f54a5cdafaee8c9"
     }
   ],
-  "tableFormat": "CSV cell grids transcribed from the current manuscript; original TeX snippets retain formatting. Earlier full-precision tidy tables and additional analyses are separately retained in the archive."
+  "tableFormat": "CSV cell grids transcribed from the current manuscript. Manuscript sources are not included. Earlier full-precision tidy tables and additional analyses are separately retained in the archive."
 }

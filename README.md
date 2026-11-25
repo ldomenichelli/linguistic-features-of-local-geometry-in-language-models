@@ -8,7 +8,7 @@ The study asks how the linguistic form of an excerpt relates to the local intrin
 
 ## Explore the texts and results
 
-Use the [owner-only project preview](https://local-geometry-paper-preview.reflectiveshore16.chatgpt.site) to explore the excerpts, measurements, and paper results during private review. Public GitHub Pages publication is paused.
+Use the [project website](https://local-geometry-paper-preview.reflectiveshore16.chatgpt.site) to explore the excerpts, measurements, and paper results.
 
 The static site in [`docs/`](docs/) includes:
 
@@ -33,11 +33,11 @@ The page now uses a compact academic layout with the actual abstract, supplied p
 
 Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
 
-Public deployment is paused in [`.github/workflows/pages.yml`](.github/workflows/pages.yml): pushes never publish the site, and manual public publication requires an explicit opt-in and a public repository. See [PUBLISHING.md](PUBLISHING.md) for private access and future publication instructions.
+The [GitHub Pages workflow](.github/workflows/pages.yml) supports manual public releases after the repository is public and Pages is enabled. See [PUBLISHING.md](PUBLISHING.md) for hosting and release instructions.
 
 ## Current paper and earlier reproduction bundle
 
-Start with the [current manuscript result index](paper/current/README.md). [`paper/current/manifest.json`](paper/current/manifest.json) records the manuscript digest, captions, labels, table cells, figure sources, and content hashes. CSVs in that directory transcribe the displayed, rounded table cells. Their accompanying TeX preserves the exact table source, including formatting. They are not a new high-precision analysis run.
+Start with the [current manuscript result index](paper/current/README.md). [`paper/current/manifest.json`](paper/current/manifest.json) records the manuscript digest, captions, labels, table cells, figure sources, and content hashes. CSVs in that directory transcribe the displayed, rounded table cells. Manuscript and table TeX sources are excluded from the public release. The CSVs are not a new high-precision analysis run.
 
 The material imported from `local-geometry-reproduction` is preserved in its original structure: [figures](paper/FIGURES.md), [tables](paper/TABLES.md), and [artifact map](paper/ARTIFACTS.md). Its six numbered figures and seventeen numbered tables have **their own earlier numbering**, plus additional experiment artifacts. This archive includes Ridge and logistic baselines, which are additional comparisons rather than methods claimed for the current manuscript. Original higher-precision CSVs and reference outputs are retained.
 
@@ -81,7 +81,7 @@ The full pipeline in `src/full_pipeline/` requires separately acquired corpus da
 | Path | Contents |
 |---|---|
 | `docs/` | GitHub Pages site, browser data, and downloadable results |
-| `paper/current/` | Current manuscript’s 7 figures and 16 table grids / TeX snippets |
+| `paper/current/` | Current manuscript’s 7 figures and 16 CSV table grids |
 | `paper/figures/`, `paper/tables/` | Original reproduction artifacts and additional analyses |
 | `data/explorer/` | Verified excerpts and source categories for the interactive browser |
 | `data/derived/` | Numeric feature, geometry, checkpoint, and neighbourhood tables |

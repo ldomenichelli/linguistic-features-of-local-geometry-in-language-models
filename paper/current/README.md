@@ -1,25 +1,25 @@
 # Current manuscript results
 
-These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; TeX snippets preserve their source. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).
+These 16 tables and 7 figures follow the current manuscript order. CSVs transcribe the displayed cells; manuscript sources are not included. The original higher-precision reproduction tables and additional experiments remain in [the archived bundle](../TABLES.md).
 
 ## Tables
 
-- **Table 1** — Spearman correlations between excerpt perplexity and ESS-estimated pointwise ID. [CSV](tables/perplexity-ess-correlations.csv) · [TeX](tables/perplexity-ess-correlations.tex)
-- **Table 2** — ESS-estimated pointwise ID regression with linguistic features, ablations, and baselines. [CSV](tables/main-results.csv) · [TeX](tables/main-results.tex)
-- **Table 3** — Most predictive features for ESS-estimated pointwise ID regression. [CSV](tables/top-features.csv) · [TeX](tables/top-features.tex)
-- **Table 4** — Stable ALE directions for recurring predictors of ESS-estimated pointwise ID. [CSV](tables/feature-direction.csv) · [TeX](tables/feature-direction.tex)
-- **Table 5** — ESS-estimated pointwise ID regression across seven Apertus checkpoints. [CSV](tables/apertus-checkpoint-ess-importance.csv) · [TeX](tables/apertus-checkpoint-ess-importance.tex)
-- **Table 6** — Pointwise ID regression and feature-ablation controls for FCI and MLE. [CSV](tables/alternative-estimator-ablation.csv) · [TeX](tables/alternative-estimator-ablation.tex)
-- **Table 7** — Most predictive features for FCI- and MLE-estimated pointwise ID regression. [CSV](tables/alternative-estimator-importance.csv) · [TeX](tables/alternative-estimator-importance.tex)
-- **Table 8** — Sensitivity of Profiling-UD regression to neighbourhood size and layer in Pythia and Qwen. [CSV](tables/k-layer-sensitivity.csv) · [TeX](tables/k-layer-sensitivity.tex)
-- **Table 9** — Stability of held-out permutation-importance rankings for ESS-estimated pointwise ID. [CSV](tables/importance-sensitivity.csv) · [TeX](tables/importance-sensitivity.tex)
-- **Table 10** — Pointwise ID distributions across the Pile evaluation splits for Pythia, using k=1000 and n_ref=15,000. [CSV](tables/pile-split-id-robustness.csv) · [TeX](tables/pile-split-id-robustness.tex)
-- **Table 11** — Most predictive features for random forest classification of the lowest and highest ESS-estimated pointwise ID quintiles. [CSV](tables/ess-classification-features.csv) · [TeX](tables/ess-classification-features.tex)
-- **Table 12** — Representative excerpts illustrating the recurring feature directions identified by ALE. [CSV](tables/mann-whitney.csv) · [TeX](tables/mann-whitney.tex)
-- **Table 13** — Classification performance of Profiling-UD, matched lexical baselines, and log perplexity on main_set. [CSV](tables/lexical-classification.csv) · [TeX](tables/lexical-classification.tex)
-- **Table 14** — Regression performance of Profiling-UD, matched lexical baselines, and log perplexity on main_set. [CSV](tables/lexical-regression.csv) · [TeX](tables/lexical-regression.tex)
-- **Table 15** — ESS-estimated pointwise ID regression across five Pythia checkpoints. [CSV](tables/pythia-feature.csv) · [TeX](tables/pythia-feature.tex)
-- **Table 16** — Inventory of the 46 predictors used in the pointwise ID analyses. [CSV](tables/retained-profiling-ud-features.csv) · [TeX](tables/retained-profiling-ud-features.tex)
+- **Table 1** — Spearman correlations between excerpt perplexity and ESS-estimated pointwise ID. [CSV](tables/perplexity-ess-correlations.csv)
+- **Table 2** — ESS-estimated pointwise ID regression with linguistic features, ablations, and baselines. [CSV](tables/main-results.csv)
+- **Table 3** — Most predictive features for ESS-estimated pointwise ID regression. [CSV](tables/top-features.csv)
+- **Table 4** — Stable ALE directions for recurring predictors of ESS-estimated pointwise ID. [CSV](tables/feature-direction.csv)
+- **Table 5** — ESS-estimated pointwise ID regression across seven Apertus checkpoints. [CSV](tables/apertus-checkpoint-ess-importance.csv)
+- **Table 6** — Pointwise ID regression and feature-ablation controls for FCI and MLE. [CSV](tables/alternative-estimator-ablation.csv)
+- **Table 7** — Most predictive features for FCI- and MLE-estimated pointwise ID regression. [CSV](tables/alternative-estimator-importance.csv)
+- **Table 8** — Sensitivity of Profiling-UD regression to neighbourhood size and layer in Pythia and Qwen. [CSV](tables/k-layer-sensitivity.csv)
+- **Table 9** — Stability of held-out permutation-importance rankings for ESS-estimated pointwise ID. [CSV](tables/importance-sensitivity.csv)
+- **Table 10** — Pointwise ID distributions across the Pile evaluation splits for Pythia, using k=1000 and n_ref=15,000. [CSV](tables/pile-split-id-robustness.csv)
+- **Table 11** — Most predictive features for random forest classification of the lowest and highest ESS-estimated pointwise ID quintiles. [CSV](tables/ess-classification-features.csv)
+- **Table 12** — Representative excerpts illustrating the recurring feature directions identified by ALE. [CSV](tables/mann-whitney.csv)
+- **Table 13** — Classification performance of Profiling-UD, matched lexical baselines, and log perplexity on main_set. [CSV](tables/lexical-classification.csv)
+- **Table 14** — Regression performance of Profiling-UD, matched lexical baselines, and log perplexity on main_set. [CSV](tables/lexical-regression.csv)
+- **Table 15** — ESS-estimated pointwise ID regression across five Pythia checkpoints. [CSV](tables/pythia-feature.csv)
+- **Table 16** — Inventory of the 46 predictors used in the pointwise ID analyses. [CSV](tables/retained-profiling-ud-features.csv)
 
 ## Figures
 

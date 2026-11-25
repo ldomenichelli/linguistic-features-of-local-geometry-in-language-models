@@ -20,7 +20,7 @@ Online publication requires creation of the named GitHub repository and a succes
 
 ## Academic site revision
 
-Replaced the presentation-led page with a compact paper page: real abstract and authors, central figures, compact tables, actual manuscript/code/data downloads, and a source browser. The supplied PDF is identified as an earlier version; the current TeX snapshot is separately provided. No unverified GitHub, DOI, or arXiv link is displayed.
+Replaced the presentation-led page with a compact paper page: real abstract and authors, central figures, compact tables, actual manuscript/code/data downloads, and a source browser. The supplied PDF is identified as an earlier version; current results are provided as CSV tables and figures. No unverified GitHub, DOI, or arXiv link is displayed.
 
 The explorer now loads geometry progressively by model/layer and locality diagnostics on request. It supports paired model/layer plots, a nine-setting per-excerpt measurement table, feature-value filtering, feature-definition search, full-precision multi-estimator CSV export, and keyboard-operable plot points.
 
@@ -36,3 +36,9 @@ Recovered the six remaining original texts and verified exact text/source alignm
 All 500 locality-audit texts are included, with 45,000 exact diagnostic rows across nine settings. Feature-based plots omit unavailable feature pairs; geometry-only paired plots include all available estimates.
 
 Removed ZIP and TeX download links and generated assets from the website. PDF, CSV, and JSON remain available. Public Pages publication no longer runs on push and requires an explicit manual opt-in in a public repository. The existing owner-only Sites preview is retained.
+
+## Public release preparation — 25 November 2026
+
+Removed the manuscript TeX and all 16 table TeX snippets. The importer now reads an external manuscript and writes only CSV tables, figures, and metadata. Builds check the released artifact hashes and consistent manuscript provenance without requiring the private source. TeX and related LaTeX source formats are ignored to prevent accidental reintroduction.
+
+The owner authorized removing TeX files from Git history before changing repository visibility. A private local backup preserves the original history; it is not part of the public repository or website. Public Pages deployment remains an explicit manual operation.
