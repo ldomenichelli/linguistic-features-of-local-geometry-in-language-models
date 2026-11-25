@@ -8,38 +8,11 @@ The study asks how the linguistic form of an excerpt relates to the local intrin
 
 ## Explore the texts and results
 
-The project website is prepared for [GitHub Pages](https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/), where you can explore the excerpts, measurements, and paper results once publication is activated.
+Browse 2,000 excerpts, compare results across language models, and download figures, tables, and data on the [project website](https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/).
 
-The static site in [`docs/`](docs/) includes:
+## Paper results
 
-- **2,000 original evaluation excerpts**, verified against the original text/source mappings across all nine model/layer settings; six have no released linguistic profile and retain unavailable feature values;
-- **46 features**, with definitions, units, and missing values preserved;
-- **27 measured settings**: three models × three depths × three ID estimators;
-- text, source, percentile, and feature-value filters; a selectable feature/geometry scatterplot; paired model/layer plots; per-excerpt all-model tables; two-text comparisons; and full-precision CSV export;
-- **500 verified locality-audit excerpts**, with recorded Euclidean radii, distances, source composition, and TF-IDF diagnostics for five neighbourhood sizes and cumulative/shell intervals;
-- **all 7 figures and 16 tables from the current manuscript**, with full captions and downloadable PNG/PDF and CSV;
-- the earlier reproduction bundle and its additional geometry, neighbourhood, feature-family, source, lexical, and perplexity analyses.
-
-To preview the committed site, Python’s standard library is enough:
-
-```bash
-make serve
-# Open http://localhost:8765
-```
-
-The site works entirely in the browser. It displays saved measurements; it does not run a language model or predict ID for new text. Percentiles use all available evaluation observations within each model/layer/estimator before filtering. The measured evaluation set has 2,000 queries; the browser includes all 2,000 texts and their recorded geometry, with missing profiles explicitly unavailable. One early-layer Pythia FCI measurement is unavailable and remains null.
-
-The page now uses a compact academic layout with the actual abstract, supplied paper PDF, central figures, and full-precision JSON/CSV downloads. The supplied PDF is an earlier version; the site explains its difference from the current manuscript snapshot. The repository is [ldomenichelli/linguistic-features-of-local-geometry-in-language-models](https://github.com/ldomenichelli/linguistic-features-of-local-geometry-in-language-models). No DOI or arXiv URL was supplied.
-
-Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
-
-The [GitHub Pages workflow](.github/workflows/pages.yml) publishes updates on pushes to `main` and when the repository becomes public, provided Pages is enabled with GitHub Actions as its source. Manual releases require an explicit public opt-in. See [PUBLISHING.md](PUBLISHING.md) for activation instructions.
-
-## Current paper and earlier reproduction bundle
-
-Start with the [current manuscript result index](paper/current/README.md). [`paper/current/manifest.json`](paper/current/manifest.json) records the manuscript digest, captions, labels, table cells, figure sources, and content hashes. CSVs in that directory transcribe the displayed, rounded table cells. Manuscript and table TeX sources are excluded from the public release. The CSVs are not a new high-precision analysis run.
-
-The material imported from `local-geometry-reproduction` is preserved in its original structure: [figures](paper/FIGURES.md), [tables](paper/TABLES.md), and [artifact map](paper/ARTIFACTS.md). Its six numbered figures and seventeen numbered tables have **their own earlier numbering**, plus additional experiment artifacts. This archive includes Ridge and logistic baselines, which are additional comparisons rather than methods claimed for the current manuscript. Original higher-precision CSVs and reference outputs are retained.
+Find the [current figures and tables](paper/current/README.md) and [earlier supporting analyses](paper/README.md). The included PDF is an earlier version of the paper.
 
 ![Pointwise ID study pipeline](paper/current/figures/pipeline.png)
 
