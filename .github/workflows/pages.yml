@@ -1,5 +1,8 @@
 name: Deploy project explorer
 on:
+  push:
+    branches: [main]
+  public:
   workflow_dispatch:
     inputs:
       publish_publicly:
@@ -11,11 +14,14 @@ permissions:
   contents: read
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   build:
-    # Public releases use an explicit manual opt-in and a public repository.
-    if: inputs.publish_publicly == true && github.event.repository.private == false
+    # Publish pushes and the initial visibility change only for public repos.
+    # Manual runs retain an explicit publication opt-in.
+    if: >-
+      github.event.repository.private == false &&
+      (github.event_name != 'workflow_dispatch' || inputs.publish_publicly == true)
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,8 +46,8 @@ jobs:
           request = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2026-03-10'})
           try:
               with urllib.request.urlopen(request) as response:
-                  json.load(response)
-              enabled = True
+                  pages = json.load(response)
+              enabled = pages.get('build_type') == 'workflow'
           except urllib.error.HTTPError as error:
               if error.code != 404:
                   raise
@@ -50,7 +56,7 @@ jobs:
               output.write('enabled=' + str(enabled).lower() + '\n')
           if not enabled:
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
-                  summary.write('## GitHub Pages activation required\n\nThe checked site artifact is ready. In Settings → Pages, choose GitHub Actions as the source, then rerun this workflow to publish it.\n')
+                  summary.write('## GitHub Pages activation required\n\nThe checked site artifact is ready. In Settings → Pages, choose GitHub Actions as the source, then rerun this workflow with publish_publicly enabled to publish it.\n')
           PY
       - run: python -m pip install -r requirements-analysis.txt
       - run: make site

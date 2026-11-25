@@ -8,7 +8,7 @@ The study asks how the linguistic form of an excerpt relates to the local intrin
 
 ## Explore the texts and results
 
-Use the [project website](https://local-geometry-paper-preview.reflectiveshore16.chatgpt.site) to explore the excerpts, measurements, and paper results.
+The project website is prepared for [GitHub Pages](https://ldomenichelli.github.io/linguistic-features-of-local-geometry-in-language-models/), where you can explore the excerpts, measurements, and paper results once publication is activated.
 
 The static site in [`docs/`](docs/) includes:
 
@@ -33,7 +33,7 @@ The page now uses a compact academic layout with the actual abstract, supplied p
 
 Geometry is loaded by model/layer, and locality diagnostics only when requested. Excerpt keys identify records; intrinsic dimension describes query-neighbourhood geometry. The [website guide](SITE.md) documents granularity, units, missingness, accessibility, and how to update results.
 
-The [GitHub Pages workflow](.github/workflows/pages.yml) supports manual public releases after the repository is public and Pages is enabled. See [PUBLISHING.md](PUBLISHING.md) for hosting and release instructions.
+The [GitHub Pages workflow](.github/workflows/pages.yml) publishes updates on pushes to `main` and when the repository becomes public, provided Pages is enabled with GitHub Actions as its source. Manual releases require an explicit public opt-in. See [PUBLISHING.md](PUBLISHING.md) for activation instructions.
 
 ## Current paper and earlier reproduction bundle
 

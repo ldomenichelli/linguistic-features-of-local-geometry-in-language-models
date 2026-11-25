@@ -41,4 +41,6 @@ Removed ZIP and TeX download links and generated assets from the website. PDF, C
 
 Removed the manuscript TeX and all 16 table TeX snippets. The importer now reads an external manuscript and writes only CSV tables, figures, and metadata. Builds check the released artifact hashes and consistent manuscript provenance without requiring the private source. TeX and related LaTeX source formats are ignored to prevent accidental reintroduction.
 
-The owner authorized removing TeX files from Git history before changing repository visibility. A private local backup preserves the original history; it is not part of the public repository or website. Public Pages deployment remains an explicit manual operation.
+The owner authorized removing TeX files from Git history before changing repository visibility. A private local backup preserves the original history; it is not part of the public repository or website.
+
+GitHub Pages is the intended public host. The separate Sites preview has been restored to private access. The Pages workflow publishes pushes to `main` and the initial change to public visibility after Pages activation; manual runs retain an explicit public opt-in.

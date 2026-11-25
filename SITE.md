@@ -1,6 +1,6 @@
 # Website: data model, updates, and publication
 
-The project website is buildless HTML, CSS, and JavaScript in `docs/`. GitHub Pages can serve it directly. The same static files are deployed to the hosted project website. The site never calls a language model, fits a predictor, or computes missing scientific measurements in the browser.
+The project website is buildless HTML, CSS, and JavaScript in `docs/`, deployed with GitHub Pages. The site never calls a language model, fits a predictor, or computes missing scientific measurements in the browser.
 
 ## What is an observation?
 
@@ -78,7 +78,7 @@ make check
 python3 scripts/check_browser.py --screenshots /tmp/local-geometry-preview
 ```
 
-Commit the changed code, manifests, CSVs, figures, and generated JS/JSON data chunks. Keep manuscript sources outside Git. The Pages workflow uses manual dispatch with an explicit public opt-in and requires a public repository. See [PUBLISHING.md](PUBLISHING.md) for hosting and release instructions.
+Commit the changed code, manifests, CSVs, figures, and generated JS/JSON data chunks. Keep manuscript sources outside Git. The Pages workflow publishes pushes to `main` and the initial change to public visibility when Pages is configured for GitHub Actions. Manual dispatch requires an explicit public opt-in. All deployments require a public repository. See [PUBLISHING.md](PUBLISHING.md) for activation instructions.
 
 ## Accessibility and visual conventions
 
